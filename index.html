@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShutterStyle - Your Home, Your Style</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #000000;
+            padding: 20px 0;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #1e90ff;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url("https://media.istockphoto.com/id/1150973389/photo/modern-kitchen-and-living-room.jpg?s=612x612&w=0&k=20&c=X_3y-z5Ul9Yf08KzY3721BxuatTHe0cu90qo5nRTAZg=");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #1c7ed6;
+        }
+
+        /* Products section styles */
+        .products {
+            padding: 100px 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #000000;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .product-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .product-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials section styles */
+        .testimonials {
+            background-color: #1e90ff;
+            padding: 100px 0;
+            color: #ffffff;
+        }
+        .testimonial-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .testimonial-item p:first-child {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .about{
+            background-color: rgb(179, 169, 156);
+        }
+
+        /* Contact section styles */
+        .contact {
+            padding: 100px 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .submit-button {
+            background-color: #1e90ff;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #1c7ed6;
+        }
+        #about-links{
+            text-align: center;
+            border-radius: 15px;
+        }
+        #about-links a{
+            color: white;
+            
+        }
+
+        /* Footer styles */
+        /* Footer styles */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+    border-top: 2px solid #1e90ff;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #1e90ff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1e90ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* About-links section fix */
+#about-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#about-links a:hover {
+    text-decoration: underline;
+}
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ShutterStyle</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Home with Style and Security</h1>
+            <p>Discover our premium range of shutters and blinds</p>
+            <a href="#contact" class="cta-button">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://media.istockphoto.com/id/1399201382/photo/window-roller-shutters-house-and-terrace.jpg?s=612x612&w=0&k=20&c=QumE6d8TcKdYiUTLWd9KbGl0f40CEakV2SYKOnMkoio=" alt="Window roller shutters with house and terrace">
+                    <h3>Shutters</h3>
+                    <p>Enhanced security and insulation for your home</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://media.istockphoto.com/id/1150973389/photo/modern-kitchen-and-living-room.jpg?s=612x612&w=0&k=20&c=X_3y-z5Ul9Yf08KzY3721BxuatTHe0cu90qo5nRTAZg=" alt="Modern kitchen and living room interior">
+                    <h3>Blinds</h3>
+                    <p>Classic style with adjustable light control</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4=" alt="Little boy opening roller blinds in the morning">
+                    <h3>Shades</h3>
+                    <p>Elegant fabric shades for a soft, luxurious look</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-item">
+                <p>"ShutterStyle transformed our home with their beautiful blinds. The quality and service are unmatched!"</p>
+                <p>- Sarah J., New York</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"I'm impressed with the security features of their roller shutters. Peace of mind and style in one package."</p>
+                <p>- Mark T., California</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h3>About ShutterStyle</h3>
+            <p>At ShutterStyle, we offer premium quality shutters, blinds, and drapes that blend style with functionality. We are dedicated to helping you transform your home with stylish and functional window treatments. With years of experience in the industry, we provide a curated selection of high-quality shutters and blinds that enhance the beauty, security, and comfort of your living spaces.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="about-links">
+    <div>
+        <p><a href="info.html>">About us</a></p>
+        <p><a href="quote.html">Get a quote</a></p>
+        <p><a href="gallery.html">View Gallery</a></p>
+    </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#">Facebook<i class="fab fa-facebook-f"></i></a>
+                        <a href="#">Twitter<i class="fab fa-twitter"></i></a>
+                        <a href="#">Instagram<i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ShutterStyle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
