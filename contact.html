@@ -3,42 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us - Shutters and Blinds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #f9f9f9;
+            --accent-color: #a67c00;
+            --text-color: #333;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
         .container {
             width: 80%;
+            max-width: 800px;
             margin: auto;
             overflow: hidden;
         }
         header {
-            background: #333;
+            background: var(--primary-color);
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
         h1 {
             margin: 0;
         }
         .content {
-            padding: 20px;
+            padding: 40px;
             background: #fff;
             margin-top: 20px;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .contact-info {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .contact-info p {
-            margin: 5px 0;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-item i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--accent-color);
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
         }
         footer {
-            background: #333;
+            background: var(--primary-color);
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -58,27 +91,26 @@
         <div class="content">
             <h2>Get in Touch</h2>
             <div class="contact-info">
-                <p><strong>Address:</strong> 123 Main Street, Anytown, USA</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Email:</strong> contact@yourcompany.com</p>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Shutter Street, Durban, South Africa</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+27 76 780 4372</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@shuttersandblinds.co.za</p>
+                </div>
             </div>
-            <form action="mailto:contact@yourcompany.com" method="post" enctype="text/plain">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <div>
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
+            <div class="contact-links">
+                <a href="tel:+27767804372" class="phone-link">Call Us</a>
+                <a href="mailto:info@shuttersandblinds.co.za" class="email-link">Email Us</a>
+            </div>
+            <a href="https://wa.me/27767804372" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
         </div>
     </div>
 
