@@ -3,115 +3,477 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Gallery - Shutters & Blinds</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #f9f9f9;
+            --accent-color: #a67c00;
+            --text-color: #333;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
         }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-nav {
+            background-color: var(--accent-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-nav:hover {
+            background-color: #8b6700;
+        }
+
+        main {
+            padding-top: 80px;
+        }
+
+        .gallery-hero {
+            background: linear-gradient(rgba(26,54,93,0.8), rgba(26,54,93,0.8)), url('/api/placeholder/1200/400') no-repeat center center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .gallery-categories {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--accent-color);
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 0;
         }
+
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height: 250px;
+            object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
         }
-        .gallery-item:hover .overlay {
-            opacity: 1;
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
+
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(26,54,93,0.7);
             color: #fff;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             opacity: 0;
             transition: opacity 0.3s ease;
             text-align: center;
+            padding: 20px;
         }
-        .footer {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            margin-bottom: 10px;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 60px 0;
             text-align: center;
         }
+
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: var(--primary-color);
+        width: 100%;
+        height: calc(100% - 80px);
+        transition: 0.3s;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block !important;
+    }
+}
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
-            <div class="logo-container">
-                <img src="images/Shutters-and-blinds-logo.jpg" class="logo-img" alt="Shutters & Blinds Logo">
-                <div class="logo-text">Shutters & Blinds</div>
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/Shutters-and-blinds-logo.jpg" alt="Shutters & Blinds Logo" class="logo-img">
+                    <div class="logo-text">Shutters & Blinds</div>
+                </div>
+                <button class="burger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#" class="active">Gallery</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="cta-nav">Get a Quote</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products-services.html">Products & Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="quote.html" class="cta-nav">Get a Quote</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <section class="container">
-        <h1>Gallery</h1>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Shutter+1" alt="Shutter 1">
-                <div class="overlay">Shutter 1</div>
+    <main>
+        <section class="gallery-hero">
+            <div class="container">
+                <h1>Our Gallery</h1>
+                <p>Explore our stunning collection of shutters and blinds installations</p>
             </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Shutter+2" alt="Shutter 2">
-                <div class="overlay">Shutter 2</div>
+        </section>
+
+        <section class="container">
+            <div class="gallery-categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Shutters</button>
+                <button class="category-btn">Blinds</button>
+                <button class="category-btn">Residential</button>
+                <button class="category-btn">Commercial</button>
             </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Blinds+1" alt="Blinds 1">
-                <div class="overlay">Blinds 1</div>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Wooden+Shutters" alt="Wooden Shutters">
+                    <div class="overlay">
+                        <h3>Wooden Shutters</h3>
+                        <p>Elegant wooden shutters for a classic look</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Vertical+Blinds" alt="Vertical Blinds">
+                    <div class="overlay">
+                        <h3>Vertical Blinds</h3>
+                        <p>Modern vertical blinds for large windows</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Roller+Blinds" alt="Roller Blinds">
+                    <div class="overlay">
+                        <h3>Roller Blinds</h3>
+                        <p>Sleek roller blinds for a minimalist aesthetic</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Plantation+Shutters" alt="Plantation Shutters">
+                    <div class="overlay">
+                        <h3>Plantation Shutters</h3>
+                        <p>Classic plantation shutters for a timeless appeal</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Roman+Blinds" alt="Roman Blinds">
+                    <div class="overlay">
+                        <h3>Roman Blinds</h3>
+                        <p>Luxurious Roman blinds for a soft, elegant look</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Aluminum+Shutters" alt="Aluminum Shutters">
+                    <div class="overlay">
+                        <h3>Aluminum Shutters</h3>
+                        <p>Durable aluminum shutters for modern homes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Cellular+Shades" alt="Cellular Shades">
+                    <div class="overlay">
+                        <h3>Cellular Shades</h3>
+                        <p>Energy-efficient cellular shades for insulation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/300/250?text=Bamboo+Blinds" alt="Bamboo Blinds">
+                    <div class="overlay">
+                        <h3>Bamboo Blinds</h3>
+                        <p>Natural bamboo blinds for an eco-friendly touch</p>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x200?text=Blinds+2" alt="Blinds 2">
-                <div class="overlay">Blinds 2</div>
+        </section>
+
+        <section class="testimonial">
+            <div class="container">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Shutters & Blinds transformed our home with their beautiful window treatments. The quality and craftsmanship are outstanding, and their team was professional from start to finish. We couldn't be happier with the result!"</p>
+                    <p class="testimonial-author">- Sarah and John Thompson, Durban</p>
+                </div>
             </div>
-            <!-- Add more gallery items as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>123 Shutter Street, Durban</li>
+                        <li>Phone: (031) 123-4567</li>
+                        <li>Email: info@shuttersandblinds.co.za</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">F</a>
+                        <a href="#" aria-label="Twitter">T</a>
+                        <a href="#" aria-label="Instagram">I</a>
+                        <a href="#" aria-label="Pinterest">P</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shutters & Blinds. All rights reserved.</p>
+            </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2024 Shutters & Blinds. All rights reserved.</p>
     </footer>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            burgerMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                burgerMenu.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
