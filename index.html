@@ -13,7 +13,14 @@
                 <img src="images/Shutters-and-blinds-logo.jpg" class="logo-img" alt="Shutters & Blinds Logo">
                 <div class="logo-text">Shutters & Blinds</div>
             </div>
-            <nav>
+
+            <!-- Burger Menu Icon -->
+            <div id="burger" class="burger">
+                <span>&#9776;</span> <!-- Burger icon -->
+            </div>
+
+            <!-- Navigation Links -->
+            <nav id="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products-services.html">Products & Services</a></li>
@@ -138,7 +145,7 @@
             <div class="footer-column social-column">
                 <h3>Connect With Us</h3>
                 <div class="social-icons">
-                    <a href="https://facebook.com" aria-label="Facebook"><img src="fb.png" width="30" alt="Facebook Logo"> Facebook</a>
+                    <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
                     <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
                     <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
                 </div>
@@ -147,6 +154,19 @@
                 <p>&copy; 2024 Shutters & Blinds. All rights reserved.</p>
             </div>
         </div>
+
+        <!-- JavaScript for Burger Menu -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('nav');
+
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+});
+        </script>
     </footer>
 </body>
 </html>
