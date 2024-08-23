@@ -6,6 +6,15 @@
     <title>Shutters & Blinds - Elevate Your Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --white: #fff;
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +24,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-color);
             overflow-x: hidden;
         }
 
@@ -26,12 +35,12 @@
         }
 
         header {
-            background-color: #fff;
+            background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .header-content {
@@ -44,8 +53,13 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: var(--text-color);
             text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            color: var(--primary-color);
         }
 
         nav ul {
@@ -59,13 +73,13 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-color);
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
 
         nav ul li a:hover {
-            color: #007bff;
+            color: var(--primary-color);
         }
 
         .burger {
@@ -76,9 +90,9 @@
         .burger div {
             width: 25px;
             height: 3px;
-            background-color: #333;
+            background-color: var(--text-color);
             margin: 5px;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .hero {
@@ -88,7 +102,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #fff;
+            color: var(--white);
             padding: 0 20px;
         }
 
@@ -114,56 +128,53 @@
 
         .cta-button {
             display: inline-block;
-            background-color: #007bff;
-            color: #fff;
+            background-color: var(--primary-color);
+            color: var(--white);
             padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s ease;
+            transition: var(--transition);
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease 1s forwards;
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: var(--secondary-color);
         }
 
-        .products, .about-us, .gallery {
+        .section {
             padding: 80px 0;
+            text-align: center;
         }
 
-        .products, .gallery {
-            background-color: #f8f9fa;
-        }
-
-        .about-us {
-            background-color: #fff;
-            margin-top: 10px;
-        }
-
-        .products h2, .about-us h2, .gallery h2 {
+        .section-title {
             text-align: center;
             margin-bottom: 40px;
             font-size: 36px;
+            color: var(--text-color);
         }
 
-        .product-grid {
+        .section-bg {
+            background-color: var(--bg-color);
+        }
+
+        .product-grid, .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
-        .product-item {
-            background-color: #fff;
+        .product-item, .testimonial-item {
+            background-color: var(--white);
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: var(--transition);
         }
 
-        .product-item:hover {
+        .product-item:hover, .testimonial-item:hover {
             transform: translateY(-10px);
         }
 
@@ -173,47 +184,21 @@
             object-fit: cover;
         }
 
-        .product-item h3 {
+        .product-item h3, .testimonial-item .author {
             padding: 20px;
             font-size: 24px;
             text-align: center;
         }
 
-        .about-us p, .gallery p {
+        .section-text {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 30px;
             font-size: 18px;
         }
 
-        .about-us .cta-button, .gallery .cta-button {
-            display: block;
-            width: 200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .testimonials {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-
-        .testimonials h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 36px;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
         .testimonial-item {
-            background-color: #f8f9fa;
             padding: 30px;
-            border-radius: 10px;
             text-align: center;
         }
 
@@ -222,13 +207,9 @@
             margin-bottom: 20px;
         }
 
-        .testimonial-item .author {
-            font-weight: 600;
-        }
-
         footer {
             background-color: #333;
-            color: #fff;
+            color: var(--white);
             padding: 40px 0;
         }
 
@@ -237,7 +218,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 35px;
- 
         }
 
         .footer-column {
@@ -249,6 +229,7 @@
 
         .footer-column h3 {
             margin-bottom: 20px;
+            color: var(--primary-color);
         }
 
         .footer-column ul {
@@ -260,8 +241,13 @@
         }
 
         .footer-column ul li a {
-            color: #fff;
+            color: var(--white);
             text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
         }
 
         .footer-bottom {
@@ -269,6 +255,32 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        #whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        #whatsapp-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
 
         @keyframes fadeInUp {
@@ -287,7 +299,7 @@
                 position: absolute;
                 right: 0;
                 top: 70px;
-                background-color: #fff;
+                background-color: var(--white);
                 width: 50%;
                 height: calc(100vh - 70px);
                 transform: translateX(100%);
@@ -325,10 +337,10 @@
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products-services.html">Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="burger">
@@ -344,21 +356,21 @@
         <div class="hero-content">
             <h1>Elevate Your Home with Style and Security</h1>
             <p>Discover our premium range of shutters and blinds, tailored to enhance your living spaces.</p>
-            <a href="products-services.html" class="cta-button">Explore Products</a>
+            <a href="#products" class="cta-button">Explore Products</a>
         </div>
     </section>
 
-    <section id="about" class="about-us" style="background-image: url(https://media.istockphoto.com/id/1137063276/photo/orchid-shutters.jpg?s=612x612&w=0&k=20&c=SjvDshesv1rtcTQu1gfx4PzDzdCgDeCsWG17z_l-4bQ=); background-position: center;">
+    <section id="about" class="section">
         <div class="container">
-            <h2>About Us</h2>
-            <p>At Shutters & Blinds, we are committed to providing the highest quality window treatments in Durban. Our expert team is dedicated to helping you find the perfect solution for your home or business. With years of experience and a passion for excellence, we ensure that every product we offer meets our rigorous standards for quality, style, and functionality.</p>
-            <a href="quote.html" class="cta-button">Get a Quote</a>
+            <h2 class="section-title">About Us</h2>
+            <p class="section-text">At Shutters & Blinds, we are committed to providing the highest quality window treatments in Durban. Our expert team is dedicated to helping you find the perfect solution for your home or business. With years of experience and a passion for excellence, we ensure that every product we offer meets our rigorous standards for quality, style, and functionality.</p>
+            <a href="#contact" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
-    <section id="products" class="products">
+    <section id="products" class="section section-bg">
         <div class="container">
-            <h2>Our Products</h2>
+            <h2 class="section-title">Our Products</h2>
             <div class="product-grid">
                 <div class="product-item">
                     <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Shutters">
@@ -376,18 +388,17 @@
         </div>
     </section>
 
-    <section id="gallery" class="gallery" style="background-image: url('https://media.istockphoto.com/id/1294479662/photo/a-set-of-open-white-plantation-shutters-in-a-light-butter-yelllow-room.jpg?s=612x612&w=0&k=20&c=9Y1q8Wh9m6vTqg4Rfi_Q2ZjvQqRKhtDhd-NhfflKPi4='); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <section id="gallery" class="section">
         <div class="container">
-            <h2>View Our Gallery</h2>
-            <p>Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds, our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and envision the possibilities for your own home or office.</p>
+            <h2 class="section-title">View Our Gallery</h2>
+            <p class="section-text">Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds, our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and envision the possibilities for your own home or office.</p>
             <a href="#" class="cta-button">View Full Gallery</a>
         </div>
     </section>
-    
 
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="section section-bg">
         <div class="container">
-            <h2>What Our Customers Say</h2>
+            <h2 class="section-title">What Our Customers Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-item">
                     <p>"Shutters & Blinds transformed our home with their beautiful products. The quality and service are unmatched!"</p>
@@ -401,12 +412,10 @@
         </div>
     </section>
 
-    <section>
-        <a href="https://wa.me/27648784287" id="WhatsApp" style="position: fixed; bottom: 20px; right: 20px; display: inline-flex; align-items: center; background-color: #25D366; color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px; margin-right: 10px;">
-            Chat on WhatsApp
-        </a>
-    </section>    
+    <a href="https://wa.me/27648784287" id="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Chat on WhatsApp
+    </a>
 
     <footer id="contact">
         <div class="container">
@@ -425,7 +434,6 @@
                         <li><a href="#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h3>Follow Us</h3>
                     <ul>
