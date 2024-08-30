@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff;
-            --secondary-color: #0056b3;
-            --accent-color: #ffd700;
-            --text-color: #333;
-            --bg-color: #f8f9fa;
-            --white: #fff;
+            --primary-color: #FFD700; /* Gold */
+            --secondary-color: #C79E5C; /* Darker Gold */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #333; /* Dark Grey */
+            --bg-color: #fff; /* White */
+            --white: #fff; /* White */
             --transition: all 0.3s ease;
         }
 
@@ -27,6 +27,7 @@
             line-height: 1.6;
             color: var(--text-color);
             overflow-x: hidden;
+            background-color: var(--bg-color);
         }
 
         .container {
@@ -36,7 +37,7 @@
         }
 
         header {
-            background-color: var(--white);
+            background-color: var(--bg-color);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
@@ -113,7 +114,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/black\ shutters.jpg) no-repeat center center/cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -332,6 +333,39 @@
             filter: brightness(110%);
         }
 
+        .image-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .image-button {
+            display: block;
+            width: 250px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            line-height: 150px; /* Vertically center text */
+        }
+
+        .image-button a {
+            display: block;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .image-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -382,6 +416,14 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .image-buttons {
+                flex-direction: column;
+            }
+
+            .image-button {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -415,6 +457,26 @@
         </div>
     </section>
 
+    <section id="image-buttons" class="image-buttons">
+        <div class="image-button" style="background-image: url(images/golden\ shutter.jpg);">
+            <a href="#about">About us</a>
+        </div>
+        <div class="image-button" style="background-image: url(images/black\ shutters.jpg);">
+            <a href="quote.html">Quote</a>
+        </div>
+        <div class="image-button" style="background-image: url(images/black\ shutters.jpg);">
+            <a href="gallery.html">Gallery</a>
+        </div> 
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-text">At Shutters & Blinds, we are committed to providing the highest quality window treatments in Durban. Our expert team is dedicated to helping you find the perfect solution for your home or business. With years of experience and a passion for excellence, we ensure that every product we offer meets our rigorous standards for quality, style, and functionality.</p>
+            <a href="quote.html" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+
     <section id="products" class="section section-bg">
         <div class="container">
             <h2 class="section-title">Our Products</h2>
@@ -428,7 +490,7 @@
                     <h3>Blinds</h3>
                 </div>
                 <div class="product-item">
-                    <img src="https://media.istockphoto.com/id/1727666303/photo/mosquito-net-on-the-window-to-protect-against-insects-close-up-fastening-fragment.jpg?s=612x612&w=0&k=20&c=ivf1qPRRVu-QeSd62Iszt-Vx0ZNubC2uID9Ecf7URYk=" alt="Flyscreens">
+                    <img src="images/flyscreen.jpg" alt="Flyscreens">
                     <h3>Flyscreens</h3>
                 </div>
             </div>
@@ -442,14 +504,6 @@
             <h2 class="section-title">View Our Gallery</h2>
             <p class="section-text">Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds, our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and envision the possibilities for your own home or office.</p>
             <a href="gallery.html" class="cta-button">View Full Gallery</a>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p class="section-text">At Shutters & Blinds, we are committed to providing the highest quality window treatments in Durban. Our expert team is dedicated to helping you find the perfect solution for your home or business. With years of experience and a passion for excellence, we ensure that every product we offer meets our rigorous standards for quality, style, and functionality.</p>
-            <a href="quote.html" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
@@ -511,7 +565,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Shutters & Blinds. All rights reserved.</p>
+                <p>© 2024 Shutters & Blinds. All rights reserved.</p>
             </div>
         </div>
     </footer>
