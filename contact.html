@@ -5,55 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Shutters and Blinds</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #1a365d;
-            --secondary-color: #f9f9f9;
-            --accent-color: #a67c00;
-            --text-color: #333;
+            --primary-color: #FFD700; /* Gold */
+            --secondary-color: #C79E5C; /* Darker Gold */
+            --accent-color: #FFD700; /* Gold */
+            --text-color: #333; /* Dark Grey */
+            --bg-color: #fff; /* White */
+            --white: #fff; /* White */
+            --transition: all 0.3s ease;
         }
-        body {
-            font-family: Arial, sans-serif;
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--secondary-color);
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
             color: var(--text-color);
+            overflow-x: hidden;
+            background-color: var(--bg-color);
         }
+
         .container {
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
+
         header {
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo-text:hover {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
             background: var(--primary-color);
-            color: #fff;
-            padding: 20px 0;
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px;
+            transition: var(--transition);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
             text-align: center;
         }
-        h1 {
-            margin: 0;
-        }
+
         .content {
             padding: 40px;
-            background: #fff;
+            background: var(--bg-color);
             margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .contact-info {
             margin-bottom: 30px;
         }
+
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
+
         .contact-item i {
             font-size: 24px;
             margin-right: 15px;
             color: var(--accent-color);
         }
+
         .contact-links a {
             display: inline-block;
             margin-right: 15px;
@@ -61,62 +162,263 @@
             text-decoration: none;
             font-weight: bold;
         }
+
         .whatsapp-btn {
             background-color: #25D366;
-            color: white;
+            color: var(--white);
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             display: inline-block;
             margin-top: 20px;
         }
+
+        /* Footer styles */
         footer {
-            background: var(--primary-color);
-            color: #fff;
+            background-color: #333; /* Dark Grey */
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin-bottom: 20px;
+            min-width: 205px;
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: var(--accent-color); /* Gold */
+            font-size: 20px;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color); /* Gold */
+        }
+
+        .footer-bottom {
             text-align: center;
-            padding: 10px 0;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #whatsapp-button {
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            bottom: 20px;
+            right: 20px;
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #whatsapp-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .cta-nav {
+            background-color: var(--primary-color); /* Gold */
+            color: var(--white) !important;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-nav:hover {
+            background-color: var(--secondary-color); /* Darker Gold */
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .burger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                right: 0;
+                top: 70px;
+                background-color: var(--white);
+                width: 50%;
+                height: calc(100vh - 70px);
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.active {
+                transform: translateX(0%);
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 30px;
+            }
+
+            nav ul li {
+                margin: 20px 0;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Contact Us</h1>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="images/shutters and blinds logo.png" alt="Shutters & Blinds Logo" class="logo-img">
+                    <a href="#" class="logo-text">Shutters & Blinds</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="content">
-            <h2>Get in Touch</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Shutter Street, Durban, South Africa</p>
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="content">
+                <h2>Get in Touch</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Shutter Street, Durban, South Africa</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+27 71 234 5678</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@shuttersandblinds.co.za</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+27 76 780 4372</p>
+                <div class="contact-links">
+                    <a href="tel:+27712345678" class="phone-link">Call Us</a>
+                    <a href="mailto:info@shuttersandblinds.co.za" class="email-link">Email Us</a>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@shuttersandblinds.co.za</p>
-                </div>
+                <a href="https://wa.me/27648784287" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
             </div>
-            <div class="contact-links">
-                <a href="tel:+27767804372" class="phone-link">Call Us</a>
-                <a href="mailto:info@shuttersandblinds.co.za" class="email-link">Email Us</a>
-            </div>
-            <a href="https://wa.me/27767804372" class="whatsapp-btn" target="_blank">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
         </div>
-    </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Shutters and Blinds. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>123 Shutter Street, Durban</p>
+                    <p>Phone: (031) 123-4567</p>
+                    <p>Email: info@shuttersandblinds.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    </ul>                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Shutters & Blinds. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav ul li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    burger.classList.remove('toggle');
+                });
+            });
+
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+        });
+    </script>
 </body>
 </html>
