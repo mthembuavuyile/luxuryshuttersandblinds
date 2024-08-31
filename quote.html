@@ -8,12 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #f2f2f2; /* Light Grey */
-            --secondary-color: #c79c6e; /* Gold */
-            --accent-color: #1C1C1C; /* Dark Grey */
-            --text-color: #222; /* Dark Grey */
-            --bg-color: #fff; /* White */
-            --light-grey: #e0e0e0; /* Lighter Grey */
+            --primary-color: #f8f9fa;
+            --secondary-color: #e9b44c;
+            --accent-color: #333;
+            --text-color: #333;
+            --bg-color: #fff;
+            --light-grey: #e0e0e0;
             --transition: all 0.3s ease;
         }
 
@@ -31,18 +31,18 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 30px;
-            padding: 40px;
+            margin-bottom: 50px;
+            padding: 60px 40px;
             background-color: var(--primary-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             color: var(--accent-color);
         }
 
@@ -50,17 +50,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .logo-img {
-            width: 100px;
+            width: 120px;
             height: auto;
-            margin-right: 10px;
+            margin-right: 20px;
         }
 
         .logo-text {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--secondary-color);
             text-decoration: none;
@@ -68,25 +68,44 @@
         }
 
         .logo-text:hover {
-            color: var(--light-grey);
+            color: var(--accent-color);
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 15px;
             color: var(--accent-color);
         }
 
         .tagline {
             font-style: italic;
-            color: black;
+            color: var(--text-color);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
         form {
             background-color: var(--bg-color);
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -104,7 +123,7 @@
             width: 100%;
             padding: 12px;
             border: 2px solid var(--light-grey);
-            border-radius: 6px;
+            border-radius: 8px;
             font-family: 'Poppins', sans-serif;
             transition: var(--transition);
             background-color: var(--bg-color);
@@ -114,21 +133,21 @@
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: var(--secondary-color);
-            box-shadow: 0 0 5px rgba(91, 192, 190, 0.5);
+            box-shadow: 0 0 10px rgba(233, 180, 76, 0.3);
         }
 
         textarea {
-            height: 120px;
+            height: 150px;
             resize: vertical;
         }
 
         button {
             display: inline-block;
-            background-color: rgb(173, 152, 31);
+            background-color: var(--secondary-color);
             color: var(--bg-color);
             padding: 14px 30px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             transition: var(--transition);
@@ -136,7 +155,7 @@
 
         button:hover {
             background-color: var(--accent-color);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         #whatsapp-button {
@@ -147,7 +166,7 @@
             color: var(--bg-color);
             padding: 14px 30px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             text-decoration: none;
@@ -163,17 +182,34 @@
 
         #whatsapp-button:hover {
             background-color: #128C7E;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+        }
+
+        /* Style the map container */
+        #map-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the map iframe */
+        #map-container iframe {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            border: none;
         }
 
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 60px;
+            padding: 40px;
             background-color: var(--primary-color);
             color: var(--accent-color);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
         .footer-content {
@@ -185,12 +221,13 @@
 
         .footer-column {
             flex: 1;
-            margin: 10px;
+            margin: 20px;
+            text-align: left;
         }
 
         .footer-column h3 {
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-size: 1.3em;
             color: var(--secondary-color);
         }
 
@@ -200,19 +237,30 @@
         }
 
         .footer-column ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-column ul li a {
             color: var(--text-color);
             text-decoration: none;
+            transition: var(--transition);
         }
 
         .footer-column ul li a:hover {
             color: var(--secondary-color);
         }
 
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
         @media screen and (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
             .footer-content {
                 flex-direction: column;
                 align-items: center;
@@ -220,6 +268,7 @@
 
             .footer-column {
                 margin: 20px 0;
+                text-align: center;
             }
         }
     </style>
@@ -232,54 +281,69 @@
                 <a href="#" class="logo-text">Shutters & Blinds</a>
             </div>
             <h1>Get a Quote</h1>
-            <p class="tagline">Your home, your style</p>
-            <center>
-                <p style="background-color: yellow; padding: 5px; display: inline-block;">
-                  <a href="index.html" style="text-decoration: none; color: black;">Home Page</a>
-                </p>
-            </center>
+            <p class="tagline">Transform Your Space with Elegance</p>
+            <nav>
+                <a href="index.html" class="nav-link">Home Page</a>
+            </nav>
         </header>
 
-        <form id="quoteForm">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="product">Product</label>
-                <select id="product" name="product" required>
-                    <option value="">Select a product</option>
-                    <option value="shutters">Shutters</option>
-                    <option value="blinds">Blinds</option>
-                    <option value="flyscreens">Flyscreens</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Additional Details</label>
-                <textarea id="message" name="message" placeholder="Please provide any additional details or specific requirements"></textarea>
-            </div>
-            <button type="submit">Submit Quote Request</button>
-        </form>
+        <main>
+            <section id="quote-form">
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select a product</option>
+                            <option value="shutters">Shutters</option>
+                            <option value="blinds">Blinds</option>
+                            <option value="flyscreens">Flyscreens</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" placeholder="Please provide any additional details or specific requirements"></textarea>
+                    </div>
+                    <button type="submit">Submit Quote Request</button>
+                </form>
 
-        <a href="https://wa.me/27648784287?text=I%20would%20like%20to%20get%20a%20quote%20for%20[Product]%20please." id="whatsapp-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            WhatsApp us
-        </a>
+                <div id="contact-options">
+                    <a href="https://wa.me/27648784287?text=I%20would%20like%20to%20get%20a%20quote%20please." id="whatsapp-button">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        WhatsApp us
+                    </a>
+                </div>
+            </section>
+
+
+            <section id="map-container">
+                <iframe
+                    id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.19158344077!2d31.02417217489434!3d-29.858748222688952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9c9dc0cfb2f%3A0x3a40134958919c48!2sDurban%20Central%20Public%20Library!5e0!3m2!1sen!2sza!4v1725092484526!5m2!1sen!2sza"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </section>
+
+        </main>
 
         <footer>
             <div class="footer-content">
                 <div class="footer-column">
-                    <p>© 2023 Shutters & Blinds. All rights reserved.</p>
+                    <h3>Contact Us</h3>
                     <p>123 Shutter Street, Durban</p>
-                    <p>Phone: 031 123 4567 | Email: info@shuttersandblinds.co.za</p>
+                    <p>Phone: 031 123 4567</p>
+                    <p>Email: info@shuttersandblinds.co.za</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -289,6 +353,9 @@
                         <li><a href="index.html#testimonials">Testimonials</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Shutters & Blinds. All rights reserved.</p>
             </div>
         </footer>
     </div>
