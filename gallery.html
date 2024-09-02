@@ -365,6 +365,13 @@
             }
         }
 
+        /* Instagram Embed Styles */
+        #instagram-widget {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
         @media screen and (max-width: 768px) {
             .burger {
                 display: block;
@@ -406,6 +413,17 @@
 
             .category-btn {
                 margin: 5px;
+            }
+
+            /* Instagram Embed Styles */
+            #instagram-widget {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #instagram-widget iframe {
+                width: 100%;
+                max-width: 400px; /* Adjust as needed for mobile */
             }
         }
     </style>
@@ -519,8 +537,22 @@
     </section>
 
     <div class="image-button">
-    <a href="quote.html">Get a Quote</a>
-    </div>
+        <a href="quote.html">Get a Quote</a>
+        </div>
+
+    <section id="instagram-feed">
+        <div class="container">
+            <center><h2>Follow Us on Instagram</h2></center>
+            <div id="instagram-widget">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/shutters_andblinds" data-instgrm-version="12" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/shutters_andblinds" style="text-decoration:none; color:#3897f0;" target="_blank">View this post on Instagram</a>
+                    </div>
+                </blockquote>
+                <script async src="https://www.instagram.com/embed.js"></script>
+            </div>
+        </div>
+    </section>
 
     <a href="https://wa.me/27648784287" id="whatsapp-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -548,7 +580,7 @@
                     <h3>Follow Us</h3>
                     <ul>
                         <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/shutters_andblinds" target="_blank">Instagram</a></li>
                         <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
                     </ul>                    
                 </div>
