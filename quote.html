@@ -6,375 +6,39 @@
     <title>Get a Quote - Shutters & Blinds</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-    :root {
-    --primary-color: #FFD700; /* Gold */
-    --secondary-color: #C79E5C; /* Darker Gold */
-    --accent-color: #FFD700; /* Gold */
-    --text-color: #333; /* Dark Grey */
-    --bg-color: #fff; /* White */
-    --white: #fff; /* White */
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background-color: var(--bg-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-}
-
-
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .logo-img {
-        width: 50px;
-        height: auto;
-        margin-right: 10px;
-    }
-
-    .logo-text {
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--primary-color);
-        text-decoration: none;
-        transition: var(--transition);
-    }
-
-    .logo-text:hover {
-        color: var(--secondary-color);
-    }
-
-    h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-
-    .tagline {
-        font-size: 18px;
-        color: var(--secondary-color);
-        margin-bottom: 20px;
-    }
-
-    nav {
-        margin-top: 20px;
-    }
-
-    nav ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        margin: 5px 15px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: var(--text-color);
-        font-weight: 500;
-        transition: var(--transition);
-        position: relative;
-    }
-
-    nav ul li a:hover {
-        color: var(--primary-color);
-    }
-
-    nav ul li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background: var(--primary-color);
-        bottom: -5px;
-        left: 0;
-        transition: var(--transition);
-    }
-
-    nav ul li a:hover::after {
-        width: 100%;
-    }
-
-    .cta-nav {
-        background-color: var(--primary-color);
-        color: var(--white) !important;
-        padding: 12px 30px;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: var(--transition);
-    }
-
-    .cta-nav:hover {
-        background-color: var(--secondary-color);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .burger {
-        display: none;
-        cursor: pointer;
-    }
-
-    .burger div {
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-color);
-        margin: 5px;
-        transition: var(--transition);
-    }
-
-    main {
-        padding: 40px 0;
-    }
-
-    #quote-form {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: var(--bg-color);
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 600;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    textarea {
-        height: 100px;
-        resize: vertical;
-    }
-
-    button[type="submit"] {
-        background-color: var(--primary-color);
-        color: var(--white);
-        border: none;
-        padding: 12px 20px;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: var(--transition);
-        display: block;
-        margin: 0 auto;
-        width: fit-content;
-    }
-
-    button[type="submit"]:hover {
-        background-color: var(--secondary-color);
-    }
-
-    #contact-options {
-        margin-top: 30px;
-        text-align: center;
-    }
-
-    #whatsapp-button {
-        display: inline-flex;
-        align-items: center;
-        background-color: #25D366;
-        color: var(--white);
-        padding: 12px 24px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: var(--transition);
-    }
-
-    #whatsapp-button:hover {
-        background-color: #128C7E;
-    }
-
-    #whatsapp-button img {
-        width: 24px;
-        height: 24px;
-        margin-right: 10px;
-    }
-
-    #map-container {
-        margin-top: 40px;
-    }
-
-    #map {
-        width: 100%;
-        height: 400px;
-        border: none;
-        border-radius: 8px;
-    }
-
-    footer {
-    background-color: #333;
-    color: var(--white);
-    padding: 40px 0;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-    .footer-column {
-        flex: 1;
-        margin-bottom: 20px;
-        min-width: 200px;
-    }
-
-    .footer-column h3 {
-        color: var(--accent-color);
-        margin-bottom: 15px;
-    }
-
-    .footer-column ul {
-        list-style-type: none;
-    }
-
-    .footer-column ul li {
-        margin-bottom: 10px;
-    }
-
-    .footer-column ul li a {
-        color: var(--white);
-        text-decoration: none;
-        transition: var(--transition);
-    }
-
-    .footer-column ul li a:hover {
-        color: var(--accent-color);
-    }
-
-    .copyright {
-        text-align: center;
-        margin-top: 20px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    @media screen and (max-width: 768px) {
-        h1 {
-            font-size: 28px;
-        }
-
-        .tagline {
-            font-size: 16px;
-        }
-
-        #quote-form {
-            padding: 20px;
-        }
-
-        .footer-content {
-            flex-direction: column;
-        }
-
-        nav {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        background-color: var(--white);
-        width: 70%;
-        height: 100vh;
-        transition: right 0.3s ease-in;
-        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    nav.active {
-        right: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 70px;
-    }
-
-    nav ul li {
-        margin: 20px 0;
-    }
-
-    .burger {
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1001;
-    }
-}
-    </style>
+    <link rel="stylesheet" href="quote-page.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo-container">
-                <img src="images/shutters and blinds logo.png" alt="Shutters & Blinds Logo" class="logo-img">
-                <a href="#" class="logo-text">Shutters & Blinds</a>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="logo/Luxury_S&B_logo-06.png" alt="Shutters & Blinds Logo" class="logo-img">
+  <a href="#" class="gradient-logo-text">Luxury Shutters & Blinds</a>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#gallery-categories">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
-            <h1>Get a Quote</h1>
-            <p class="tagline">Transform Your Space with Elegance</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#gallery-categories">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </header>
+        </div>
+    </header>
 
-        <main>
-            <section id="quote-form">
-                <form id="quoteForm">
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Get a Quote</h1>
+                <p class="section-text">Transform Your Space with Elegance</p>
+                <form id="quote-form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -402,25 +66,23 @@ header {
                     </div>
                     <button type="submit">Submit Quote Request</button>
                 </form>
+            </div>
+        </section>
 
-                <div id="contact-options">
-                    <a href="https://wa.me/27648784287?text=I%20would%20like%20to%20get%20a%20quote%20please." id="whatsapp-button">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                        WhatsApp us
-                    </a>
-                </div>
-            </section>
-
-            <section id="map-container">
+        <section id="map-container" class="section">
+            <div class="container">
+                <h2 class="section-title">Find Us</h2>
                 <iframe
                     id="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.19158344077!2d31.02417217489434!3d-29.858748222688952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9c9dc0cfb2f%3A0x3a40134958919c48!2sDurban%20Central%20Public%20Library!5e0!3m2!1sen!2sza!4v1725092484526!5m2!1sen!2sza"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer>
+    <footer>
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Contact Us</h3>
@@ -437,14 +99,19 @@ header {
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>© 2023 Shutters & Blinds. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Shutters & Blinds. All rights reserved.</p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/27648784287?text=I%20would%20like%20to%20get%20a%20quote%20please." id="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        WhatsApp us
+    </a>
 
     <script>
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
             e.preventDefault();
             console.log('Form submitted');
             alert('Thank you for your quote request. We will get back to you soon!');
