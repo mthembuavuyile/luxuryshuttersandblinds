@@ -309,6 +309,17 @@
             transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        /* Map Styles */
+#map-container {
+  margin-top: 50px;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: var(--border-radius);
+}
 
         @media screen and (max-width: 768px) {
             .burger {
@@ -387,28 +398,28 @@
                     <h2>Get in Touch</h2>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>123 Shutter Street, Durban, South Africa</p>
+                        <p>24 Carmichael Place, Woodlands, Durban, 4004</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <p>+27 71 234 5678</p>
+                        <p>+27 73 289 9370</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>info@shuttersandblinds.co.za</p>
+                        <p>info@luxuryshuttersandblinds.co.za</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <p>Mon-Fri: 9am-5pm, Sat: 10am-2pm</p>
                     </div>
                     <div class="contact-links">
-                        <a href="tel:+27712345678" class="contact-link phone-link">
+                        <a href="tel:+27 73 289 9370" class="contact-link phone-link">
                             <i class="fas fa-phone"></i> Call Us
                         </a>
-                        <a href="mailto:info@shuttersandblinds.co.za" class="contact-link email-link">
+                        <a href="mailto:info@luxuryshuttersandblinds.co.za" class="contact-link email-link">
                             <i class="fas fa-envelope"></i> Email Us
                         </a>
-                        <a href="https://wa.me/27648784287" class="contact-link whatsapp-link" target="_blank">
+                        <a href="https://wa.me/27732899370" class="contact-link whatsapp-link" target="_blank">
                             <i class="fab fa-whatsapp"></i> WhatsApp
                         </a>
                         <a href="https://www.instagram.com/designerblindsandshutters" class="contact-link instagram-link" target="_blank">
@@ -420,15 +431,27 @@
         </div>
     </section>
 
+    <section id="map-container" class="section">
+        <div class="container">
+            <center><h2 class="section-title">Find Us</h2></center>
+            <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza"
+                width="600" height="450" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p>123 Shutter Street, Durban</p>
-                    <p>Phone: (031) 123-4567</p>
-                    <p>Email: info@shuttersandblinds.com</p>
-                </div>
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
+                    <p><strong>Phone:</strong> +27 73 289 9370</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
+                </div>            
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
@@ -454,7 +477,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/27648784287" id="whatsapp-button" target="_blank">
+    <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
         WhatsApp us
     </a>
