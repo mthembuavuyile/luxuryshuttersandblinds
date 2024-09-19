@@ -323,6 +323,25 @@ footer a {
   margin-right: 10px;
 }
 /* Button Styles */
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease 1s forwards;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--hover-shadow);
+}
+
 /* Button Container */
 .button-container {
   display: flex;
@@ -331,31 +350,6 @@ footer a {
   flex-wrap: wrap;
 }
 
-/* Common Button Styles */
-.cta-button {
-  display: inline-block;
-  color: var(--white);
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease 1s forwards;
-  min-width: 200px;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Individual Button Colors */
 .button-bg-1 { 
   background-color: #4CAF50; /* Green */
 }
@@ -366,18 +360,11 @@ footer a {
   background-color: #FFC107; /* Amber */
 }
 
-/* Hover Effects */
-.button-bg-1:hover {
-  background-color: #45a049;
-}
-.button-bg-2:hover {
-  background-color: #1e87db;
-}
+.button-bg-1:hover,
+.button-bg-2:hover,
 .button-bg-3:hover {
-  background-color: #e6ae06;
+  filter: brightness(110%);
 }
-
-/* Ensure buttons maintain shape on smaller screens */
 @media screen and (max-width: 768px) {
   .button-container {
     flex-direction: column;
