@@ -384,6 +384,8 @@ footer a {
   flex-wrap: wrap;
   gap: 20px;
   padding: 50px 0;
+  width: 95%;
+  margin: auto;
 }
 
 .image-button {
