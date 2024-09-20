@@ -68,7 +68,7 @@ header {
   font-family: 'Arial', sans-serif;
   font-size: 23px;
   font-weight: bold;
-  background: linear-gradient(to right, #c9aa83, #dac6a6);
+  background: linear-gradient(45deg, #b8860b, #ffd700);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -229,10 +229,15 @@ nav ul li a:hover::after {
   object-fit: cover;
 }
 
-.product-item h3,
+.product-item h3{
+  padding: 20px;
+  font-size: 24px;
+  color:black;
+}
 .testimonial-item .author {
   padding: 20px;
   font-size: 24px;
+  color: #b8860b;
 }
 
 .testimonial-item {
@@ -284,7 +289,7 @@ footer {
 }
 
 .footer-bottom {
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -351,18 +356,10 @@ footer a {
 }
 
 .button-bg-1 { 
-  background-color: #4CAF50; /* Green */
-}
-.button-bg-2 { 
-  background-color: #2196F3; /* Blue */
-}
-.button-bg-3 { 
-  background-color: #FFC107; /* Amber */
+  background-color: #b8860b;
 }
 
-.button-bg-1:hover,
-.button-bg-2:hover,
-.button-bg-3:hover {
+.button-bg-1:hover {
   filter: brightness(110%);
 }
 @media screen and (max-width: 768px) {
