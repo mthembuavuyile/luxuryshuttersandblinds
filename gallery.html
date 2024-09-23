@@ -7,50 +7,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
---primary-color: #FFD700; /* Gold */
---secondary-color: #C79E5C; /* Darker Gold */
---accent-color: #FFD700; /* Gold */
---text-color: #333; /* Dark Grey */
---bg-color: #fff; /* White */
---white: #fff; /* White */
---transition: all 0.3s ease;
+  --primary-color: #FFD700;
+  --secondary-color: #C79E5C;
+  --accent-color: #FFD700;
+  --text-color: #333;
+  --bg-color: #fff;
+  --white: #fff;
+  --transition: all 0.3s ease;
 }
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-font-family: 'Poppins', sans-serif;
-line-height: 1.6;
-color: var(--text-color);
-overflow-x: hidden;
-background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
-background-color: var(--bg-color);
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-position: fixed;
-width: 100%;
-z-index: 1000;
-transition: var(--transition);
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: var(--transition);
 }
 
 .header-content {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
+
 .gradient-logo-text {
   font-family: 'Arial', sans-serif;
   font-size: 23px;
@@ -63,323 +64,324 @@ padding: 15px 0;
 }
 
 .logo-container {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo-img {
-width: 50px;
-height: auto;
-margin-right: 10px;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .logo-text {
-font-size: 24px;
-font-weight: 700;
-color: var(--primary-color);
-text-decoration: none;
-transition: var(--transition);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 .logo-text:hover {
-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 nav ul {
-display: flex;
-list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 nav ul li {
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 nav ul li a {
-text-decoration: none;
-color: var(--text-color);
-font-weight: 500;
-transition: var(--transition);
-position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
 }
 
 nav ul li a:hover {
-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 nav ul li a::after {
-content: '';
-position: absolute;
-width: 0;
-height: 2px;
-background: var(--primary-color);
-bottom: -5px;
-left: 0;
-transition: var(--transition);
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: var(--transition);
 }
 
 nav ul li a:hover::after {
-width: 100%;
+  width: 100%;
 }
 
 .burger {
-display: none;
-cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .burger div {
-width: 25px;
-height: 3px;
-background-color: var(--text-color);
-margin: 5px;
-transition: var(--transition);
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px;
+  transition: var(--transition);
 }
 
 .gallery-hero {
-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/black\ shutters.jpg) no-repeat center center/cover;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-color: var(--white);
-padding: 0 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/black\ shutters.jpg) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
 }
 
 .gallery-hero h1 {
-font-size: 48px;
-margin-bottom: 20px;
-opacity: 0;
-transform: translateY(20px);
-animation: fadeInUp 1s ease forwards;
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
 
 .gallery-hero p {
-font-size: 18px;
-margin-bottom: 30px;
-opacity: 0;
-transform: translateY(20px);
-animation: fadeInUp 1s ease 0.5s forwards;
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease 0.5s forwards;
 }
 
 .gallery-categories {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
 .category-btn {
-background-color: var(--bg-color);
-border: none;
-padding: 0.5rem 1rem;
-margin: 0.5rem;
-cursor: pointer;
-font-size: 1rem;
-transition: background-color 0.3s ease;
+  background-color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .category-btn.active,
 .category-btn:hover {
-background-color: var(--primary-color);
-color: var(--white);
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 .gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 3rem;
 }
 
 .gallery-item {
-position: relative;
-overflow: hidden;
-border-radius: 5px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
 }
 
 .gallery-item:hover {
-transform: translateY(-10px);
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-item img {
-width: 100%;
-height: auto;
-display: block;
-transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: rgba(0, 0, 0, 0.7);
-color: var(--white);
-padding: 1rem;
-transform: translateY(100%);
-transition: transform 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
 .gallery-item:hover .overlay {
-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .overlay h3 {
-margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .testimonial {
-background-color: var(--bg-color);
-padding: 4rem 0;
-text-align: center;
+  background-color: var(--bg-color);
+  padding: 4rem 0;
+  text-align: center;
 }
 
 .testimonial-content {
-max-width: 800px;
-margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .testimonial-text {
-font-size: 1.25rem;
-font-style: italic;
-margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .testimonial-author {
-font-weight: bold;
+  font-weight: bold;
 }
 
-/* Footer styles */
 footer {
-background-color: #333; /* Dark Grey */
-color: var(--white);
-padding: 60px 0;
+  background-color: #333;
+  color: var(--white);
+  padding: 60px 0;
+}
+footer p a{
+  color: white;
 }
 
 .footer-content {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .footer-column {
-flex: 1;
-margin-bottom: 20px;
-min-width: 205px;
-text-align: left;
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 205px;
+  text-align: left;
 }
 
 .footer-column h3 {
-margin-bottom: 20px;
-color: var(--accent-color); /* Gold */
-font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  font-size: 20px;
 }
 
 .footer-column ul {
-list-style-type: none;
+  list-style-type: none;
 }
 
 .footer-column ul li {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
-color: var(--white);
-text-decoration: none;
-transition: var(--transition);
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
 }
 
 .footer-column ul li a:hover {
-color: var(--accent-color); /* Gold */
+  color: var(--accent-color);
 }
 
 .footer-bottom {
-text-align: center;
-margin-top: 40px;
-padding-top: 20px;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.image-button{
-text-align: center;
+
+.image-button {
+  text-align: center;
 }
 
 .image-button a {
-background: grey;
-color: gold;
-text-align: center;
-margin-bottom: 15px;
-border-radius: 10px;
-padding: 10px 20px;
-font-weight: bold;
-text-decoration: none;
-display: inline-block;
-text-align: center;
+  background: grey;
+  color: gold;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 #whatsapp-button {
-position: fixed;
-bottom: 20px;
-right: 20px;
-display: inline-flex;
-align-items: center;
-background-color: #25D366;
-color: var(--white);
-padding: 12px 24px;
-border-radius: 50px;
-text-decoration: none;
-font-weight: bold;
-z-index: 1000;
-transition: var(--transition);
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #25D366;
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #whatsapp-button:hover {
-background-color: #128C7E;
-transform: translateY(-3px);
-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 #whatsapp-button img {
-width: 24px;
-height: 24px;
-margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 .cta-nav {
-background-color: var(--primary-color); /* Gold */
-color: var(--white) !important;
-padding: 12px 30px;
-border-radius: 5px;
-font-weight: 600;
-transition: var(--transition);
+  background-color: var(--primary-color);
+  color: var(--white) !important;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
 }
 
 .cta-nav:hover {
-background-color: var(--secondary-color); /* Darker Gold */
-transform: translateY(-3px);
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeInUp {
-to {
-opacity: 1;
-transform: translateY(0);
-}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Instagram Embed Styles */
 #instagram-widget {
-display: flex;
-justify-content: center;
-margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
 }
 
 .instagram-grid {
@@ -390,6 +392,7 @@ margin: 2rem 0;
   width: 100%;
   max-width: 1200px;
 }
+
 .instagram-post {
   background-color: #fff;
   border-radius: 8px;
@@ -397,6 +400,7 @@ margin: 2rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
+
 .follow-button {
   display: block;
   width: 80%;
@@ -412,62 +416,61 @@ margin: 2rem 0;
 }
 
 @media screen and (max-width: 768px) {
-.burger {
-display: block;
-}
+  .burger {
+    display: block;
+  }
 
-nav {
-position: absolute;
-right: 0;
-top: 70px;
-background-color: var(--white);
-width: 50%;
-height: calc(100vh - 70px);
-transform: translateX(100%);
-transition: transform 0.3s ease-in;
-box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-}
+  nav {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    background-color: var(--white);
+    width: 50%;
+    height: calc(100vh - 70px);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  }
 
-nav.active {
-transform: translateX(0%);
-}
+  nav.active {
+    transform: translateX(0%);
+  }
 
-nav ul {
-flex-direction: column;
-align-items: center;
-padding-top: 30px;
-}
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
 
-nav ul li {
-margin: 20px 0;
-}
+  nav ul li {
+    margin: 20px 0;
+  }
 
-.gallery-hero h1 {
-font-size: 36px;
-}
+  .gallery-hero h1 {
+    font-size: 36px;
+  }
 
-.gallery-hero p {
-font-size: 16px;
-}
+  .gallery-hero p {
+    font-size: 16px;
+  }
 
-.category-btn {
-margin: 5px;
-}
+  .category-btn {
+    margin: 5px;
+  }
 
-/* Instagram Embed Styles */
-#instagram-widget {
-flex-direction: column;
-align-items: center;
-}
+  #instagram-widget {
+    flex-direction: column;
+    align-items: center;
+  }
 
-#instagram-widget iframe {
-width: 100%;
-max-width: 400px; /* Adjust as needed for mobile */
-}
+  #instagram-widget iframe {
+    width: 100%;
+    max-width: 400px;
+  }
 
-.instagram-grid {
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-}
+  .instagram-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
 }
 </style>
 </head>
@@ -478,12 +481,14 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   <img src="logo/Luxury_S&B_logo-06.png" alt="Shutters & Blinds Logo" class="logo-img">
   <a href="#" class="gradient-logo-text">Luxury Shutters & Blinds</a>
   <nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="#gallery-categories">Products</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="quote.html">Quote</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+  </ul>
 </nav>
 <div class="burger">
 <div class="line1"></div>
@@ -496,86 +501,10 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 <section id="gallery" class="gallery-hero">
 <div class="container">
-<h1>View Our Gallery</h1>
+<h1>View Our Product Gallery</h1>
 <p>Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds, our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and envision the possibilities for your own home or office.</p>
 </div>
 </section>
-
-<section id="gallery-categories" class="container">
-<div class="gallery-categories">
-<button class="category-btn active" data-filter="all">All</button>
-<button class="category-btn" data-filter="shutters">Shutters</button>
-<button class="category-btn" data-filter="blinds">Blinds</button>
-<button class="category-btn" data-filter="residential">Residential</button>
-<button class="category-btn" data-filter="commercial">Commercial</button>
-</div>
-
-<div class="gallery" id="gallery-grid">
-<div class="gallery-item shutters residential" data-category="shutters, residential">
-<img src="https://media.istockphoto.com/id/147205658/photo/low-angle-view-of-wood-shutters-on-modern-house.jpg?s=612x612&w=0&k=20&c=lksdmawW-I1gNLuyBUI08f5lp1VThKsj53K95Es9xoo=" alt="Wooden Shutters">
-<div class="overlay">
-<h3>Wooden Shutters</h3>
-<p>Elegant wooden shutters for a classic look</p>
-</div>
-</div>
-<div class="gallery-item shutters residential" data-category="blinds, commercial">
-<img src="https://media.istockphoto.com/id/1460837047/photo/pleated-blinds-xl-close-uo-on-the-window.jpg?s=612x612&w=0&k=20&c=-QCPs9MUN5o3t3VkiBkaXbr62V7Qb9hJIL6nvYz0LTQ=" alt="Vertical Blinds">
-<div class="overlay">
-<h3>Vertical Blinds</h3>
-<p>Modern vertical blinds for large windows</p>
-</div>
-</div>
-<div class="gallery-item blinds residential" data-category="blinds, residential">
-<img src="https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4=" alt="Roller Blinds">
-<div class="overlay">
-<h3>Roller Blinds</h3>
-<p>Sleek roller blinds for a minimalist aesthetic</p>
-</div>
-</div>
-<div class="gallery-item shutters residential" data-category="shutters, residential">
-<img src="https://media.istockphoto.com/id/1333492725/photo/plantation-shutters.jpg?s=612x612&w=0&k=20&c=2RYXEJPg74eVJ7cahAMaQAvjh9yr9aUIFV6kIq0TGKA=" alt="Plantation Shutters">
-<div class="overlay">
-<h3>Plantation Shutters</h3>
-<p>Classic plantation shutters for a timeless appeal</p>
-</div>
-</div>
-
-<div class="gallery-item shutters commercial" data-category="shutters, commercial">
-<img src="https://media.istockphoto.com/id/1071492116/photo/window-roller-shutters.jpg?s=612x612&w=0&k=20&c=nxrW8dSckVS1kLrx7X5cJ341b0xn57pNbXuRpSweyYw=" alt="Aluminum Shutters">
-<div class="overlay">
-<h3>Aluminum Shutters</h3>
-<p>Durable aluminum shutters for modern homes</p>
-</div>
-</div>
-<div class="gallery-item blinds residential" data-category="blinds, residential">
-<img src="https://media.istockphoto.com/id/1416972321/photo/pleated-blinds-xl-closeup-in-the-window-opening.jpg?s=612x612&w=0&k=20&c=fZIcKuil34CTm8U4e_nn-IpBvWD9S3neYfhsY4WaW8I=" alt="Cellular Shades">
-<div class="overlay">
-<h3>Cellular Shades</h3>
-<p>Energy-efficient cellular shades for insulation</p>
-</div>
-</div>
-
-<div class="gallery-item blinds residential" data-category="blinds, residential">
-  <img src="https://media.istockphoto.com/id/174072202/photo/contemporary-bathroom.jpg?s=612x612&w=0&k=20&c=85XAEAnTaTREXxqmdlvTJp0It3lg-tLNRSNanM3XYGg=" alt="Roman Blinds">
-  <div class="overlay">
-  <h3>Roman Blinds</h3>
-  <p>Luxurious Roman blinds for a soft, elegant look</p>
-  </div>
-  </div>
-
-<div class="gallery-item blinds residential" data-category="blinds, residential">
-<img src="https://media.istockphoto.com/id/1494734880/photo/modern-minimal-white-fabric-bolster-back-corner-sofa-cushion-wooden-side-table-on-japanese.jpg?s=612x612&w=0&k=20&c=MLxTqFQi_ipxcA8lM_ZjtmKR6ssv45Z7z3s37ACulw4=" alt="Bamboo Blinds">
-<div class="overlay">
-<h3>Bamboo Blinds</h3>
-<p>Natural bamboo blinds for an eco-friendly touch</p>
-</div>
-</div>
-</div>
-</section>
-
-<div class="image-button">
-<a href="quote.html">Get a Quote</a>
-</div>
 
 <section id="instagram-feed">
 <div class="container">
@@ -596,7 +525,7 @@ Follow Us on Instagram
   </div>
   </section>
 
-<a href="https://wa.me/27648784287" id="whatsapp-button">
+<a href="https://wa.me/27732899370" id="whatsapp-button">
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 WhatsApp us
 </a>
