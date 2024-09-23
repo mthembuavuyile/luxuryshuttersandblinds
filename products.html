@@ -5,89 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Window Treatment Products</title>
     <style>
-    :root {
-        --primary-color: #b8860b;
-        --text-color: #333;
-        --transition: all 0.3s ease;
-        --bg-color: #fff;
-        --burger-bg: #ffffff;
+      :root {
+          --primary-color: #b8860b;
+          --text-color: #333;
+          --transition: all 0.3s ease;
+          --bg-color: #fff;
+          --burger-bg: #ffffff;
       }
-      
+
+      html, body {
+          overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
       body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        overflow-x: hidden;
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
       }
-      
+
       .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        overflow: hidden;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          overflow: hidden;
       }
-      
+
       header {
-        background-color: var(--bg-color);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
+          background-color: var(--bg-color);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          padding: 10px 0;
       }
-      
+
       .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
       }
-      
+
       .logo-img {
-        max-height: 50px;
-        margin-right: 10px;
+          max-height: 50px;
+          margin-right: 10px;
       }
-      
+
       .gradient-logo-text {
-        font-family: 'Arial', sans-serif;
-        font-size: 23px;
-        font-weight: bold;
-        background: linear-gradient(45deg, #b8860b, #ffd700);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        text-transform: uppercase;
+          font-family: 'Arial', sans-serif;
+          font-size: 23px;
+          font-weight: bold;
+          background: linear-gradient(45deg, #b8860b, #ffd700);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          text-transform: uppercase;
       }
-      
+
       nav {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
+          display: flex;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          justify-content: center;
+          position: relative; /* Ensure it's positioned relative to its container */
       }
-      
+
       nav ul {
-        display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        justify-content: center;
-      }
-      
-      nav ul li {
-        margin: 0 15px;
-      }
-      
-      nav ul li a {
-        text-decoration: none;
-        color:#333;
-        font-weight: 500;
-        transition: var(--transition);
-        position: relative;
-      }
-      
-      nav ul li a:hover {
-        color: var(--primary-color);
-      }
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }nav ul li a:hover {
+            color: var(--primary-color);
+        }
       
       nav ul li a::after {
         content: '';
@@ -105,17 +107,17 @@
       }
       
       .burger {
-        display: none;
-        cursor: pointer;
-      }
-      
-      .burger div {
-        width: 25px;
-        height: 3px;
-        background-color: #000000; /* Change this line to black */
-        margin: 5px;
-        transition: var(--transition);
-      }
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #000000;
+            margin: 5px;
+            transition: var(--transition);
+        }
       
       h1 {
         text-align: center;
@@ -216,26 +218,26 @@
       }
       
       @media screen and (max-width: 768px) {
-        .burger {
-          display: block;
-        }
+            .burger {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                right: 0;
+                top: 70px;
+                background-color: var(--burger-bg);
+                width: 100%; /* Take full width */
+                max-width: 300px; /* Optional: Limit menu width */
+                height: calc(100vh - 70px);
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in;
+                box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+            }
       
-        nav {
-          position: absolute;
-          right: 0;
-          top: 70px;
-          background-color: var(--burger-bg);
-          width: 50%;
-          height: calc(100vh - 70px);
-          transform: translateX(100%);
-          transition: transform 0.3s ease-in;
-          box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-        }
-      
-        nav.active {
-          transform: translateX(0%);
-          background-color: var(--burger-bg);
-        }
+            nav.active {
+                transform: translateX(0);
+            }
       
         nav ul {
           flex-direction: column;
@@ -249,6 +251,9 @@
       
         nav ul li a:focus {
           outline: 2px solid var(--primary-color);
+        }
+        body.nav-active {
+        overflow: hidden; /* Prevent scroll when menu is open */
         }
       }
       
