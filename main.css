@@ -341,6 +341,7 @@ footer a {
   animation: fadeInUp 1s ease 1s forwards;
 }
 
+/* Hover Effect */
 .cta-button:hover {
   background-color: var(--secondary-color);
   transform: translateY(-3px);
@@ -351,10 +352,11 @@ footer a {
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Space between buttons */
   flex-wrap: wrap;
 }
 
+/* Background Style */
 .button-bg-1 { 
   background-color: #b8860b;
 }
@@ -362,6 +364,8 @@ footer a {
 .button-bg-1:hover {
   filter: brightness(110%);
 }
+
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .button-container {
     flex-direction: column;
@@ -370,10 +374,11 @@ footer a {
   
   .cta-button {
     width: 100%;
-    margin: 4px;
+    margin: 10px 0; /* Add vertical margin for spacing */
     max-width: 300px;
   }
 }
+
 
 /* Image Buttons */
 .image-buttons {
