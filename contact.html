@@ -151,39 +151,40 @@
         }
 
         .contact-info {
-            text-align: center;
-        }
+    text-align: center;
+}
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
 
-        .contact-item i {
-            font-size: 24px;
-            margin-right: 15px;
-            color: var(--accent-color);
-        }
+.contact-item i {
+    font-size: 28px; /* Increased icon size */
+    margin-right: 15px;
+    color: var(--accent-color);
+}
 
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap for tighter alignment */
+    margin-top: 20px; /* Reduced margin for consistency */
+}
 
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: var(--transition);
-        }
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
 
         .phone-link {
             background-color: #4CAF50;
@@ -219,6 +220,9 @@
             background-color: #333; /* Dark Grey */
             color: var(--white);
             padding: 60px 0;
+        }
+        footer a{
+            color: white;
         }
 
         .footer-content {
@@ -376,9 +380,11 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#products">Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quote.html">Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </nav>
                 <div class="burger">
@@ -398,7 +404,10 @@
                     <h2>Get in Touch</h2>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>24 Carmichael Place, Woodlands, Durban, 4004</p>
+                        <div>
+                            <p><strong>(By Appointment Only)</strong></p>
+                            <p>24 Carmichael Place, Woodlands, Durban, 4004</p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -412,6 +421,8 @@
                         <i class="fas fa-clock"></i>
                         <p>Mon-Fri: 9am-5pm, Sat: 10am-2pm</p>
                     </div>
+                </div>
+                
                     <div class="contact-links">
                         <a href="tel:+27 73 289 9370" class="contact-link phone-link">
                             <i class="fas fa-phone"></i> Call Us
@@ -434,14 +445,18 @@
     <section id="map-container" class="section">
         <div class="container">
             <center><h2 class="section-title">Find Us</h2></center>
-            <iframe
-                id="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza"
-                width="600" height="450" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <p style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 20px;">By Appointment Only</p>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <iframe
+                    id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza"
+                    width="100%" height="450" style="border:0; max-width: 900px; border-radius: 10px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
         </div>
     </section>
+    
 
     <footer>
         <div class="container">
@@ -449,6 +464,7 @@
                 <div class="footer-column">
                     <h3>Get in Touch</h3>
                     <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
+                    <p><strong>(By Appointment Only)</strong></p>
                     <p><strong>Phone:</strong> +27 73 289 9370</p>
                     <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
                 </div>            
@@ -456,10 +472,11 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#products">Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quote.html">Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
