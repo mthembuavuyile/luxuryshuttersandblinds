@@ -175,13 +175,14 @@
             margin-bottom: 20px;
         }
 
-        
-
         /* Footer styles */
         footer {
             background-color: #333; /* Dark Grey */
             color: var(--white);
             padding: 60px 0;
+        }
+        footer a{
+            color: white;
         }
 
         .footer-content {
@@ -257,7 +258,29 @@
             height: 24px;
             margin-right: 10px;
         }
-
+    
+        .cta-button {
+    background-color: #FFD700;
+    border: 2px solid #323634;
+    border-radius: 25px;
+    color: #333;
+    font-size: 10px;
+    margin: 5px 0;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 5px;
+}
+        
         .cta-nav {
             background-color: var(--primary-color); /* Gold */
             color: var(--white) !important;
@@ -319,6 +342,7 @@
                 font-size: 16px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -332,10 +356,11 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#products">Products</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quote.html">Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
                 </nav>
                 <div class="burger">
@@ -350,14 +375,14 @@
     <section id="about" class="about-hero">
         <div class="container">
             <h1>About Shutters & Blinds</h1>
-            <p>Elevating homes and offices since 2010</p>
+            <p>Elevating homes and offices since 2015</p>
         </div>
     </section>
 
     <section class="about-content">
         <div class="container">
             <h2>Our Story</h2>
-            <p>Founded in 2010 in the vibrant city of Durban, KZN, Shutters & Blinds began with a simple mission: to offer high-quality window treatments that blend functionality, style, and innovation. What started as a small family business has blossomed into a leading provider of shutters, blinds, and shades across South Africa.</p>
+            <p>Founded in 2015 in the vibrant city of Durban, KZN, Shutters & Blinds began with a simple mission: to offer high-quality window treatments that blend functionality, style, and innovation. What started as a small family business has blossomed into a leading provider of shutters, blinds, and shades across South Africa.</p>
             <p>Our journey is marked by a commitment to excellence, a passion for design, and an unwavering dedication to customer satisfaction. Over the years, we've expanded our product range, embraced new technologies, and honed our craft to meet the evolving needs of our clients.</p>
             <h2>Our Values</h2>
             <p>At Shutters & Blinds, we are guided by values of integrity, craftsmanship, and customer-centric service. Our team is devoted to delivering products that not only elevate the aesthetics of your space but also ensure long-lasting durability and performance. Proudly rooted in Durban, we bring local expertise and a personal touch to every project we undertake.</p>
@@ -367,13 +392,14 @@
     <section id="button-section" class="section">
         <div class="container">
             <div class="button-container">
-                <p><a href="quote.html" class="cta-button button-bg-2">Get a Quote</a></p>
-                <p><a href="gallery.html" class="cta-button button-bg-3">View Gallery</a></p>
+                <p><a href="quote.html" class="cta-button">Get a Quote</a></p>
+                <p><a href="gallery.html" class="cta-button">View Gallery</a></p>
+                <p><a href="contact.html" class="cta-button">Contact us</a></p>
             </div>
         </div>
-    </section>
+    </section>       
     
-    <a href="https://wa.me/27648784287" id="whatsapp-button">
+    <a href="https://wa.me/27732899370" id="whatsapp-button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         WhatsApp us
     </a>
@@ -400,13 +426,15 @@
                     <h3>Follow Us</h3>
                     <ul>
                         <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank">Instagram</a></li>
                         <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
                     </ul>                    
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2024 Shutters & Blinds. All rights reserved.</p>
+                <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/">Vylex Nexys</a></p>
+
             </div>
         </div>
     </footer>
