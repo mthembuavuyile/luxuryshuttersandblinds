@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Treatment Products</title>
+    <style>
+    :root {
+        --primary-color: #b8860b;
+        --text-color: #333;
+        --transition: all 0.3s ease;
+        --bg-color: #fff;
+        --burger-bg: #ffffff;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        overflow-x: hidden;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        overflow: hidden;
+      }
+      
+      header {
+        background-color: var(--bg-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+      }
+      
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo-img {
+        max-height: 50px;
+        margin-right: 10px;
+      }
+      
+      .gradient-logo-text {
+        font-family: 'Arial', sans-serif;
+        font-size: 23px;
+        font-weight: bold;
+        background: linear-gradient(45deg, #b8860b, #ffd700);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+      }
+      
+      nav {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+      }
+      
+      nav ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 0 15px;
+      }
+      
+      nav ul li a {
+        text-decoration: none;
+        color:#333;
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+      }
+      
+      nav ul li a:hover {
+        color: var(--primary-color);
+      }
+      
+      nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #ffffff;
+        bottom: -5px;
+        left: 0;
+        transition: var(--transition);
+      }
+      
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+      
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+      
+      .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #000000; /* Change this line to black */
+        margin: 5px;
+        transition: var(--transition);
+      }
+      
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      
+      .description {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        color: #666;
+      }
+      
+      .filter-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+      
+      .filter-button {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .filter-button.active {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+      
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      
+      .product-item {
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      
+      .product-item:hover {
+        transform: translateY(-5px);
+      }
+      
+      .product-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      .product-info {
+        padding: 15px;
+      }
+      
+      .product-info h3 {
+        margin: 0 0 10px;
+        color: #333;
+      }
+      
+      .product-info p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9em;
+      }
+      
+      .quote-button {
+        display: block;
+        width: 200px;
+        margin: 30px auto;
+        padding: 10px 20px;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      
+      .quote-button:hover {
+        background-color: #ffd700;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 50px;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .burger {
+          display: block;
+        }
+      
+        nav {
+          position: absolute;
+          right: 0;
+          top: 70px;
+          background-color: var(--burger-bg);
+          width: 50%;
+          height: calc(100vh - 70px);
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in;
+          box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        nav.active {
+          transform: translateX(0%);
+          background-color: var(--burger-bg);
+        }
+      
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          padding-top: 30px;
+        }
+      
+        nav ul li {
+          margin: 20px 0;
+        }
+      
+        nav ul li a:focus {
+          outline: 2px solid var(--primary-color);
+        }
+      }
+      
+      @media (max-width: 600px) {
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="logo/Luxury_S&B_logo-06.png" alt="Shutters & Blinds Logo" class="logo-img">
+                <a href="#" class="gradient-logo-text">Luxury Shutters & Blinds</a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quote.html">Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>View Our Products</h1>
+        <p class="description">
+            Explore how our products can transform your space. From elegant shutters to stylish blinds, 
+            our gallery showcases the versatility and beauty of our window treatments in various settings. 
+            Get inspired and envision the possibilities for your own home or office.
+        </p>
+
+        <div class="filter-buttons">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="shutters">Shutters</button>
+            <button class="filter-button" data-filter="blinds">Blinds</button>
+            <button class="filter-button" data-filter="curtains">Curtains</button>
+            <button class="filter-button" data-filter="burglar-guards">Burglar Guards</button>
+            <button class="filter-button" data-filter="residential">Residential</button>
+            <button class="filter-button" data-filter="commercial">Commercial</button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <a href="quote.html" class="quote-button">Get a Quote</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Luxury Shutters & Blinds. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Wooden Shutters",
+                description: "Elegant wooden shutters for a classic look",
+                category: ["shutters", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/147205658/photo/low-angle-view-of-wood-shutters-on-modern-house.jpg?s=612x612&w=0&k=20&c=lksdmawW-I1gNLuyBUI08f5lp1VThKsj53K95Es9xoo="
+            },
+            {
+                id: 2,
+                name: "Vertical Blinds",
+                description: "Modern vertical blinds for large windows",
+                category: ["blinds", "commercial"],
+                imageUrl: "https://media.istockphoto.com/id/1460837047/photo/pleated-blinds-xl-close-uo-on-the-window.jpg?s=612x612&w=0&k=20&c=-QCPs9MUN5o3t3VkiBkaXbr62V7Qb9hJIL6nvYz0LTQ="
+            },
+            {
+                id: 3,
+                name: "Roller Blinds",
+                description: "Sleek roller blinds for a minimalist aesthetic",
+                category: ["blinds", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4="
+            },
+            {
+                id: 4,
+                name: "Plantation Shutters",
+                description: "Classic plantation shutters for a timeless appeal",
+                category: ["shutters", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/1333492725/photo/plantation-shutters.jpg?s=612x612&w=0&k=20&c=2RYXEJPg74eVJ7cahAMaQAvjh9yr9aUIFV6kIq0TGKA="
+            },
+            {
+                id: 5,
+                name: "Aluminum Shutters",
+                description: "Durable aluminum shutters for modern homes",
+                category: ["shutters", "commercial"],
+                imageUrl: "https://media.istockphoto.com/id/1071492116/photo/window-roller-shutters.jpg?s=612x612&w=0&k=20&c=nxrW8dSckVS1kLrx7X5cJ341b0xn57pNbXuRpSweyYw="
+            },
+            {
+                id: 6,
+                name: "Cellular Shades",
+                description: "Energy-efficient cellular shades for insulation",
+                category: ["blinds", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/1416972321/photo/pleated-blinds-xl-closeup-in-the-window-opening.jpg?s=612x612&w=0&k=20&c=fZIcKuil34CTm8U4e_nn-IpBvWD9S3neYfhsY4WaW8I="
+            },
+            {
+                id: 7,
+                name: "Roman Blinds",
+                description: "Luxurious Roman blinds for a soft, elegant look",
+                category: ["blinds", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/174072202/photo/contemporary-bathroom.jpg?s=612x612&w=0&k=20&c=85XAEAnTaTREXxqmdlvTJp0It3lg-tLNRSNanM3XYGg="
+            },
+            {
+                id: 8,
+                name: "Bamboo Blinds",
+                description: "Natural bamboo blinds for an eco-friendly touch",
+                category: ["blinds", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/1494734880/photo/modern-minimal-white-fabric-bolster-back-corner-sofa-cushion-wooden-side-table-on-japanese.jpg?s=612x612&w=0&k=20&c=MLxTqFQi_ipxcA8lM_ZjtmKR6ssv45Z7z3s37ACulw4="
+            },
+            {
+                id: 9,
+                name: "Blackout Curtains",
+                description: "Light-blocking curtains for better sleep",
+                category: ["curtains", "residential"],
+                imageUrl: "https://media.istockphoto.com/id/1445425775/photo/room-with-a-window-with-closed-curtains-1.jpg?s=612x612&w=0&k=20&c=6TwG9HCfuzPeCsDtI0jABPPq3bf-eJQZADSkaGtPUow="
+            },
+            {
+                id: 10,
+                name: "Decorative Curtains",
+                description: "Stylish curtains to enhance your decor",
+                category: ["curtains", "residential", "commercial"],
+                imageUrl: "https://media.istockphoto.com/id/1341378132/photo/side-view-of-open-plan-kitchen-with-living-room-and-garden-view-from-the-window.jpg?s=612x612&w=0&k=20&c=oOM1OPUlhkPBamoY3yj4mnc8Dg7qb_JIHhdAKpZAi64="
+            },
+            {
+                id: 11,
+                name: "Window Burglar Guards",
+                description: "Secure your home with sturdy window guards",
+                category: ["burglar-guards", "residential"],
+                imageUrl: "https://images.pexels.com/photos/15307250/pexels-photo-15307250/free-photo-of-window-with-bars-in-a-townhouse.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                id: 12,
+                name: "Commercial Security Grilles",
+                description: "Heavy-duty security grilles for businesses",
+                category: ["burglar-guards", "commercial"],
+                imageUrl: "https://media.istockphoto.com/id/820321792/photo/wall-pattern.jpg?s=612x612&w=0&k=20&c=ZLLOs5hTG4IRuyVYFSFNzbCQHXOJEQ883hOoxuq8XJs="
+            }
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('nav');
+
+        function renderProducts(filteredProducts) {
+            productGrid.innerHTML = '';
+            filteredProducts.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product-item';
+                productElement.innerHTML = `
+                    <img src="${product.imageUrl}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                    </div>
+                `;
+                productGrid.appendChild(productElement);
+            });
+        }
+
+        function filterProducts(category) {
+            if (category === 'all') {
+                renderProducts(products);
+            } else {
+                const filteredProducts = products.filter(product => product.category.includes(category));
+                renderProducts(filteredProducts);
+            }
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                filterProducts(filter);
+            });
+        });
+
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+
+        // Initial render
+        renderProducts(products);
+    </script>
+</body>
+</html>
