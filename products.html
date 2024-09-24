@@ -50,7 +50,7 @@
     }
     
     html, body {
-      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-x: hidden;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
@@ -68,7 +68,7 @@
       background-color: var(--bg-color);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       padding: 10px 0;
-      position: relative; /* To position burger menu */
+      position: relative;
     }
     
     .header-content {
@@ -96,6 +96,7 @@
       background-clip: text;
       color: transparent;
       text-transform: uppercase;
+      text-decoration: none;
     }
     
     nav {
@@ -104,7 +105,7 @@
       padding: 0;
       margin: 0;
       justify-content: center;
-      position: relative; /* Ensure it's positioned relative to its container */
+      position: relative;
     }
     
     nav ul {
@@ -136,7 +137,7 @@
       position: absolute;
       width: 0;
       height: 2px;
-      background: #ffffff;
+      background: var(--primary-color);
       bottom: -5px;
       left: 0;
       transition: var(--transition);
@@ -147,32 +148,35 @@
     }
     
     .burger {
-      display: none; /* Show only on smaller screens */
+      display: none;
       cursor: pointer;
       position: absolute;
       top: 15px;
       right: 20px;
-      z-index: 10; /* Ensure it's on top */
+      z-index: 110;
+      width: 30px;
+      height: 30px;
     }
     
-    .burger div {
-      width: 25px;
+    .burger span {
+      display: block;
+      width: 100%;
       height: 3px;
       background-color: #000000;
-      margin: 5px;
+      margin: 6px 0;
       transition: var(--transition);
     }
     
-    .burger.active div:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+    .burger.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
     }
     
-    .burger.active div:nth-child(2) {
+    .burger.active span:nth-child(2) {
       opacity: 0;
     }
     
-    .burger.active div:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
+    .burger.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
     }
     
     h1 {
@@ -280,27 +284,26 @@
       }
     
       nav {
-        position: fixed; /* Position it fixed to the screen */
-        right: 0;
+        position: fixed;
+        right: -100%;
         top: 0;
         background-color: var(--burger-bg);
-        width: 50%; /* Set width to 50% of screen */
+        width: 50%;
         height: 100vh;
-        transform: translateX(100%); /* Initially off screen */
-        transition: transform 0.3s ease-in;
+        transition: right 0.3s ease-in;
         box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 100; /* Ensure it's on top */
-        overflow-y: auto; /* Allow scrolling within the nav */
+        z-index: 100;
+        overflow-y: auto;
       }
     
       nav.active {
-        transform: translateX(0); /* Slide in from right */
+        right: 0;
       }
     
       nav ul {
         flex-direction: column;
         align-items: center;
-        padding-top: 30px;
+        padding-top: 70px;
       }
     
       nav ul li {
@@ -312,11 +315,11 @@
       }
     
       .header-content {
-        flex-direction: column; /* Stack logo and nav vertically */
+        flex-direction: column;
       }
       
       body {
-        position: relative; /* To position the overlay for closing the menu */
+        position: relative;
       }
       
       .nav-overlay {
@@ -325,21 +328,21 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-        display: none; /* Initially hidden */
-        z-index: 99; /* Make it on top of the content but below the nav */
-        pointer-events: none; /* Prevent events from triggering on the overlay */
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 99;
+        pointer-events: none;
       }
       
       .nav-overlay.active {
         display: block;
-        pointer-events: all; /* Allow events to trigger on the overlay */
+        pointer-events: all;
       }
     }
     
     /* Additional Styling for Navigation */
     .nav-active {
-      overflow: hidden; /* Prevent scroll when menu is open */
+      overflow: hidden;
     }
     </style>
 </head>
@@ -362,9 +365,9 @@
                     </ul>
                 </nav>
                 <div class="burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -397,7 +400,8 @@
         <p>© 2024 Luxury Shutters & Blinds. All rights reserved.</p>
     </footer>
 
-    <div class="nav-overlay"></div> <script>
+    <div class="nav-overlay"></div>
+    <script>
         const products = [
             {
                 id: 1,
@@ -422,21 +426,21 @@
             },
             {
                 id: 4,
-                name: "Plantation Shutters",
-                description: "Classic plantation shutters for a timeless appeal",
+                name: "Aluminum Shutters",
+                description: "Alluminium shutters for a timeless appeal",
                 category: ["shutters", "residential"],
                 imageUrl: "https://media.istockphoto.com/id/1333492725/photo/plantation-shutters.jpg?s=612x612&w=0&k=20&c=2RYXEJPg74eVJ7cahAMaQAvjh9yr9aUIFV6kIq0TGKA="
             },
             {
                 id: 5,
-                name: "Aluminum Shutters",
+                name: "Security Shutters",
                 description: "Durable aluminum shutters for modern homes",
                 category: ["shutters", "commercial"],
                 imageUrl: "https://media.istockphoto.com/id/1071492116/photo/window-roller-shutters.jpg?s=612x612&w=0&k=20&c=nxrW8dSckVS1kLrx7X5cJ341b0xn57pNbXuRpSweyYw="
             },
             {
                 id: 6,
-                name: "Cellular Shades",
+                name: "Venetian Shutters",
                 description: "Energy-efficient cellular shades for insulation",
                 category: ["blinds", "residential"],
                 imageUrl: "https://media.istockphoto.com/id/1416972321/photo/pleated-blinds-xl-closeup-in-the-window-opening.jpg?s=612x612&w=0&k=20&c=fZIcKuil34CTm8U4e_nn-IpBvWD9S3neYfhsY4WaW8I="
@@ -474,11 +478,11 @@
                 name: "Window Burglar Guards",
                 description: "Secure your home with sturdy window guards",
                 category: ["burglar-guards", "residential"],
-                imageUrl: "https://images.pexels.com/photos/15307250/pexels-photo-15307250/free-photo-of-window-with-bars-in-a-townhouse.jpeg?auto=compress&cs=tinysrgb&w=600"
-            },
+                imageUrl: "images/WindowBurglarGuard.jpg"
+              },
             {
                 id: 12,
-                name: "Commercial Security Grilles",
+                name: "Security Grilles",
                 description: "Heavy-duty security grilles for businesses",
                 category: ["burglar-guards", "commercial"],
                 imageUrl: "https://media.istockphoto.com/id/820321792/photo/wall-pattern.jpg?s=612x612&w=0&k=20&c=ZLLOs5hTG4IRuyVYFSFNzbCQHXOJEQ883hOoxuq8XJs="
@@ -525,17 +529,20 @@
             });
         });
 
-        burger.addEventListener('click', () => {
+        function toggleMenu() {
             nav.classList.toggle('active');
-            burger.classList.toggle('toggle');
+            burger.classList.toggle('active');
             navOverlay.classList.toggle('active');
-        });
+            document.body.classList.toggle('nav-active');
+        }
 
-        // Close the menu on clicking outside
-        navOverlay.addEventListener('click', () => {
-            nav.classList.remove('active');
-            burger.classList.remove('toggle');
-            navOverlay.classList.remove('active');
+        burger.addEventListener('click', toggleMenu);
+
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on a nav link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
         });
 
         // Initial render
