@@ -91,7 +91,7 @@ header {
   font-family: 'Arial', sans-serif;
   font-size: 23px;
   font-weight: bold;
-  background: linear-gradient(to right, #c9aa83, #dac6a6);
+  background: linear-gradient(45deg, #b8860b, #ffd700);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -292,13 +292,11 @@ nav ul li a:hover::after {
   font-weight: bold;
 }
 
+/* Footer Styles */
 footer {
   background-color: #333;
   color: var(--white);
   padding: 60px 0;
-}
-footer p a{
-  color: white;
 }
 
 .footer-content {
@@ -329,21 +327,19 @@ footer p a{
   margin-bottom: 10px;
 }
 
-.footer-column ul li a {
-  color: var(--white);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
 .footer-column ul li a:hover {
   color: var(--accent-color);
 }
 
 .footer-bottom {
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer a {
+  color: #5debeb;
 }
 
 .image-button {
@@ -566,35 +562,36 @@ WhatsApp us
 </a>
 
 <footer id="contact">
-<div class="container">
-<div class="footer-content">
-<div class="footer-column">
-<h3>Contact Us</h3>
-<p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
-    <p><strong>Phone:</strong> +27 73 289 9370</p>
-    <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
-</div>
-<div class="footer-column">
-<h3>Quick Links</h3>
-<ul>
-<li><a href="#gallery">Home</a></li>
-<li><a href="#gallery">Products</a></li>
-<li><a href="index.html#testimonials">Testimonials</a></li>
-</ul>
-</div>
-<div class="footer-column">
-<h3>Follow Us</h3>
-<ul>
-<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-<li><a href="https://www.instagram.com/designerblindsandshutters" target="_blank">Instagram</a></li>
-<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-</ul>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2024 Shutters & Blinds. All rights reserved.</p>
-</div>
-</div>
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-column">
+              <h3>Get in Touch</h3>
+              <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
+              <p><strong>Phone:</strong><a href="tel:+27732899370">+27 73 289 9370</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
+          </div>               
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#products">Products</a></li>
+                  <li><a href="#testimonials">Testimonials</a></li>
+              </ul>
+          </div>  
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="https://www.facebook.com/luxuryshuttersandblinds" target="_blank">Facebook</a></li>
+                  <li><a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank">Instagram</a></li>
+                  <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>© 2024 Luxury Shutters & Blinds. All rights reserved.</p>
+          <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/">Vylex Nexys</a></p>
+      </div>
+  </div>
 </footer>
 
 <script>
