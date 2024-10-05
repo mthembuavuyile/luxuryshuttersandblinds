@@ -68,7 +68,7 @@ header {
   font-family: 'Arial', sans-serif;
   font-size: 23px;
   font-weight: bold;
-  background: linear-gradient(to right, #c9aa83, #dac6a6);
+  background: linear-gradient(45deg, #b8860b, #ffd700);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -290,10 +290,14 @@ footer {
 }
 
 .footer-bottom {
-  text-align: center;
+  text-align: left;
   margin-top: 40px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer a {
+  color: #5debeb;
 }
 
 /* Media Queries */
