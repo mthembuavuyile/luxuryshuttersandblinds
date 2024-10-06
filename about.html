@@ -183,6 +183,28 @@
         nav ul li a:hover::after {
             width: 100%;
         }
+        .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.nav-active {
+    overflow: hidden;
+}
+
 
         .burger {
             display: none;
@@ -428,6 +450,8 @@ footer a {
             </div>
         </div>
     </header>
+    <div class="nav-overlay"></div>
+
 
     <section id="about" class="about-hero">
         <div class="container">
@@ -473,9 +497,9 @@ footer a {
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
                     </ul>
                 </div>  
                 <div class="footer-column">
@@ -494,29 +518,6 @@ footer a {
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelectorAll('nav ul li');
-
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('active');
-                burger.classList.toggle('toggle');
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    nav.classList.remove('active');
-                    burger.classList.remove('toggle');
-                });
-            });
-
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('header');
-                header.classList.toggle('sticky', window.scrollY > 0);
-            });
-        });
-    </script>
-</body>
+    <script src="scripts/common-script.js"></script>
+   
 </html>
