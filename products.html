@@ -375,6 +375,8 @@ footer a {
         </div>
     </div>
   </header>
+  <div class="nav-overlay"></div>
+
 
   <main class="container">
     <center><h1>View Our Products</h1></center>
@@ -411,9 +413,9 @@ footer a {
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="index.html#products">Products</a></li>
+                  <li><a href="index.html#testimonials">Testimonials</a></li>
                 </ul>
             </div>  
             <div class="footer-column">
@@ -431,16 +433,17 @@ footer a {
         </div>
     </div>
 </footer>
+<script src="scripts/common-script.js"></script>
 
-  <div class="nav-overlay"></div>
+
   <script>
     const products = [
-        {
+    {
             id: 1,
-            name: "Wooden Shutters",
-            description: "Elegant wooden shutters for a classic look",
-            category: ["shutters", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/147205658/photo/low-angle-view-of-wood-shutters-on-modern-house.jpg?s=612x612&w=0&k=20&c=lksdmawW-I1gNLuyBUI08f5lp1VThKsj53K95Es9xoo="
+            name: "Roller Blinds",
+            description: "Sleek roller blinds for a minimalist aesthetic",
+            category: ["blinds", "residential"],
+            imageUrl: "https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4="
         },
         {
             id: 2,
@@ -451,15 +454,15 @@ footer a {
         },
         {
             id: 3,
-            name: "Roller Blinds",
-            description: "Sleek roller blinds for a minimalist aesthetic",
-            category: ["blinds", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4="
+            name: "Wooden Shutters",
+            description: "Elegant wooden shutters for a classic look",
+            category: ["shutters", "residential"],
+            imageUrl: "https://media.istockphoto.com/id/147205658/photo/low-angle-view-of-wood-shutters-on-modern-house.jpg?s=612x612&w=0&k=20&c=lksdmawW-I1gNLuyBUI08f5lp1VThKsj53K95Es9xoo="
         },
         {
             id: 4,
             name: "Aluminum Shutters",
-            description: "Alluminium shutters for a timeless appeal",
+            description: "Aluminum shutters for a timeless appeal",
             category: ["shutters", "residential"],
             imageUrl: "https://media.istockphoto.com/id/1333492725/photo/plantation-shutters.jpg?s=612x612&w=0&k=20&c=2RYXEJPg74eVJ7cahAMaQAvjh9yr9aUIFV6kIq0TGKA="
         },
@@ -560,67 +563,7 @@ footer a {
             filterProducts(filter);
         });
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const burger = document.querySelector('.burger');
-      const nav = document.querySelector('nav');
-      const navLinks = document.querySelectorAll('nav ul li');
-      const navOverlay = document.querySelector('.nav-overlay');
-
-      burger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        burger.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        document.body.classList.toggle('nav-active');
-      });
-
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          nav.classList.remove('active');
-          burger.classList.remove('active');
-          navOverlay.classList.remove('active');
-          document.body.classList.remove('nav-active');
-        });
-      });
-
-      navOverlay.addEventListener('click', () => {
-        nav.classList.remove('active');
-        burger.classList.remove('active');
-        navOverlay.classList.remove('active');
-        document.body.classList.remove('nav-active');
-      });
-
-      window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY > 0);
-      });
-
-      renderProducts(products);
-
-      // Lazy loading images
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-              observer.unobserve(img);
-            }
-          });
-        });
-
-        document.querySelectorAll('img.lazy').forEach(img => {
-          imageObserver.observe(img);
-        });
-      } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        document.querySelectorAll('img.lazy').forEach(img => {
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-        });
-      }
-    });
+      
     </script>
 </body>
 </html>
