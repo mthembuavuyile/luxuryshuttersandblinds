@@ -529,6 +529,8 @@ footer a {
 </div>
 </div>
 </header>
+<div class="nav-overlay"></div>
+
 
 <section id="gallery" class="gallery-hero">
 <div class="container">
@@ -573,9 +575,9 @@ WhatsApp us
           <div class="footer-column">
               <h3>Quick Links</h3>
               <ul>
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#products">Products</a></li>
-                  <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
               </ul>
           </div>  
           <div class="footer-column">
@@ -593,29 +595,9 @@ WhatsApp us
       </div>
   </div>
 </footer>
+<script src="scripts/common-script.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
-const navLinks = document.querySelectorAll('nav ul li');
-
-burger.addEventListener('click', () => {
-nav.classList.toggle('active');
-burger.classList.toggle('toggle');
-});
-
-navLinks.forEach(link => {
-link.addEventListener('click', () => {
-nav.classList.remove('active');
-burger.classList.remove('toggle');
-});
-});
-
-window.addEventListener('scroll', () => {
-const header = document.querySelector('header');
-header.classList.toggle('sticky', window.scrollY > 0);
-});
 
 const instagramPosts = [
 'https://www.instagram.com/p/CsinkGWAaoP/',
@@ -646,7 +628,6 @@ instagramGrid.appendChild(postElement);
 if (window.instgrm) {
 window.instgrm.Embeds.process();
 }
-});
 </script>
 <script async src="//www.instagram.com/embed.js"></script>
 </body>
