@@ -74,6 +74,8 @@
             </div>
         </div>
     </header>
+    <div class="nav-overlay"></div>
+
 
     <main>
         <section class="section">
@@ -137,9 +139,9 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
                     </ul>
                 </div>  
                 <div class="footer-column">
@@ -163,6 +165,9 @@
         WhatsApp us
     </a>
 
+
+    <script src="scripts/common-script.js"></script>
+
     <script>
         document.getElementById('quote-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -170,14 +175,7 @@
             alert('Thank you for your quote request. We will get back to you soon!');
             this.reset();
         });
-
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('nav');
-
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            burger.classList.toggle('toggle');
-        });
     </script>
+
 </body>
 </html>
