@@ -119,6 +119,25 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Overlay for closing navigation when clicking outside */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: none; /* Hidden by default */
+  z-index: 1; /* Behind the navigation */
+}
+
+/* When the nav is active, show the overlay */
+nav.active ~ .nav-overlay {
+  display: block;
+}
+
+
+
 .burger {
   display: none;
   cursor: pointer;
@@ -297,6 +316,17 @@ footer {
 
 footer a {
   color: #5debeb;
+}
+.social-icons a {
+  color: var(--white);
+  font-size: 20px;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
 }
 
 /* WhatsApp Button */
