@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        document.querySelectorAll('img.lazy').forEach(img => imageObserver.observe(img));
+    document.querySelectorAll('img.lazy').forEach(img => imageObserver.observe(img));
     } else {
         // Fallback for browsers that don't support IntersectionObserver
         document.querySelectorAll('img.lazy').forEach(img => {
