@@ -10,7 +10,7 @@
     <!-- Open Graph Meta Tags for social sharing -->
     <meta property="og:title" content="Contact Us - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta property="og:description" content="Reach out to Luxury Shutters & Blinds in Durban for premium custom shutters, blinds, and flyscreens. Get professional advice and a free quote today.">
-    <meta property="og:image" content="https://www.luxuryshuttersandblinds.co.za/logo/Luxury_S&B_logo-06.png">
+    <meta property="og:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
     <meta property="og:url" content="https://www.luxuryshuttersandblinds.co.za/contact">
     <meta property="og:type" content="website">
 
@@ -18,9 +18,12 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta name="twitter:description" content="Contact Luxury Shutters & Blinds for custom window treatments in Durban. Request a free quote for shutters, blinds, and flyscreens today.">
-    <meta name="twitter:image" content="https://www.luxuryshuttersandblinds.co.za/logo/Luxury_S&B_logo-06.png">
+    <meta name="twitter:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
 
     <!-- Styles and Fonts -->
+    <link rel="stylesheet" href="styles/common-styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -30,7 +33,7 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "Luxury Shutters & Blinds",
-      "image": "https://www.luxuryshuttersandblinds.co.za/logo/Luxury_S&B_logo-06.png",
+      "image": "https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png",
       "@id": "https://www.luxuryshuttersandblinds.co.za/contact",
       "url": "https://www.luxuryshuttersandblinds.co.za/contact",
       "telephone": "+27732899370",
@@ -76,13 +79,13 @@
             --white: #fff; /* White */
             --transition: all 0.3s ease;
         }
-
+    
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -90,135 +93,20 @@
             overflow-x: hidden;
             background-color: var(--bg-color);
         }
-
+    
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        header {
-            background-color: var(--bg-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        .gradient-logo-text {
-  font-family: 'Arial', sans-serif;
-  font-size: 23px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #b8860b, #ffd700);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-transform: uppercase;
-}
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .logo-text:hover {
-            color: var(--secondary-color);
-        }
-
-        nav ul {
-            display: flex;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            bottom: -5px;
-            left: 0;
-            transition: var(--transition);
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        .nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.nav-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-        .burger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-color);
-            margin: 5px;
-            transition: var(--transition);
-        }
-
+    
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
             text-align: center;
             padding-top: 100px;
         }
-
+    
         .content {
             padding: 40px;
             background: var(--bg-color);
@@ -226,122 +114,71 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
+    
         .contact-info {
-    text-align: center;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Increased margin for better spacing */
-}
-
-.contact-item i {
-    font-size: 28px; /* Increased icon size */
-    margin-right: 15px;
-    color: var(--accent-color);
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px; /* Reduced gap for tighter alignment */
-    margin-top: 20px; /* Reduced margin for consistency */
-}
-
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 15px; /* Adjusted padding */
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-
+            text-align: center;
+        }
+    
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Increased margin for better spacing */
+        }
+    
+        .contact-item i {
+            font-size: 28px; /* Increased icon size */
+            margin-right: 15px;
+            color: var(--accent-color);
+        }
+    
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px; /* Reduced gap for tighter alignment */
+            margin-top: 20px; /* Reduced margin for consistency */
+        }
+    
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px; /* Adjusted padding */
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+    
         .phone-link {
             background-color: #4CAF50;
             color: var(--white);
         }
-
+    
         .email-link {
             background-color: #2196F3;
             color: var(--white);
         }
-
+    
         .whatsapp-link {
             background-color: #25D366;
             color: var(--white);
         }
-
+    
         .instagram-link {
             background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
             color: var(--white);
         }
-
+    
         .contact-link:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-
+    
         .contact-link i {
             margin-right: 10px;
         }
-
-        /* Footer Styles */
-footer {
-  background-color: #333;
-  color: var(--white);
-  padding: 60px 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-column {
-  flex: 1;
-  margin-bottom: 20px;
-  min-width: 205px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  margin-bottom: 20px;
-  color: var(--accent-color);
-  font-size: 20px;
-}
-
-.footer-column ul {
-  list-style-type: none;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a:hover {
-  color: var(--accent-color);
-}
-
-.footer-bottom {
-  text-align: left;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-footer a {
-  color: #5debeb;
-}
-
+    
         #whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -358,19 +195,19 @@ footer a {
             transition: var(--transition);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-
+    
         #whatsapp-button:hover {
             background-color: #128C7E;
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
-
+    
         #whatsapp-button img {
             width: 24px;
             height: 24px;
             margin-right: 10px;
         }
-
+    
         .cta-nav {
             background-color: var(--primary-color); /* Gold */
             color: var(--white) !important;
@@ -379,60 +216,31 @@ footer a {
             font-weight: 600;
             transition: var(--transition);
         }
-
+    
         .cta-nav:hover {
             background-color: var(--secondary-color); /* Darker Gold */
             transform: translateY(-3px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+    
         /* Map Styles */
-#map-container {
-  margin-top: 50px;
-}
-
-#map {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: var(--border-radius);
-}
-
+        #map-container {
+            margin-top: 50px;
+        }
+    
+        #map {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+    
         @media screen and (max-width: 768px) {
-            .burger {
-                display: block;
-            }
-
-            nav {
-                position: absolute;
-                right: 0;
-                top: 70px;
-                background-color: var(--white);
-                width: 50%;
-                height: calc(100vh - 70px);
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in;
-                box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-            }
-
-            nav.active {
-                transform: translateX(0%);
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                padding-top: 30px;
-            }
-
-            nav ul li {
-                margin: 20px 0;
-            }
-
             .contact-links {
                 flex-direction: column;
                 align-items: center;
             }
-
+    
             .contact-link {
                 width: 100%;
                 max-width: 250px;
@@ -536,31 +344,43 @@ footer a {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Get in Touch</h3>
-                    <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
-                    <p><strong>Phone:</strong><a href="tel:+27732899370">+27 73 289 9370</a></p>
+                    <h3>Contact Luxury Shutters & Blinds</h3>
+                    <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004, South Africa</p>
+                    <p><strong>Phone:</strong> <a href="tel:+27732899370">+27 73 289 9370</a></p>
                     <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
                 </div>               
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="index.html#products">Products</a></li>
-                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#testimonials">Client Testimonials</a></li>
                     </ul>
-                </div>  
-                <div class="footer-column">
+                </div>
+                <div class="footer-column social-icons">
                     <h3>Follow Us</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/luxuryshuttersandblinds" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank">Instagram</a></li>
-                        <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/luxuryshuttersandblinds" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Luxury Shutters & Blinds. All rights reserved.</p>
-                <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/">Vylex Nexys</a></p>
+                <p>&copy; 2024 Luxury Shutters &amp; Blinds. All rights reserved.</p>
+                <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/" target="_blank" rel="noopener noreferrer">Vylex Nexys</a></p>
             </div>
         </div>
     </footer>

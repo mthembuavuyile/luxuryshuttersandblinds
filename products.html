@@ -10,7 +10,7 @@
     <!-- Open Graph Meta Tags for social sharing -->
     <meta property="og:title" content="Products - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta property="og:description" content="Discover the range of premium shutters, blinds, curtains, and security solutions by Luxury Shutters & Blinds. Enhance your space with our custom window treatments.">
-    <meta property="og:image" content="https://www.luxuryshuttersandblinds.co.za/products/sample-product-image.png">
+    <meta property="og:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
     <meta property="og:url" content="https://www.luxuryshuttersandblinds.co.za/products.html">
     <meta property="og:type" content="website">
 
@@ -18,7 +18,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Products - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta name="twitter:description" content="Explore our products, including shutters, blinds, and burglar guards for homes and offices in Durban. Custom window treatments for every space.">
-    <meta name="twitter:image" content="https://www.luxuryshuttersandblinds.co.za/products/sample-product-image.png">
+    <meta name="twitter:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles/common-styles.css">
 
     <!-- Structured Data (Schema Markup) -->
     <script type="application/ld+json">
@@ -27,7 +30,7 @@
       "@type": "Product",
       "name": "Luxury Shutters & Blinds Product Range",
       "description": "Explore our selection of custom shutters, blinds, curtains, and window burglar guards.",
-      "image": "https://www.luxuryshuttersandblinds.co.za/products/sample-product-image.png",
+      "image": "https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png",
       "brand": {
         "@type": "Brand",
         "name": "Luxury Shutters & Blinds"
@@ -77,7 +80,7 @@
     }
     main.container {
     padding-top: 10px;
-}
+    }
     
     h1, h2, h3, h4, h5, h6 {
       font-weight: 700;
@@ -88,174 +91,6 @@
       text-decoration: none;
       color: inherit;
       transition: var(--transition);
-    }
-    
-    header {
-      background-color: var(--bg-color);
-      box-shadow: var(--box-shadow);
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      transition: var(--transition);
-    }
-    
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 0;
-    }
-    
-    .gradient-logo-text {
-  font-family: 'Arial', sans-serif;
-  font-size: 23px;
-  font-weight: bold;
-  background: linear-gradient(45deg, #b8860b, #ffd700);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-transform: uppercase;
-}
-    
-    .logo:hover {
-      color: var(--secondary-color);
-    }
-    
-    .logo-img {
-      width: 50px;
-      height: auto;
-      margin-right: 10px;
-    }
-    
-    nav ul {
-      display: flex;
-      list-style-type: none;
-    }
-    
-    nav ul li {
-      margin-left: 30px;
-    }
-    
-    nav ul li a {
-      font-weight: 500;
-      position: relative;
-    }
-    
-    nav ul li a:hover {
-      color: var(--primary-color);
-    }
-    
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: var(--primary-color);
-      bottom: -5px;
-      left: 0;
-      transition: var(--transition);
-    }
-    
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-    
-    .burger {
-  display: none;
-  cursor: pointer;
-  border: none;
-  background: none;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--text-color);
-  margin: 5px;
-  transition: var(--transition);
-}
-
-/* Footer Styles */
-footer {
-  background-color: #333;
-  color: var(--white);
-  padding: 60px 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-column {
-  flex: 1;
-  margin-bottom: 20px;
-  min-width: 205px;
-  text-align: left;
-}
-
-.footer-column h3 {
-  margin-bottom: 20px;
-  color: var(--accent-color);
-  font-size: 20px;
-}
-
-.footer-column ul {
-  list-style-type: none;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a:hover {
-  color: var(--accent-color);
-}
-
-.footer-bottom {
-  text-align: left;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-footer a {
-  color: #5debeb;
-}
-
-    @media screen and (max-width: 768px) {
-      .burger {
-        display: block;
-      }
-
-      nav {
-        position: fixed;
-        right: 0;
-        top: 70px;
-        background-color: var(--white);
-        width: 50%;
-        height: calc(100vh - 70px);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      nav.active {
-        transform: translateX(0%);
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-      }
-
-      nav ul li {
-        margin: 20px 0;
-      }
     }
 
     .product-grid {
@@ -330,26 +165,7 @@ footer a {
     .quote-button:hover {
       background-color: var(--secondary-color);
     }
-
-    .nav-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-    }
-
-    .nav-overlay.active {
-      display: block;
-    }
-
-    body.nav-active {
-      overflow: hidden;
-    }
-    </style>
+  </style>
 </head>
 <body>
   <header>
@@ -405,37 +221,47 @@ footer a {
     <div class="container">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>Get in Touch</h3>
-                <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004</p>
-                <p><strong>Phone:</strong><a href="tel:+27732899370">+27 73 289 9370</a></p>
+                <h3>Contact Luxury Shutters & Blinds</h3>
+                <p><strong>Address:</strong> 24 Carmichael Place, Woodlands, Durban, 4004, South Africa</p>
+                <p><strong>Phone:</strong> <a href="tel:+27732899370">+27 73 289 9370</a></p>
                 <p><strong>Email:</strong> <a href="mailto:info@luxuryshuttersandblinds.co.za">info@luxuryshuttersandblinds.co.za</a></p>
             </div>               
             <div class="footer-column">
-
-              <img src ="all images/gate (1).jpg"
-
                 <h3>Quick Links</h3>
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="index.html#products">Products</a></li>
-                  <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Our Products</a></li>
+                    <li><a href="#testimonials">Client Testimonials</a></li>
                 </ul>
-            </div>  
-            <div class="footer-column">
+            </div>
+            <div class="footer-column social-icons">
                 <h3>Follow Us</h3>
                 <ul>
-                    <li><a href="https://www.facebook.com/luxuryshuttersandblinds" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li>
+                        <a href="https://www.facebook.com/luxuryshuttersandblinds" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/luxuryshuttersandblinds" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Luxury Shutters & Blinds. All rights reserved.</p>
-            <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/">Vylex Nexys</a></p>
+            <p>&copy; 2024 Luxury Shutters &amp; Blinds. All rights reserved.</p>
+            <p>Designed by <a href="https://mthembuavuyile.github.io/VylexNexys/" target="_blank" rel="noopener noreferrer">Vylex Nexys</a></p>
         </div>
     </div>
 </footer>
+
 <script src="scripts/common-script.js"></script>
 
 
