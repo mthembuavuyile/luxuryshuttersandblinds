@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
@@ -264,136 +265,219 @@
 
 <script src="scripts/common-script.js"></script>
 
-
-  <script>
-    const products = [
+<script>
+const products = [
+    // Blinds
     {
-            id: 1,
-            name: "Roller Blinds",
-            description: "Sleek roller blinds for a minimalist aesthetic",
-            category: ["blinds", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1178700357/photo/little-boy-opening-the-roller-blinds-in-the-morning.jpg?s=612x612&w=0&k=20&c=uMbORC-CrJ8syF7ruSR43Xx8LHb7XMLt8EUUpOKNni4="
-        },
-        {
-            id: 2,
-            name: "Vertical Blinds",
-            description: "Modern vertical blinds for large windows",
-            category: ["blinds", "commercial"],
-            imageUrl: "https://media.istockphoto.com/id/1460837047/photo/pleated-blinds-xl-close-uo-on-the-window.jpg?s=612x612&w=0&k=20&c=-QCPs9MUN5o3t3VkiBkaXbr62V7Qb9hJIL6nvYz0LTQ="
-        },
-        {
-            id: 3,
-            name: "Wooden Shutters",
-            description: "Elegant wooden shutters for a classic look",
-            category: ["shutters", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/147205658/photo/low-angle-view-of-wood-shutters-on-modern-house.jpg?s=612x612&w=0&k=20&c=lksdmawW-I1gNLuyBUI08f5lp1VThKsj53K95Es9xoo="
-        },
-        {
-            id: 4,
-            name: "Aluminum Shutters",
-            description: "Aluminum shutters for a timeless appeal",
-            category: ["shutters", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1333492725/photo/plantation-shutters.jpg?s=612x612&w=0&k=20&c=2RYXEJPg74eVJ7cahAMaQAvjh9yr9aUIFV6kIq0TGKA="
-        },
-        {
-            id: 5,
-            name: "Security Shutters",
-            description: "Durable aluminum shutters for modern homes",
-            category: ["shutters", "commercial"],
-            imageUrl: "https://media.istockphoto.com/id/1071492116/photo/window-roller-shutters.jpg?s=612x612&w=0&k=20&c=nxrW8dSckVS1kLrx7X5cJ341b0xn57pNbXuRpSweyYw="
-        },
-        {
-            id: 6,
-            name: "Venetian Shutters",
-            description: "Energy-efficient cellular shades for insulation",
-            category: ["blinds", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1416972321/photo/pleated-blinds-xl-closeup-in-the-window-opening.jpg?s=612x612&w=0&k=20&c=fZIcKuil34CTm8U4e_nn-IpBvWD9S3neYfhsY4WaW8I="
-        },
-        {
-            id: 7,
-            name: "Roman Blinds",
-            description: "Luxurious Roman blinds for a soft, elegant look",
-            category: ["blinds", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/174072202/photo/contemporary-bathroom.jpg?s=612x612&w=0&k=20&c=85XAEAnTaTREXxqmdlvTJp0It3lg-tLNRSNanM3XYGg="
-        },
-        {
-            id: 8,
-            name: "Bamboo Blinds",
-            description: "Natural bamboo blinds for an eco-friendly touch",
-            category: ["blinds", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1494734880/photo/modern-minimal-white-fabric-bolster-back-corner-sofa-cushion-wooden-side-table-on-japanese.jpg?s=612x612&w=0&k=20&c=MLxTqFQi_ipxcA8lM_ZjtmKR6ssv45Z7z3s37ACulw4="
-        },
-        {
-            id: 9,
-            name: "Blackout Curtains",
-            description: "Light-blocking curtains for better sleep",
-            category: ["curtains", "residential"],
-            imageUrl: "https://media.istockphoto.com/id/1445425775/photo/room-with-a-window-with-closed-curtains-1.jpg?s=612x612&w=0&k=20&c=6TwG9HCfuzPeCsDtI0jABPPq3bf-eJQZADSkaGtPUow="
-        },
-        {
-            id: 10,
-            name: "Decorative Curtains",
-            description: "Stylish curtains to enhance your decor",
-            category: ["curtains", "residential", "commercial"],
-            imageUrl: "https://media.istockphoto.com/id/1341378132/photo/side-view-of-open-plan-kitchen-with-living-room-and-garden-view-from-the-window.jpg?s=612x612&w=0&k=20&c=oOM1OPUlhkPBamoY3yj4mnc8Dg7qb_JIHhdAKpZAi64="
-        },
-        {
-            id: 11,
-            name: "Window Burglar Guards",
-            description: "Secure your home with sturdy window guards",
-            category: ["burglar-guards", "residential"],
-            imageUrl: "images/WindowBurglarGuard.jpg"
-          },
-        {
-            id: 12,
-            name: "Security Grilles",
-            description: "Heavy-duty security grilles for businesses",
-            category: ["burglar-guards", "commercial"],
-            imageUrl: "https://media.istockphoto.com/id/820321792/photo/wall-pattern.jpg?s=612x612&w=0&k=20&c=ZLLOs5hTG4IRuyVYFSFNzbCQHXOJEQ883hOoxuq8XJs="
-        }
-    ];
+        id: 1,
+        name: "Venetian Blinds",
+        description: "Versatile window coverings",
+        category: ["blinds", "residential", "commercial"],
+        imageUrl: "assets/images/blinds/Venetian Blinds (11).jpg"
+    },
+    {
+        id: 2,
+        name: "Office Space Blinds",
+        description: "Vertical blinds for offices",
+        category: ["blinds", "commercial"],
+        imageUrl: "assets/images/blinds/home-and-office-blinds (10).jpg"
+    },
+    {
+        id: 3,
+        name: "Horizontal Blinds",
+        description: "Classic light control",
+        category: ["blinds", "residential", "commercial"],
+        imageUrl: "assets/images/blinds/blind (8).jpg"
+    },
+    {
+        id: 4,
+        name: "Common Area Window Coverings",
+        description: "Vertical blinds for shared spaces",
+        category: ["blinds", "commercial"],
+        imageUrl: "assets/images/blinds/window-blinds (2).jpg"
+    },
+    {
+        id: 5,
+        name: "Venetian window Blinds",
+        description: "Horizontal blinds for homes",
+        category: ["blinds", "residential", "commercial"],
+        imageUrl: "assets/images/blinds/blind (13).jpg"
+    },
+    {
+        id: 6,
+        name: "Vertical Blinds",
+        description: "For office partitions",
+        category: ["blinds", "commercial"],
+        imageUrl: "assets/images/blinds/blind (6).jpg"
+    },
 
+    // Shutters
+    {
+        id: 7,
+        name: "Aluminium Shutters",
+        description: "Elegant and timeless",
+        category: ["shutters", "residential"],
+        imageUrl: "assets/images/shutters/decorative-security-alluminium-shutters (8).jpg"
+    },
+    {
+        id: 8,
+        name: "Bespoke Aluminium Shutters",
+        description: "Custom-designed for dining/patio",
+        category: ["shutters", "residential"],
+        imageUrl: "assets/images/shutters/shutters-image (8).jpg"
+    },
+    {
+        id: 9,
+        name: "Security Shutter Barriers",
+        description: "Enhanced window safety",
+        category: ["shutters", "commercial"],
+        imageUrl: "assets/images/shutters/shutter (14).jpg"
+    },
+    {
+        id: 10,
+        name: "Aluminium Patio Shutters",
+        description: "Modern patio enclosure",
+        category: ["shutters", "residential"],
+        imageUrl: "assets/images/shutters/exterior (4).jpg"
+    },
+    {
+        id: 11,
+        name: "Sophisticated Shutter Designs",
+        description: "Elevate exterior decor",
+        category: ["shutters", "residential"],
+        imageUrl: "assets/images/shutters/exterior (5).jpg"
+    },
+    {
+        id: 12,
+        name: "Outdoor Shutter Protection",
+        description: "Weather-resistant and stylish",
+        category: ["shutters", "residential"],
+        imageUrl: "assets/images/shutters/exterior (7).jpg"
+    },
 
-    const productGrid = document.getElementById('productGrid');
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('nav');
-    const navOverlay = document.querySelector('.nav-overlay');
+    // Curtains
+    {
+        id: 13,
+        name: "Light-Adjusting Fabric Panels",
+        description: "Control natural light",
+        category: ["curtains", "residential"],
+        imageUrl: "https://media.istockphoto.com/id/1445425775/photo/room-with-a-window-with-closed-curtains-1.jpg?s=612x612&w=0&k=20&c=6TwG9HCfuzPeCsDtI0jABPPq3bf-eJQZADSkaGtPUow="
+    },
+    {
+        id: 14,
+        name: "Stylish Hanging Window Covers",
+        description: "Enhance room aesthetics",
+        category: ["curtains", "residential", "commercial"],
+        imageUrl: "https://media.istockphoto.com/id/1341378132/photo/side-view-of-open-plan-kitchen-with-living-room-and-garden-view-from-the-window.jpg?s=612x612&w=0&k=20&c=oOM1OPUlhkPBamoY3yj4mnc8Dg7qb_JIHhdAKpZAi64="
+    },
+    {
+        id: 15,
+        name: "Light Fabric Window Drapes",
+        description: "Bright and airy atmosphere",
+        category: ["curtains", "residential"],
+        imageUrl: "assets/images/curtains/curtain (67).jpg"
+    },
+    {
+        id: 16,
+        name: "Navy Blackout curtain",
+        description: "Light-blocking privacy",
+        category: ["curtains", "residential"],
+        imageUrl: "assets/images/curtains/curtain (33).jpg"
+    },
+    {
+        id: 17,
+        name: "Insulating Fabric Panels",
+        description: "Energy-efficient temperature control",
+        category: ["curtains", "residential"],
+        imageUrl: "assets/images/curtains/curtain (57).jpg"
+    },
+    {
+        id: 18,
+        name: "Soft Textured Window Drapes",
+        description: "Luxurious sophistication",
+        category: ["curtains", "residential"],
+        imageUrl: "assets/images/curtains/curtain (37).jpg"
+    },
+    {
+        id: 19,
+        name: "Decorative Window Fabrics",
+        description: "Stylish patterned statement",
+        category: ["curtains", "residential"],
+        imageUrl: "assets/images/curtains/curtain (22).jpg"
+    },
 
-    function renderProducts(filteredProducts) {
-        productGrid.innerHTML = '';
-        filteredProducts.forEach(product => {
-            const productElement = document.createElement('div');
-            productElement.className = 'product-item';
-            productElement.innerHTML = `
-                <img src="${product.imageUrl}" alt="${product.name}">
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <p>${product.description}</p>
-                </div>
-            `;
-            productGrid.appendChild(productElement);
-        });
+    // Burglar Guards
+    {
+        id: 20,
+        name: "Home Security Barrier",
+        description: "Secure doors and windows",
+        category: ["burglar-guards", "residential"],
+        imageUrl: "assets/images/gates/gate (3).jpg"
+    },
+    {
+        id: 21,
+        name: "Commercial Security Barrier",
+        description: "Robust business protection",
+        category: ["burglar-guards", "commercial"],
+        imageUrl: "assets/images/gates/gate (9).jpg"
+    },
+    {
+        id: 22,
+        name: "Home Security grills",
+        description: "Safe with light and ventilation",
+        category: ["burglar-guards", "residential"],
+        imageUrl: "assets/images/gates/gate (6).jpg"
+    },
+    {
+        id: 23,
+        name: "Steel gate",
+        description: "Enhanced business security",
+        category: ["burglar-guards", "commercial"],
+        imageUrl: "assets/images/gates/gate (7).jpg"
     }
+];
 
-    function filterProducts(category) {
-        if (category === 'all') {
-            renderProducts(products);
-        } else {
-            const filteredProducts = products.filter(product => product.category.includes(category));
-            renderProducts(filteredProducts);
-        }
-    }
+const productGrid = document.getElementById('productGrid');
+const filterButtons = document.querySelectorAll('.filter-button');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            const filter = button.getAttribute('data-filter');
-            filterProducts(filter);
-        });
+function createProductElement(product) {
+    const productElement = document.createElement('div');
+    productElement.className = 'product-item';
+    productElement.innerHTML = `
+        <img src="${product.imageUrl}" alt="${product.name}">
+        <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+        </div>
+    `;
+    return productElement;
+}
+
+function renderProducts(filteredProducts) {
+    productGrid.innerHTML = '';
+    filteredProducts.forEach(product => {
+        productGrid.appendChild(createProductElement(product));
     });
-      
-    </script>
+}
+
+function filterProducts(category) {
+    const filteredProducts = category === 'all' 
+        ? products 
+        : products.filter(product => product.category.includes(category));
+    renderProducts(filteredProducts);
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+        filterProducts(filter);
+    });
+});
+
+// Initial render
+renderProducts(products);
+</script>
 </body>
 </html>
