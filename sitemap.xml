@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
-        http://www.google.com/schemas/sitemap-image/1.1
-        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/</loc>
       <lastmod>2024-10-15T11:57:41+00:00</lastmod>
@@ -29,10 +26,6 @@
       <lastmod>2024-10-15T11:57:41+00:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
-      <image:image>
-         <image:loc>https://luxuryshuttersandblinds.co.za/images/gallery1.jpg</image:loc>
-         <image:caption>Luxury Shutters Showcase</image:caption>
-      </image:image>
    </url>
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/contact.html</loc>
