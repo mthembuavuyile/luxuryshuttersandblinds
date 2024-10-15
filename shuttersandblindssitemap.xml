@@ -3,37 +3,37 @@
    <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
       <priority>1.00</priority>
    </url>
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/index.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
+      <priority>0.90</priority>
+   </url>
+   <url>
+      <loc>https://luxuryshuttersandblinds.co.za/contact.html</loc>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
       <priority>0.80</priority>
    </url>
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/products.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
-      <priority>0.80</priority>
-   </url>
-   <url>
-      <loc>https://luxuryshuttersandblinds.co.za/quote.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
-      <priority>0.80</priority>
-   </url>
-   <url>
-      <loc>https://luxuryshuttersandblinds.co.za/contact.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
-      <priority>0.80</priority>
-   </url>
-   <url>
-      <loc>https://luxuryshuttersandblinds.co.za/about.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
       <priority>0.80</priority>
    </url>
    <url>
       <loc>https://luxuryshuttersandblinds.co.za/gallery.html</loc>
-      <lastmod>2024-10-05T20:09:29+00:00</lastmod>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
       <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://luxuryshuttersandblinds.co.za/quote.html</loc>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
+      <priority>0.70</priority>
+   </url>
+   <url>
+      <loc>https://luxuryshuttersandblinds.co.za/about.html</loc>
+      <lastmod>2024-10-15T11:57:41+00:00</lastmod>
+      <priority>0.70</priority>
    </url>
 </urlset>
