@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luxuryshuttersandblinds.co.za/sitemap.xml
