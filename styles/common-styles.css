@@ -65,19 +65,13 @@ header {
 
 .gradient-logo-text {
   font-family: 'Arial', sans-serif;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: bold;
   background: linear-gradient(45deg, #b8860b, #ffd700);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-transform: uppercase;
-}
-
-.logo-text {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--primary-color);
 }
 
 .logo-text:hover {
