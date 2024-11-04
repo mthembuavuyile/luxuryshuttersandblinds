@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-button {
   display: block;
-  width: 250px;
+  width: 30%;
   height: 150px;
   background-size: cover;
   background-position: center;
@@ -257,9 +257,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-button a {
   display: block;
-  color: var(--white);
+  color: #f1ce73;
   font-weight: bold;
 }
+
 
 .image-button:hover {
   transform: translateY(-5px);

@@ -36,6 +36,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/common-styles.css">
+    <link rel="stylesheet" href="styles/slideshow.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -98,10 +99,10 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="quote.html">Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About Us</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="quote.html">Quote</a></li>
+                        <li><a href="about.html">About Us</a></li>
                     </ul>
                 </nav>
                 <div class="burger">
@@ -123,15 +124,15 @@
         </section>
 
         <section id="image-buttons" class="image-buttons">
-            <div class="image-button" style="background-image: url(images/golden-shutter.jpg);">
-                <a href="about.html">About Us</a>
+            <div class="image-button" style="background-image: url(assets/images/shutters/exterior\ \(5\).jpg);">
+                <a href="gallery.html">Explore Gallery</a>
             </div>
-            <div class="image-button" style="background-image: url(images/black-shutters.jpg);">
-                <a href="quote.html">Get a Quote</a>
+            <div class="image-button" style="background-image: url(assets/images/shutters/lsbshutter\ \(1\).jpg);">
+                <a href="products.html">Our Products</a>
             </div>
-            <div class="image-button" style="background-image: url(images/golden-shutter.jpg);">
-                <a href="gallery.html">View Gallery</a>
-            </div> 
+            <div class="image-button" style="background-image: url(assets/images/shutters/lsbshutter\ \(4\).jpg)">
+                <a href="quote.html">Request a Quote</a>
+            </div>
         </section>
 
         <section id="products" class="section section-bg">
@@ -158,6 +159,40 @@
                 </div>
             </div>
         </section>
+
+        <section id="latest-work" class="section">
+            <div class="container">
+              <h2 class="section-title">Our Latest Work</h2>
+              <p class="section-text">
+                We're passionate about transforming spaces with our exceptional window treatments. Check out some of our recent projects and see how we've brought elegance and functionality to homes and businesses in Durban.
+              </p>
+          
+              <div class="slideshow-container">
+                <div class="slide fade">
+                  <img src="assets/images/blinds/latest-blinds (5).jpg" alt="Project 1" />
+                  <div class="caption">Blinds</div>
+                </div>
+                <div class="slide fade">
+                  <img src="assets/images/blinds/latest-blinds (2).jpg" alt="Project 2" />
+                  <div class="caption">Blinds</div>
+                </div>
+                <div class="slide fade">
+                  <img src="assets/images/curtains/curtain (37).jpg" alt="Project 3" />
+                  <div class="caption">Curtains and Shutters</div>
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/blinds/latest-blinds (7).jpg" alt="Project 4" />
+                    <div class="caption">Blinds</div>
+                  </div>
+          
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+          
+              <a href="products.html" class="cta-button" style="margin-top: 26px;">Explore More Projects</a>
+            </div>
+          </section>
 
         <section id="about" class="section">
             <div class="container">
@@ -224,6 +259,7 @@
     </main>
 
     <script src="scripts/common-script.js"></script>
+    <script src="scripts/slideshow.js"></script>
 
     <footer id="contact">
         <div class="container">

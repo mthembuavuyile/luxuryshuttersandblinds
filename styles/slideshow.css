@@ -1,0 +1,79 @@
+/* Slideshow container styling */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Individual slide styling */
+  .slide {
+    display: none;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Caption below each image */
+  .caption {
+    text-align: center;
+    padding: 10px 0;
+    color: #333;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 8px 8px;
+  }
+  
+  /* Fade animation */
+  .fade {
+    animation: fadeEffect 1s;
+  }
+  
+  @keyframes fadeEffect {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+  }
+  
+  /* Navigation buttons */
+  .slideshow-container .prev,
+  .slideshow-container .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30%;
+    transition: background-color 0.3s;
+  }
+  
+  .slideshow-container .prev:hover,
+  .slideshow-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .slideshow-container .prev {
+    left: 15px;
+  }
+  
+  .slideshow-container .next {
+    right: 15px;
+  }
+  
+  /* Active slide display */
+  .slide.active {
+    display: block;
+  }
+  
