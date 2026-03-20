@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (headerResponse.ok) {
             document.getElementById('header-placeholder').innerHTML = await headerResponse.text();
         }
-        
+
         if (footerResponse.ok) {
             document.getElementById('footer-placeholder').innerHTML = await footerResponse.text();
         }
@@ -30,16 +30,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const navOverlay = document.querySelector('.nav-overlay');
     const header = document.querySelector('header');
 
-    function toggleNavigation(active = null) {
-        // Safety check in case elements aren't found
+    function toggleNavigation(forceState = null) {
+        // Safety check
         if (!nav || !burger) return;
 
-        const action = (active === null) ? 'toggle' : (active ? 'add' : 'remove');
-        
+        // Determine the new state: if forceState is provided, use it. Otherwise, flip current state.
+        const isActive = forceState !== null ? forceState : !nav.classList.contains('active');
+        const action = isActive ? 'add' : 'remove';
+
         nav.classList[action]('active');
         burger.classList[action]('active');
         if (navOverlay) navOverlay.classList[action]('active');
         document.body.classList[action]('nav-active');
+
+        // Update screen reader attribute
+        burger.setAttribute('aria-expanded', isActive);
     }
 
     // Event Listeners for Mobile Menu
@@ -67,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. LAZY LOADING IMAGES
     // ==========================================
     const lazyImages = document.querySelectorAll('img.lazy');
-    
+
     if (lazyImages.length > 0) {
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
