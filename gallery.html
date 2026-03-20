@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-ZA">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the gallery of Luxury Shutters & Blinds in Durban. View our custom shutters, blinds, and window treatments for homes and offices in South Africa.">
-    <meta name="keywords" content="gallery, Luxury Shutters & Blinds, Durban window treatments, custom shutters, designer blinds, South Africa blinds, window decor">
-    <title>Gallery - Luxury Shutters & Blinds | Custom Window Treatments</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore the gallery of Luxury Shutters & Blinds in Durban. View our custom shutters, blinds, and window treatments for homes and offices in South Africa.">
+  <meta name="keywords"
+    content="gallery, Luxury Shutters & Blinds, Durban window treatments, custom shutters, designer blinds, South Africa blinds, window decor">
+  <title>Gallery - Luxury Shutters & Blinds | Custom Window Treatments</title>
 
-    <!-- Open Graph Meta Tags for social sharing -->
-    <meta property="og:title" content="Gallery - Luxury Shutters & Blinds | Custom Window Treatments">
-    <meta property="og:description" content="Check out our gallery featuring custom shutters, blinds, and flyscreens by Luxury Shutters & Blinds. Discover elegant window treatments for your home or office in Durban.">
-    <meta property="og:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
-    <meta property="og:url" content="https://www.luxuryshuttersandblinds.co.za/gallery">
-    <meta property="og:type" content="website">
+  <!-- Open Graph Meta Tags for social sharing -->
+  <meta property="og:title" content="Gallery - Luxury Shutters & Blinds | Custom Window Treatments">
+  <meta property="og:description"
+    content="Check out our gallery featuring custom shutters, blinds, and flyscreens by Luxury Shutters & Blinds. Discover elegant window treatments for your home or office in Durban.">
+  <meta property="og:image"
+    content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
+  <meta property="og:url" content="https://www.luxuryshuttersandblinds.co.za/gallery">
+  <meta property="og:type" content="website">
 
-    <!-- Twitter Card for social sharing -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gallery - Luxury Shutters & Blinds | Custom Window Treatments">
-    <meta name="twitter:description" content="Explore the gallery of custom window treatments by Luxury Shutters & Blinds in Durban. View our premium shutters, blinds, and flyscreens.">
-    <meta name="twitter:image" content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
+  <!-- Twitter Card for social sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gallery - Luxury Shutters & Blinds | Custom Window Treatments">
+  <meta name="twitter:description"
+    content="Explore the gallery of custom window treatments by Luxury Shutters & Blinds in Durban. View our premium shutters, blinds, and flyscreens.">
+  <meta name="twitter:image"
+    content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles/common-styles.css">
-    <link rel="stylesheet" href="styles/gallery.css">
-    
-    <link rel="preload" as="image" href="assets/images/logos/png/Luxury_S&B_logo-06.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Structured Data (Schema Markup) -->
-    <script type="application/ld+json">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/pages/gallery.css">
+
+  <link rel="preload" as="image" href="assets/images/logos/png/Luxury_S&B_logo-06.png">
+
+  <!-- Structured Data (Schema Markup) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "VisualArtwork",
@@ -49,77 +60,82 @@
     </script>
 
 </head>
+
 <body>
 
   <div id="header-placeholder"></div>
 
-<section id="gallery" class="gallery-hero">
-<div class="container">
-<h1>View Our Product Gallery</h1>
-<p>Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds, our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and envision the possibilities for your own home or office.</p>
-</div>
-</section>
-
-<section id="instagram-feed">
-<div class="container">
-<center><h2>See Our Latest Work on Instagram</h2></center>
-<div class="instagram-grid" id="instagramGrid"></div>
-<a href="https://www.instagram.com/designerblindsandshutters" target="_blank" rel="noopener noreferrer" class="follow-button">
-Follow Us on Instagram
-</a>
-</div>
-</section>
-
-<section class="testimonial">
-  <div class="container">
-  <div class="testimonial-content">
-  <p class="testimonial-text">"Shutters & Blinds transformed our home with their beautiful window treatments. The quality and craftsmanship are outstanding, and their team was professional from start to finish. We couldn't be happier with the result!"</p>
-  <p class="testimonial-author">- Sarah and John Thompson, Durban</p>
-  </div>
-  </div>
+  <section id="gallery" class="gallery-hero">
+    <div class="container">
+      <h1>View Our Product Gallery</h1>
+      <p>Explore our gallery to see how our products can transform your space. From elegant shutters to stylish blinds,
+        our gallery showcases the versatility and beauty of our window treatments in various settings. Get inspired and
+        envision the possibilities for your own home or office.</p>
+    </div>
   </section>
 
-<a href="https://wa.me/27732899370" id="whatsapp-button">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-WhatsApp us
-</a>
+  <section id="instagram-feed" class="section section-bg">
+    <div class="container">
+      <h2 class="section-title">See Our Latest Work on Instagram</h2>
+      
+      <div class="instagram-grid" id="instagramGrid"></div>
+      
+      <a href="https://www.instagram.com/designerblindsandshutters" target="_blank" rel="noopener noreferrer" class="follow-button">
+        Follow Us on Instagram
+      </a>
+    </div>
+  </section>
 
-<div id="footer-placeholder"></div>
+  <section class="testimonial section">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-item">
+          <p>"Shutters & Blinds transformed our home with their beautiful window treatments. The quality and craftsmanship are outstanding, and their team was professional from start to finish. We couldn't be happier with the result!"</p>
+          <p class="author">- Sarah and John Thompson, Durban</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="scripts/main.js"></script>
+  <div id="footer-placeholder"></div>
 
-<script>
+  <script src="scripts/main.js"></script>
 
-const instagramPosts = [
-'https://www.instagram.com/p/CsinkGWAaoP/',
-'https://www.instagram.com/p/CzqEgYsKPQR/',
-'https://www.instagram.com/p/Cg_GUf1qsKs/',
-'https://www.instagram.com/p/C4bDBOVqLAE/',
-'https://www.instagram.com/p/CnEOhSfAF63/',
-'https://www.instagram.com/p/CkVeVwXA-B5/',
-'https://www.instagram.com/p/Cf8dob8Afo_/',
-'https://www.instagram.com/p/CzesJJGrNA9/',
-'https://www.instagram.com/p/Cie5vDXouOz/'
-];
+  <script>
 
-const instagramGrid = document.getElementById('instagramGrid');
+    const instagramPosts = [
+      'https://www.instagram.com/p/CsinkGWAaoP/',
+      'https://www.instagram.com/p/CzqEgYsKPQR/',
+      'https://www.instagram.com/p/Cg_GUf1qsKs/',
+      'https://www.instagram.com/p/C4bDBOVqLAE/',
+      'https://www.instagram.com/p/CnEOhSfAF63/',
+      'https://www.instagram.com/p/CkVeVwXA-B5/',
+      'https://www.instagram.com/p/Cf8dob8Afo_/',
+      'https://www.instagram.com/p/CzesJJGrNA9/',
+      'https://www.instagram.com/p/Cie5vDXouOz/'
+    ];
 
-instagramPosts.forEach(post => {
-const postElement = document.createElement('div');
-postElement.className = 'instagram-post';
-postElement.innerHTML = `
+    const instagramGrid = document.getElementById('instagramGrid');
+
+    instagramPosts.forEach(post => {
+      const postElement = document.createElement('div');
+      postElement.className = 'instagram-post';
+      postElement.innerHTML = `
 <blockquote class="instagram-media" data-instgrm-permalink="${post}" data-instgrm-version="14">
 <!-- Instagram will replace this with the embedded post -->
 </blockquote>
 `;
-instagramGrid.appendChild(postElement);
-});
+      instagramGrid.appendChild(postElement);
+    });
 
-// Reload Instagram embed script to process new blockquotes
-if (window.instgrm) {
-window.instgrm.Embeds.process();
-}
-</script>
-<script async src="//www.instagram.com/embed.js"></script>
+    // Reload Instagram embed script to process new blockquotes
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+    }
+  </script>
+  <script async src="//www.instagram.com/embed.js"></script>
 </body>
+
 </html>

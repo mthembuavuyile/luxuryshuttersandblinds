@@ -28,8 +28,12 @@
         content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
 
     <!-- Styles and Fonts -->
-    <link rel="stylesheet" href="styles/common-styles.css">
-    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -85,79 +89,75 @@
 
     <div id="header-placeholder"></div>
 
-    <section id="contact">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <div class="content">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <p><strong>(By Appointment Only)</strong></p>
-                            <p>24 Carmichael Place, Woodlands, Durban, 4004</p>
+    <main class="page-padded">
+        <section id="contact" class="section">
+            <div class="container">
+                <h1 class="section-title">Contact Us</h1>
+                <div class="content">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong>(By Appointment Only)</strong></p>
+                                <p>24 Carmichael Place, Woodlands, Durban, 4004</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+27 73 289 9370</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@luxuryshuttersandblinds.co.za</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Mon-Fri: 9am-5pm, Sat: 10am-2pm</p>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+27 73 289 9370</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>info@luxuryshuttersandblinds.co.za</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <p>Mon-Fri: 9am-5pm, Sat: 10am-2pm</p>
-                    </div>
-                </div>
 
-                <div class="contact-links">
-                    <a href="tel:+27 73 289 9370" class="contact-link phone-link">
-                        <i class="fas fa-phone"></i> Call Us
-                    </a>
-                    <a href="mailto:info@luxuryshuttersandblinds.co.za" class="contact-link email-link">
-                        <i class="fas fa-envelope"></i> Email Us
-                    </a>
-                    <a href="https://wa.me/27732899370" class="contact-link whatsapp-link" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="https://www.instagram.com/luxuryshuttersandblinds" class="contact-link instagram-link"
-                        target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
+                    <div class="contact-links">
+                        <a href="tel:+27732899370" class="contact-link phone-link">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                        <a href="mailto:info@luxuryshuttersandblinds.co.za" class="contact-link email-link">
+                            <i class="fas fa-envelope"></i> Email Us
+                        </a>
+                        <a href="https://wa.me/27732899370" class="contact-link whatsapp-link" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/luxuryshuttersandblinds" class="contact-link instagram-link"
+                            target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="map-container" class="section">
-        <div class="container">
-            <center>
+        <section id="map-container" class="section section-bg">
+            <div class="container">
                 <h2 class="section-title">Find Us</h2>
-            </center>
-            <p style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 20px;">By Appointment Only
-            </p>
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <iframe id="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza"
-                    width="100%" height="450" style="border:0; max-width: 900px; border-radius: 10px;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 20px;">By Appointment
+                    Only</p>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <iframe id="map"
+                        src="https://maps.google.com/maps?q=24%20Carmichael%20Place,%20Woodlands,%20Durban,%204004&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="450" style="border:0; max-width: 900px; border-radius: 10px;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <div id="footer-placeholder"></div>
 
-    <div id="footer-placeholder"></div>
+        <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+            WhatsApp us
+        </a>
 
-
-    <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-        WhatsApp us
-    </a>
-
-    <script src="scripts/main.js"></script>
+        <script src="scripts/main.js"></script>
 
 </body>
 

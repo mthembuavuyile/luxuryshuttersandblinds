@@ -1,0 +1,15 @@
+/* Root Variables */
+:root {
+  --primary-color: #ffd700;
+  --secondary-color: #c79e5c;
+  --accent-color: #ffd700;
+  --text-color: #333;
+  --bg-color: #fff;
+  --white: #fff;
+  --black: #000;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  --border-radius: 10px;
+  --max-width: 1200px;
+}

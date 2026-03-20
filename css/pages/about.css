@@ -1,0 +1,12 @@
+.about-content {
+  padding: 60px 0;
+}
+
+.about-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
