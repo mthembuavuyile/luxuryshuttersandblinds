@@ -1,0 +1,147 @@
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+.about-hero {
+    width: 100%;
+    min-height: clamp(240px, 35vh, 320px);
+    background: #222 url('../../assets/images/shutters/latest-window-shutter (21).jpg') center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 60px 40px;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.6);
+    pointer-events: none;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+}
+
+.about-hero h1 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.about-hero p {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* =====================================================
+   ABOUT CONTENT
+===================================================== */
+.about-content {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.about-content-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.about-content p {
+    font-size: 14.5px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* =====================================================
+   VALUES & CTA SECTION
+===================================================== */
+.about-cta-section {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 60px 0;
+}
+
+.about-cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background var(--transition), transform var(--transition);
+    border: 2px solid var(--primary);
+    text-align: center;
+}
+
+.about-btn:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.about-btn.secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.about-btn.secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 50px 0;
+    }
+    
+    .about-cta-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 20px;
+    }
+}

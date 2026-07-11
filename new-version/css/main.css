@@ -1,0 +1,442 @@
+/* =====================================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+===================================================== */
+:root {
+    --primary: #111111;
+    --primary-mid: #2a2a2a;
+    --accent: #ffd700;
+    --white: #ffffff;
+    --off-white: #f4f6f8;
+    --text: #333333;
+    --text-light: #666666;
+    --text-muted: #999999;
+    --border: #e0e0e0;
+    --font: 'Montserrat', sans-serif;
+    --header-h: 72px;
+    --transition: 0.25s ease;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.10);
+    --gold: #c79e5c;
+}
+
+/* =====================================================
+   RESET & BASE
+===================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+    line-height: 1.6;
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =====================================================
+   TYPOGRAPHY HELPERS
+===================================================== */
+.section-title {
+    color: var(--primary);
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+    color: var(--text-light);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.section-banner {
+    background: var(--primary);
+    color: var(--accent);
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* =====================================================
+   LAYOUT CONTAINER
+===================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--header-h);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1.5px;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.logo-text small {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--primary);
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: color var(--transition);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width var(--transition);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+nav a.active {
+    color: var(--gold);
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    padding: 4px;
+    line-height: 0;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    background: var(--white);
+    z-index: 999;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 24px;
+    border-top: 1px solid var(--border);
+    overflow-y: auto;
+    align-items: stretch;
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav a {
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 0 40px 16px 40px;
+    border-bottom: 1px solid var(--border);
+    transition: color var(--transition);
+    text-align: left;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    color: var(--gold);
+}
+
+/* =====================================================
+   WHATSAPP FLOATING BUTTON
+===================================================== */
+#whatsapp-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+#whatsapp-button:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    color: var(--white);
+}
+
+#whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 80px 0 30px 0;
+    border-top: 1px solid var(--primary-mid);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 24px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.footer-contact-list li i {
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+}
+
+.footer-contact-list li a {
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.footer-contact-list li a:hover {
+    color: var(--white);
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-socials a {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color var(--transition);
+}
+
+.footer-socials a i {
+    width: 16px;
+    height: 16px;
+}
+
+.footer-socials a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footer-bottom a {
+    color: var(--gold);
+    transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+/* =====================================================
+   RESPONSIVE BASE BREAKPOINTS
+===================================================== */
+@media (max-width: 960px) {
+    header {
+        padding: 0 30px;
+    }
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .container {
+        padding: 44px 20px;
+    }
+
+    #whatsapp-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    #whatsapp-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        padding: 60px 0 30px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
