@@ -116,19 +116,54 @@ function highlightActiveLink() {
     
     const desktopLinks = document.querySelectorAll('#desktop-nav a');
     const mobileLinks = document.querySelectorAll('#mobile-nav a');
+    const allLinks = [...desktopLinks, ...mobileLinks];
     
-    const markActive = (links) => {
-        links.forEach(link => {
+    if (page === 'index.html' || page === '') {
+        const testimonialsSection = document.getElementById('testimonials');
+        
+        const homeLinks = allLinks.filter(link => {
             const href = link.getAttribute('href');
-            // Check if page filename matches the href exactly
-            if (href === page || (page === 'index.html' && href.startsWith('index.html'))) {
+            return href === 'index.html' || href === '/' || href === 'index.html#';
+        });
+        
+        const testimonialsLinks = allLinks.filter(link => {
+            const href = link.getAttribute('href');
+            return href.includes('#testimonials');
+        });
+        
+        if (testimonialsSection && 'IntersectionObserver' in window) {
+            const observerOptions = {
+                root: null,
+                rootMargin: '-40% 0px -40% 0px', // Activates when the section covers the center area of viewport
+                threshold: 0
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Active Testimonials
+                        testimonialsLinks.forEach(l => l.classList.add('active'));
+                        homeLinks.forEach(l => l.classList.remove('active'));
+                    } else {
+                        // Active Home
+                        testimonialsLinks.forEach(l => l.classList.remove('active'));
+                        homeLinks.forEach(l => l.classList.add('active'));
+                    }
+                });
+            }, observerOptions);
+            
+            observer.observe(testimonialsSection);
+        } else {
+            homeLinks.forEach(l => l.classList.add('active'));
+        }
+    } else {
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === page) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
             }
         });
-    };
-    
-    markActive(desktopLinks);
-    markActive(mobileLinks);
+    }
 }

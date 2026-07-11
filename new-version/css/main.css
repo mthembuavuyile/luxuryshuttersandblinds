@@ -100,10 +100,14 @@ ul {
 /* =====================================================
    HEADER
 ===================================================== */
-header {
+#header-placeholder {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: var(--white);
+}
+
+header {
     height: var(--header-h);
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -198,38 +202,93 @@ nav a.active::after {
 }
 
 .mobile-nav {
-    display: none;
+    display: flex; /* Keep flex layout, control display state with opacity and pointer-events for smooth transitions */
     position: fixed;
     inset: var(--header-h) 0 0 0;
-    background: var(--white);
+    background: rgba(17, 17, 17, 0.45); /* Elegant dark backdrop to contrast the white slats */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 999;
     flex-direction: column;
-    padding: 32px 0;
-    gap: 24px;
+    padding: 0; /* No padding so slats line up perfectly */
+    gap: 0; /* No gaps so they look like adjacent shutter slats */
     border-top: 1px solid var(--border);
     overflow-y: auto;
     align-items: stretch;
+    perspective: 1200px; /* 3D Depth Context for rotation */
+    
+    /* Fade/Blur transition when closing */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .mobile-nav.open {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .mobile-nav a {
+    display: block;
     color: var(--primary);
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    padding: 0 40px 16px 40px;
+    letter-spacing: 1.5px;
+    padding: 22px 40px; /* Generous vertical padding to feel like premium slats */
     border-bottom: 1px solid var(--border);
-    transition: color var(--transition);
+    background: var(--white);
     text-align: left;
+    
+    /* 3D Shutter/Slat properties */
+    transform-origin: top;
+    transform: rotateX(-90deg); /* Start rotated flat/invisible */
+    opacity: 0;
+    backface-visibility: hidden;
+    
+    /* Smooth close transition */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                opacity 0.3s ease, 
+                color var(--transition), 
+                background-color var(--transition);
 }
 
 .mobile-nav a:hover,
 .mobile-nav a.active {
     color: var(--gold);
+}
+
+/* Shutter Slats Animation when menu opens */
+.mobile-nav.open a {
+    animation: shutterOpen 0.65s cubic-bezier(0.175, 0.885, 0.32, 1.1) forwards;
+}
+
+/* Staggered animation delays for the shutter slats */
+.mobile-nav.open a:nth-child(1) { animation-delay: 0.04s; }
+.mobile-nav.open a:nth-child(2) { animation-delay: 0.10s; }
+.mobile-nav.open a:nth-child(3) { animation-delay: 0.16s; }
+.mobile-nav.open a:nth-child(4) { animation-delay: 0.22s; }
+.mobile-nav.open a:nth-child(5) { animation-delay: 0.28s; }
+.mobile-nav.open a:nth-child(6) { animation-delay: 0.34s; }
+.mobile-nav.open a:nth-child(7) { animation-delay: 0.40s; }
+.mobile-nav.open a:nth-child(8) { animation-delay: 0.46s; }
+
+@keyframes shutterOpen {
+    0% {
+        transform: rotateX(-90deg);
+        opacity: 0;
+        background-color: var(--off-white);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+        background-color: var(--white);
+    }
 }
 
 /* =====================================================
