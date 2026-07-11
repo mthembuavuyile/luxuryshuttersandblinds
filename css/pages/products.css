@@ -1,71 +1,226 @@
+/* =====================================================
+   PRODUCTS TITLE & FILTER
+===================================================== */
+.products-page-title {
+    text-align: center;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+.products-page-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
 .filter-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
 }
 
 .filter-button {
-  background-color: var(--bg-color);
-  border: 2px solid var(--primary-color);
-  color: var(--text-color);
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 10px 22px;
+    font-family: var(--font);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition);
 }
 
 .filter-button:hover,
 .filter-button.active {
-  background-color: var(--primary-color);
-  color: var(--white);
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-1px);
 }
 
+/* =====================================================
+   PRODUCTS GRID
+===================================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+}
+
+.product-card-img {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    cursor: pointer;
+}
+
+.product-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img img {
+    transform: scale(1.04);
+}
+
+.product-card-body {
+    padding: 24px;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+}
+
+.product-card-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.product-card-body p {
+    font-size: 12.5px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.products-footer-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.quote-button {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 36px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background var(--transition), transform var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.quote-button:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   IMAGE POPUP (LIGHTBOX)
+===================================================== */
 .image-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.95);
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
+    position: relative;
+    max-width: 90%;
+    max-height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .popup-image {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .close-popup {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute;
+    top: -48px;
+    right: 0;
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1;
+    transition: color var(--transition);
 }
 
 .close-popup:hover {
-  color: #ccc;
+    color: var(--gold);
 }
 
 .product-image {
-  cursor: pointer;
-  transition: transform 0.2s;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.product-image:hover {
-  transform: scale(1.05);
+.product-image.loaded {
+    opacity: 1;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+===================================================== */
+@media (max-width: 960px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .products-page-desc {
+        padding: 0 20px;
+    }
+    
+    .filter-buttons {
+        gap: 8px;
+    }
+    
+    .filter-button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
 }

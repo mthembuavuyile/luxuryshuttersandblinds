@@ -1,75 +1,225 @@
+/* =====================================================
+   CONTACT HERO & SPLIT
+===================================================== */
 .contact-page-title {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top: 100px;
+    text-align: center;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
-.contact-content {
-  padding: 40px;
-  background: var(--bg-color);
-  margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.contact-page-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
 }
 
-.contact-info {
-  text-align: center;
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+    margin-bottom: 60px;
 }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+.contact-info h3 {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
 }
 
-.contact-item i {
-  font-size: 28px;
-  margin-right: 15px;
-  color: var(--accent-color);
+.contact-info ul {
+    margin-bottom: 40px;
 }
 
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 14.5px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.contact-info li i {
+    flex-shrink: 0;
+    color: var(--gold);
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.contact-info li strong {
+    display: block;
+    color: var(--primary);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+/* Direct Action Links */
 .contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
 }
 
 .contact-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: var(--transition);
-}
-
-.phone-link { background-color: #4CAF50; color: var(--white); }
-.email-link { background-color: #2196F3; color: var(--white); }
-.whatsapp-link { background-color: #25D366; color: var(--white); }
-.instagram-link { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); color: var(--white); }
-
-.contact-link:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
 }
 
 .contact-link i {
-  margin-right: 10px;
+    width: 16px;
+    height: 16px;
 }
 
-@media screen and (max-width: 768px) {
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-  }
-  .contact-link {
+.phone-link { background-color: #4caf50; }
+.phone-link:hover { background-color: #43a047; }
+
+.email-link { background-color: #2196f3; }
+.email-link:hover { background-color: #1e88e5; }
+
+.whatsapp-link { background-color: #25d366; }
+.whatsapp-link:hover { background-color: #128c7e; }
+
+.instagram-link { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+.instagram-link:hover { opacity: 0.9; }
+
+.contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: var(--white);
+}
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+.contact-form label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
-    max-width: 250px;
-    margin-bottom: 10px;
-  }
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    font-family: var(--font);
+    font-size: 13.5px;
+    margin-bottom: 24px;
+    transition: border-color var(--transition), background-color var(--transition);
+    outline: none;
+    background: var(--off-white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+    background: var(--white);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 14px 36px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+    color: var(--primary);
+}
+
+/* =====================================================
+   MAP CONTAINER
+===================================================== */
+.map-section {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+    padding: 60px 0;
+}
+
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 450px;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+===================================================== */
+@media (max-width: 960px) {
+    .contact-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page-desc {
+        padding: 0 20px;
+    }
+    
+    .contact-links {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .map-wrapper iframe {
+        height: 320px;
+    }
 }

@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Quote - Luxury Shutters & Blinds | Durban Window Treatments</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.luxuryshuttersandblinds.co.za/quote.html" />
+
+    <!-- Meta Tags -->
     <meta name="description"
         content="Request a free quote from Luxury Shutters & Blinds in Durban for custom shutters, blinds, and flyscreens. Get personalized solutions for your window treatments.">
     <meta name="keywords"
         content="quote request, Luxury Shutters & Blinds, Durban window treatments, custom shutters, blinds, flyscreens, free estimate">
-    <title>Get a Free Quote - Luxury Shutters & Blinds | Durban Window Treatments</title>
-    <link rel="canonical" href="https://www.luxuryshuttersandblinds.co.za/quote.html" />
+    <meta name="robots" content="index, follow">
 
-    <!-- Open Graph Meta Tags for social sharing -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Get a Free Quote - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta property="og:description"
         content="Request a personalized quote from Luxury Shutters & Blinds in Durban for premium custom shutters, blinds, and flyscreens. Get expert advice and competitive pricing.">
@@ -20,7 +25,7 @@
     <meta property="og:url" content="https://www.luxuryshuttersandblinds.co.za/quote.html">
     <meta property="og:type" content="website">
 
-    <!-- Twitter Card for social sharing -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Get a Free Quote - Luxury Shutters & Blinds | Durban Window Treatments">
     <meta name="twitter:description"
@@ -28,19 +33,10 @@
     <meta name="twitter:image"
         content="https://www.luxuryshuttersandblinds.co.za/assets/images/logos/png/Luxury_S&B_logo-06.png">
 
-    <!-- Styles and Fonts -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/utilities.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preload" as="image" href="assets/images/logos/png/Luxury_S&B_logo-06.png">
-
-    <!-- Structured Data (Schema Markup) -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,75 +59,109 @@
     }
     </script>
 
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/quote.css">
 </head>
 
 <body>
 
+    <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <h1 class="section-title">Get a Quote</h1>
-                <p class="section-text">Transform Your Space with Elegance</p>
-                <form id="quote-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="product">Product</label>
-                        <select id="product" name="product" required>
-                            <option value="">Select a product</option>
-                            <option value="shutters">Shutters</option>
-                            <option value="blinds">Blinds</option>
-                            <option value="flyscreens">Flyscreens</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Additional Details</label>
-                        <textarea id="message" name="message"
-                            placeholder="Please provide any additional details or specific requirements"></textarea>
-                    </div>
-                    <button type="submit">Submit Quote Request</button>
-                </form>
+    <!-- =====================================================
+         QUOTE VIEWPORT
+    ===================================================== -->
+    <main class="container">
+        <h1 class="quote-page-title">Get a Quote</h1>
+        <p class="quote-page-desc">Transform Your Space with Elegance</p>
+        
+        <form id="quote-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Full Name">
             </div>
-        </section>
-
-        <div id="loadingOverlay" class="loading-overlay">
-            <div class="loading-spinner"></div>
-            <p>Preparing your quote request...</p>
-        </div>
-
-        <section id="map-container" class="section">
-            <div class="container">
-                <h2 class="section-title">Find Us</h2>
-                <p style="text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 20px;">By Appointment
-                    Only</p>
-                <iframe id="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
             </div>
-        </section>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+27 XX XXX XXXX">
+            </div>
+            
+            <div class="form-group">
+                <label for="product">Product Type</label>
+                <select id="product" name="product" required>
+                    <option value="">Select a product</option>
+                    <option value="shutters">Shutters</option>
+                    <option value="blinds">Blinds</option>
+                    <option value="flyscreens">Flyscreens</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Additional Details</label>
+                <textarea id="message" name="message" placeholder="Please provide any dimensions, specific requirements, or details about your space..."></textarea>
+            </div>
+            
+            <button type="submit">Submit Quote Request</button>
+        </form>
     </main>
 
+    <!-- =====================================================
+         LOADING SPINNER OVERLAY
+    ===================================================== -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Preparing your quote request...</p>
+    </div>
+
+    <!-- =====================================================
+         MAP VIEWPORT
+    ===================================================== -->
+    <section class="map-section">
+        <div class="container" style="padding: 0 40px;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 12px;">Find Our Showroom</h2>
+            <p style="text-align: center; font-weight: 700; font-size: 15px; margin-bottom: 30px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold);">By Appointment Only</p>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.9791710727686!2d30.95264187489742!3d-29.92250182563116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7ab9710540c5b%3A0x6788dbe0d559bc85!24%20Carmichael%20Pl%2C%20Woodlands%2C%20Durban%2C%204004!5e0!3m2!1sen!2sza!4v1726777588431!5m2!1sen!2sza" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <script src="scripts/main.js"></script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        WhatsApp Us
+    </a>
 
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('quote-form');
+            if (!form) return;
 
+            // Create error placeholders inside form groups
             const formGroups = document.querySelectorAll('.form-group');
             formGroups.forEach(group => {
                 const errorDiv = document.createElement('div');
@@ -142,6 +172,7 @@
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
 
+                // Reset error messages
                 document.querySelectorAll('.error-message').forEach(msg => msg.style.display = 'none');
 
                 const name = document.getElementById('name').value.trim();
@@ -158,7 +189,7 @@
                 }
 
                 if (!email) {
-                    showError('email', 'Please enter your email');
+                    showError('email', 'Please enter your email address');
                     isValid = false;
                 } else if (!isValidEmail(email)) {
                     showError('email', 'Please enter a valid email address');
@@ -194,11 +225,15 @@
                 }
             });
 
-            function showError(fieldId, message) {
+            function showError(fieldId, msgText) {
                 const field = document.getElementById(fieldId);
-                const errorDiv = field.parentElement.querySelector('.error-message');
-                errorDiv.textContent = message;
-                errorDiv.style.display = 'block';
+                if (field) {
+                    const errorDiv = field.parentElement.querySelector('.error-message');
+                    if (errorDiv) {
+                        errorDiv.textContent = msgText;
+                        errorDiv.style.display = 'block';
+                    }
+                }
             }
 
             function isValidEmail(email) {
@@ -210,8 +245,6 @@
             }
         });
     </script>
-
-
 </body>
 
 </html>

@@ -1,26 +1,31 @@
 <header>
-    <div class="container">
-        <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logos/png/Luxury_S&B_logo-06.png" alt="Shutters & Blinds Logo" class="logo-img">
-            </a>
-            <a href="index.html" class="gradient-logo-text">Luxury Shutters & Blinds</a>
-            <nav id="primary-navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="quote.html">Quote</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </nav>
-            <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
-                <span class="line1"></span>
-                <span class="line2"></span>
-                <span class="line3"></span>
-            </button>
-        </div>
-    </div>
+    <a href="index.html" class="logo">
+        <img src="assets/images/logos/png/Luxury_S&B_logo-06.png" alt="Luxury Shutters & Designer Blinds Logo">
+        <div class="logo-text">Luxury Shutters<small>& Designer Blinds</small></div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav id="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Burger Button -->
+    <button class="burger" id="burger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <i data-lucide="menu" width="28" height="28"></i>
+    </button>
 </header>
-<div class="nav-overlay"></div>
+
+<!-- Mobile Navigation Drawer -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html" onclick="closeMobileNav()">Home</a>
+    <a href="about.html" onclick="closeMobileNav()">About</a>
+    <a href="products.html" onclick="closeMobileNav()">Products</a>
+    <a href="gallery.html" onclick="closeMobileNav()">Gallery</a>
+    <a href="index.html#testimonials" onclick="closeMobileNav()">Testimonials</a>
+    <a href="contact.html" onclick="closeMobileNav()">Contact</a>
+</nav>

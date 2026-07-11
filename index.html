@@ -39,21 +39,6 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/utilities.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="preload" as="image" href="assets/images/logos/png/Luxury_S&B_logo-06.png">
-
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -92,208 +77,403 @@
       },
       "sameAs": [
         "https://www.facebook.com/luxuryshuttersandblinds",
-        "https://www.instagram.com/luxuryshuttersandblinds",
-        "https://twitter.com/luxuryshuttersandblinds"
+        "https://www.instagram.com/luxuryshuttersandblinds"
       ] 
     }
     </script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
 </head>
 
 <body>
 
+    <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Premium Shutters and Designer Blinds in Durban</h1>
-                <p>Discover our luxury window treatments, expertly crafted to enhance your living spaces with style and
-                    functionality. As <strong>The Blinds Expert</strong> in Durban, we offer custom shutters and blinds
-                    that blend elegance with practicality.</p>
-            </div>
-        </section>
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+    <div class="hero" id="hero" role="img" aria-label="Luxury Shutters Installation">
+        <div class="hero-content">
+            <h1>Premium Shutters and Designer Blinds</h1>
+            <p>Discover our luxury window treatments, expertly crafted to enhance your living spaces with style and
+                functionality in Durban.</p>
+            <a href="quote.html" class="hero-cta">Request a Free Quote</a>
+        </div>
+    </div>
+    <div class="hero-banner">
+        Elegance &bull; Quality &bull; Expertise
+    </div>
 
-        <section id="image-buttons" class="image-buttons">
-            <div class="image-button" style="background-image: url(assets/images/shutters/exterior\ \(5\).jpg);">
-                <a href="gallery.html">Explore Gallery</a>
-            </div>
-            <div class="image-button" style="background-image: url(assets/images/shutters/lsbshutter\ \(1\).jpg);">
-                <a href="products.html">Our Products</a>
-            </div>
-            <div class="image-button" style="background-image: url(assets/images/shutters/lsbshutter\ \(4\).jpg)">
-                <a href="quote.html">Request a Quote</a>
-            </div>
-        </section>
+    <!-- =====================================================
+         NAVIGATION CARDS
+    ===================================================== -->
+    <section class="nav-cards-section">
+        <div class="nav-cards-container">
+            <a href="gallery.html" class="nav-card"
+                style="background-image: url('assets/images/shutters/exterior (5).jpg');">
+                <div class="nav-card-overlay"></div>
+                <div class="nav-card-content">
+                    <h3>Explore Gallery</h3>
+                    <span class="nav-card-link">View Projects <i data-lucide="arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="products.html" class="nav-card"
+                style="background-image: url('assets/images/shutters/lsbshutter (1).jpg');">
+                <div class="nav-card-overlay"></div>
+                <div class="nav-card-content">
+                    <h3>Our Products</h3>
+                    <span class="nav-card-link">Explore Range <i data-lucide="arrow-right"></i></span>
+                </div>
+            </a>
+            <a href="quote.html" class="nav-card"
+                style="background-image: url('assets/images/shutters/lsbshutter (4).jpg');">
+                <div class="nav-card-overlay"></div>
+                <div class="nav-card-content">
+                    <h3>Request a Quote</h3>
+                    <span class="nav-card-link">Get Estimate <i data-lucide="arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
 
-        <section id="products" class="section section-bg">
-            <div class="container">
-                <h2 class="section-title">Our Premium Window Treatments</h2>
-                <div class="product-grid">
-                    <div class="product-item">
+    <!-- =====================================================
+         ABOUT US
+    ===================================================== -->
+    <div class="section-banner" id="about">About The Blinds Expert</div>
+
+    <div class="container">
+        <div class="about-split">
+            <div class="about-title-side">
+                <h2 class="section-title" style="text-align:left;">Transforming Spaces</h2>
+                <div class="about-divider"></div>
+            </div>
+            <div class="about-text">
+                <p>At Luxury Shutters & Blinds, we are Durban's leading provider of premium window treatments. Our
+                    expert team is dedicated to helping you find the perfect solution for your home or business.</p>
+                <p>With years of experience and a passion for excellence, we ensure that every product we offer meets
+                    our rigorous standards for quality, style, and functionality. From custom shutters to designer
+                    blinds, we blend elegance with practicality.</p>
+                <a href="products.html" class="about-cta">Explore Our Range <i data-lucide="arrow-right" width="16"
+                        height="16"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         PRODUCTS
+    ===================================================== -->
+    <section class="products-section" id="products">
+        <div class="section-banner">Our Premium Window Treatments</div>
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">What We Offer</h2>
+            <p class="section-subtitle" style="margin: 0 auto 40px auto; text-align:center;">Enhance your home with our
+                expertly crafted window solutions designed for elegance, privacy, and light control.</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-card-img">
                         <img src="https://media.istockphoto.com/id/170614680/photo/blinds.jpg?s=612x612&w=0&k=20&c=-WMkfsrXIwk-1Q-VqWZbtB42PYmpdsQSH3xlIJ3R6gM="
-                            alt="Luxury Shutters in Durban">
+                            alt="Custom Shutters">
+                    </div>
+                    <div class="product-card-body">
                         <h3><a href="products.html">Custom Shutters</a></h3>
-                    </div>
-                    <div class="product-item">
-                        <img src="https://media.istockphoto.com/id/1729031007/photo/modern-japanese-style-living-room-interior-at-night-with-sofa-television-set-and-potted-plant.jpg?s=612x612&w=0&k=20&c=p94J9gyjgBxxm1hQRV2EZaxszYhcJAFh_ij9BgHb_DU="
-                            alt="Designer Blinds in Durban">
-                        <h3><a href="products.html">Designer Blinds</a></h3>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/flyscreen2.jpg" alt="Quality Flyscreens in Durban">
-                        <h3><a href="products.html">Premium Flyscreens</a></h3>
+                        <p>Timeless elegance and robust design, custom-made to fit any window size perfectly.</p>
                     </div>
                 </div>
-                <br>
-                <div class="cta-container">
-                    <a href="products.html" class="cta-button">Explore Our Products</a>
-                    <a href="gallery.html" class="cta-button">View Product Gallery</a>
+
+                <div class="product-card">
+                    <div class="product-card-img">
+                        <img src="https://media.istockphoto.com/id/1729031007/photo/modern-japanese-style-living-room-interior-at-night-with-sofa-television-set-and-potted-plant.jpg?s=612x612&w=0&k=20&c=p94J9gyjgBxxm1hQRV2EZaxszYhcJAFh_ij9BgHb_DU="
+                            alt="Designer Blinds">
+                    </div>
+                    <div class="product-card-body">
+                        <h3><a href="products.html">Designer Blinds</a></h3>
+                        <p>Modern, stylish, and versatile blinds available in a variety of materials and premium
+                            finishes.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-img">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
+                            alt="Premium Flyscreens">
+                    </div>
+                    <div class="product-card-body">
+                        <h3><a href="products.html">Premium Flyscreens</a></h3>
+                        <p>Keep insects out while letting the fresh breeze in.</p>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="latest-work" class="section">
-            <div class="container">
-                <h2 class="section-title">Our Latest Work</h2>
-                <p class="section-text">
-                    We're passionate about transforming spaces with our exceptional window treatments.
-                    Explore our recent projects to see how we've added elegance and functionality to homes
-                    and businesses in Durban.
-                </p>
+            <div class="products-cta-container">
+                <a href="products.html" class="products-cta">Explore Our Products</a>
+                <a href="gallery.html" class="products-cta secondary">View Product Gallery</a>
+            </div>
+        </div>
+    </section>
 
-                <div class="slideshow-container">
-                    <!-- Slide 1 -->
-                    <div class="slide fade">
-                        <img src="assets/images/blinds/latest-blinds (5).jpg" alt="Modern Blinds Installation">
-                        <div class="caption">Elegant Blinds</div>
-                    </div>
+    <!-- =====================================================
+         LATEST WORK (SLIDESHOW)
+    ===================================================== -->
+    <div class="section-banner" id="gallery">Our Latest Work</div>
+    <div class="container latest-work-container">
+        <h2 class="section-title" style="text-align:center;">Project Showcase</h2>
+        <p class="section-subtitle" style="margin: 0 auto 30px auto; text-align:center;">
+            Explore our recent projects to see how we add elegance and functionality to KZN homes.
+        </p>
 
-                    <!-- Slide 2 -->
-                    <div class="slide fade">
-                        <img src="assets/images/shutters/latest-window-shutter (7).jpg" alt="Premium Window Shutters">
-                        <div class="caption">Premium Shutters</div>
-                    </div>
+        <div class="slideshow-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide fade active">
+                <img src="assets/images/blinds/latest-blinds (5).jpg" alt="Modern Blinds Installation"
+                    onerror="this.src='https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Elegant Blinds</div>
+            </div>
 
-                    <!-- Slide 3 -->
-                    <div class="slide fade">
-                        <img src="assets/images/blinds/latest-blinds (2).jpg" alt="Stylish Window Blinds">
-                        <div class="caption">Stylish Blinds</div>
-                    </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="assets/images/shutters/latest-window-shutter (7).jpg" alt="Premium Window Shutters"
+                    onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Premium Shutters</div>
+            </div>
 
-                    <!-- Slide 4 -->
-                    <div class="slide fade">
-                        <img src="assets/images/shutters/latest-window-shutter (21).jpg" alt="Luxury Window Shutters">
-                        <div class="caption">Luxury Shutters</div>
-                    </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="assets/images/blinds/latest-blinds (2).jpg" alt="Stylish Window Blinds"
+                    onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Stylish Blinds</div>
+            </div>
 
-                    <!-- Slide 5 -->
-                    <div class="slide fade">
-                        <img src="assets/images/curtains/curtain (37).jpg" alt="Curtains & Shutters Combination">
-                        <div class="caption">Curtains & Shutters</div>
-                    </div>
+            <!-- Slide 4 -->
+            <div class="slide fade">
+                <img src="assets/images/shutters/latest-window-shutter (21).jpg" alt="Luxury Window Shutters"
+                    onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Luxury Shutters</div>
+            </div>
 
-                    <!-- Slide 6 -->
-                    <div class="slide fade">
-                        <img src="assets/images/blinds/latest-blinds (7).jpg" alt="Custom Blinds Design">
-                        <div class="caption">Custom Blinds</div>
-                    </div>
+            <!-- Slide 5 -->
+            <div class="slide fade">
+                <img src="assets/images/curtains/curtain (37).jpg" alt="Curtains & Shutters Combination"
+                    onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Curtains & Shutters</div>
+            </div>
 
-                    <!-- Navigation buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Slide 6 -->
+            <div class="slide fade">
+                <img src="assets/images/blinds/latest-blinds (7).jpg" alt="Custom Blinds Design"
+                    onerror="this.src='https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80'">
+                <div class="slide-caption">Custom Blinds</div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button class="slide-prev" aria-label="Previous slide" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="slide-next" aria-label="Next slide" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+
+        <div class="products-cta-container">
+            <a href="gallery.html" class="products-cta">Explore More Projects</a>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         TESTIMONIALS
+    ===================================================== -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Luxury Shutters & Blinds transformed our Umhlanga home with their beautiful products. The
+                        quality and service are unmatched in Durban!"</p>
+                    <div class="testimonial-author">- Avuyile M., Umhlanga</div>
                 </div>
+                <div class="testimonial-card">
+                    <p>"I'm impressed with the security features of their roller shutters. Peace of mind and style in
+                        one package for our Ballito residence."</p>
+                    <div class="testimonial-author">- Mark T., Ballito</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Call to Action -->
-                <a href="products.html" class="cta-button"
-                    style="margin-top: 30px; padding: 12px 24px; font-size: 1.1em;">
-                    Explore More Projects
+    <!-- =====================================================
+         KZN ELEVATE QUICK ACTIONS
+    ===================================================== -->
+    <section class="kzn-elevate-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">Elevate Your KZN Home Today</h2>
+            <p class="section-subtitle" style="margin: 0 auto 40px auto; text-align:center;">
+                Ready to transform your windows? Select an option below to connect with Durban's premium window
+                treatment specialists.
+            </p>
+
+            <div class="kzn-grid">
+                <a href="contact.html" class="kzn-card">
+                    <div class="kzn-card-icon"><i data-lucide="phone"></i></div>
+                    <h3>Contact Us</h3>
+                    <p>Speak with our experts or schedule an in-home consultation.</p>
+                    <span class="kzn-card-action">Get in touch <i data-lucide="arrow-right"></i></span>
+                </a>
+                <a href="quote.html" class="kzn-card">
+                    <div class="kzn-card-icon"><i data-lucide="calculator"></i></div>
+                    <h3>Get a Free Quote</h3>
+                    <p>Tell us about your requirements for a customized estimate.</p>
+                    <span class="kzn-card-action">Request Quote <i data-lucide="arrow-right"></i></span>
+                </a>
+                <a href="gallery.html" class="kzn-card">
+                    <div class="kzn-card-icon"><i data-lucide="image"></i></div>
+                    <h3>View Our Gallery</h3>
+                    <p>Browse our complete catalog of custom shutters and blinds.</p>
+                    <span class="kzn-card-action">Explore Gallery <i data-lucide="arrow-right"></i></span>
+                </a>
+                <a href="about.html" class="kzn-card">
+                    <div class="kzn-card-icon"><i data-lucide="users"></i></div>
+                    <h3>About Our Experts</h3>
+                    <p>Learn about our rigorous standards and passion for quality.</p>
+                    <span class="kzn-card-action">Meet Team <i data-lucide="arrow-right"></i></span>
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Luxury Shutters & Blinds</h2>
-                <p class="section-text">At Luxury Shutters & Blinds, we are Durban's leading provider of premium window
-                    treatments. Our expert team is dedicated to helping you find the perfect solution for your home or
-                    business. With years of experience and a passion for excellence, we ensure that every product we
-                    offer meets our rigorous standards for quality, style, and functionality.</p>
-                <a href="quote.html" class="cta-button">Request Your Free Quote</a>
-            </div>
-        </section>
-
-        <section id="gallery" class="section">
-            <div class="container">
-                <h2 class="section-title">Our Window Treatment Gallery</h2>
-                <p class="section-text">Explore our gallery to see how our luxury shutters and designer blinds can
-                    transform your Durban home. From elegant shutters to stylish blinds, our gallery showcases the
-                    versatility and beauty of our window treatments in various settings. Get inspired and envision the
-                    possibilities for your own home or office.</p>
-                <a href="gallery.html" class="cta-button">View Our Full Gallery</a>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section section-bg">
-            <div class="container">
-                <h2 class="section-title">Client Testimonials</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-item">
-                        <p>"Luxury Shutters & Blinds transformed our Umhlanga home with their beautiful products. The
-                            quality and service are unmatched in Durban!"</p>
-                        <p class="author">- Avuyile M., Umhlanga</p>
+    <!-- =====================================================
+         INSTAGRAM FEED
+    ===================================================== -->
+    <section class="instagram-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">Follow Us on Instagram</h2>
+            <p class="section-subtitle" style="margin: 0 auto 30px auto; text-align:center;">
+                Stay updated with our latest installations and design inspirations by following
+                @luxuryshuttersandblinds.
+            </p>
+            <div class="instagram-wrapper">
+                <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/luxuryshuttersandblinds" data-instgrm-version="12"
+                    style="background:#FFF; border:0; border-radius:4px; box-shadow:var(--shadow-sm); margin: 0 auto; max-width:540px; min-width:326px; padding:0; width:100%;">
+                    <div style="padding:16px;">
+                        <a href="https://www.instagram.com/luxuryshuttersandblinds"
+                            style="text-decoration:none; color:var(--gold); font-weight:700;" target="_blank"
+                            rel="noopener">
+                            View our latest projects on Instagram
+                        </a>
                     </div>
-                    <div class="testimonial-item">
-                        <p>"I'm impressed with the security features of their roller shutters. Peace of mind and style
-                            in one package for our Ballito residence."</p>
-                        <p class="author">- Mark T., Ballito</p>
-                    </div>
-                </div>
+                </blockquote>
+                <script async src="https://www.instagram.com/embed.js"></script>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="button-section" class="section">
-            <div class="container">
-                <h2 class="section-title">Elevate Your KZN Home Today</h2>
-                <div class="button-container">
-                    <a href="contact.html" class="cta-button button-bg-1">📞 Contact Us</a>
-                    <a href="quote.html" class="cta-button button-bg-1">💬 Get a Free Quote</a>
-                    <a href="gallery.html" class="cta-button button-bg-1">🖼️ View Our Gallery</a>
-                    <a href="about.html" class="cta-button button-bg-1">👥 About Our Experts</a>
-                </div>
-            </div>
-        </section>
-
-        <a href="https://wa.me/27732899370" id="whatsapp-button" aria-label="Contact us on WhatsApp">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
-            WhatsApp Us
-        </a>
-
-        <section id="instagram-feed" class="section">
-            <div class="container">
-                <h2 class="section-title">See Our Latest Work on Instagram</h2>
-                <div id="instagram-widget">
-                    <blockquote class="instagram-media"
-                        data-instgrm-permalink="https://www.instagram.com/luxuryshuttersandblinds"
-                        data-instgrm-version="12"
-                        style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
-                        <div style="padding:16px;">
-                            <a href="https://www.instagram.com/luxuryshuttersandblinds"
-                                style="text-decoration:none; color:#3897f0;" target="_blank" rel="noopener">View our
-                                latest projects on Instagram</a>
+    <!-- =====================================================
+         CONTACT SECTION
+    ===================================================== -->
+    <div class="section-banner" id="contact">Get In Touch</div>
+    <div class="container">
+        <div class="contact-split">
+            <div class="contact-info">
+                <h3>Elevate Your KZN Home Today</h3>
+                <p class="section-subtitle" style="margin-bottom: 24px;">Reach out to our experts for a consultation or
+                    a free quote. We are ready to help you choose the perfect window treatments.</p>
+                <ul>
+                    <li>
+                        <i data-lucide="map-pin"></i> 
+                        <div>
+                            <strong>Showroom Address</strong>
+                            <span>42 Bank Terrace, Durban, 4001, South Africa</span>
                         </div>
-                    </blockquote>
-                    <script async src="https://www.instagram.com/embed.js"></script>
-                </div>
+                    </li>
+                    <li>
+                        <i data-lucide="phone"></i> 
+                        <div>
+                            <strong>Phone Number</strong>
+                            <span>+27 73 289 9370</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i data-lucide="mail"></i> 
+                        <div>
+                            <strong>Email Support</strong>
+                            <span>info@luxuryshuttersandblinds.co.za</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i data-lucide="clock"></i> 
+                        <div>
+                            <strong>Working Hours</strong>
+                            <span>Mon - Fri: 08:00 - 17:00</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </main>
 
+            <form class="contact-form" action="#" method="POST"
+                onsubmit="event.preventDefault(); alert('Thank you for your message. We will get back to you shortly.');">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+27 XX XXX XXXX">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/slideshow.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank" aria-label="Contact us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        WhatsApp Us
+    </a>
 
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Slideshow logic (specific to Home page)
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Auto play slider
+        let slideInterval = setInterval(() => plusSlides(1), 4000);
+
+        function plusSlides(n) {
+            clearInterval(slideInterval);
+            showSlides(slideIndex += n);
+            slideInterval = setInterval(() => plusSlides(1), 4000);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            if (slides[slideIndex - 1]) {
+                slides[slideIndex - 1].classList.add("active");
+            }
+        }
+    </script>
 </body>
 
 </html>
