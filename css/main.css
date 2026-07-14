@@ -116,6 +116,13 @@ header {
     justify-content: space-between;
     padding: 0 40px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+    transition: height var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+header.sticky {
+    height: 64px;
+    box-shadow: var(--shadow-md);
+    border-bottom-color: rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -272,8 +279,6 @@ nav a.active::after {
 .mobile-nav.open a:nth-child(4) { animation-delay: 0.22s; }
 .mobile-nav.open a:nth-child(5) { animation-delay: 0.28s; }
 .mobile-nav.open a:nth-child(6) { animation-delay: 0.34s; }
-.mobile-nav.open a:nth-child(7) { animation-delay: 0.40s; }
-.mobile-nav.open a:nth-child(8) { animation-delay: 0.46s; }
 
 @keyframes shutterOpen {
     0% {
@@ -484,6 +489,218 @@ footer {
 }
 
 /* =====================================================
+   PRODUCT CARDS (CONSOLIDATED)
+===================================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+}
+
+.product-card-img {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+    cursor: pointer;
+}
+
+.product-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img img {
+    transform: scale(1.04);
+}
+
+.product-card-body {
+    padding: 24px;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+}
+
+.product-card-body h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.product-card-body p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* =====================================================
+   TESTIMONIALS (CONSOLIDATED)
+===================================================== */
+.testimonials-section {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.testimonials-section .section-title {
+    color: var(--gold);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 36px;
+    border-left: 4px solid var(--gold);
+    text-align: left;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    opacity: 0.9;
+}
+
+.testimonial-author {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =====================================================
+   CONTACT SECTION & FORM (CONSOLIDATED)
+===================================================== */
+.contact-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: stretch;
+    margin-bottom: 60px;
+}
+
+.contact-info h3 {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.contact-info ul {
+    margin-bottom: 40px;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 14.5px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.contact-info li i {
+    flex-shrink: 0;
+    color: var(--gold);
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.contact-info li strong {
+    display: block;
+    color: var(--primary);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    font-family: var(--font);
+    font-size: 13.5px;
+    margin-bottom: 24px;
+    transition: border-color var(--transition), background-color var(--transition);
+    outline: none;
+    background: var(--off-white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+    background: var(--white);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 14px 36px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+    color: var(--primary);
+}
+
+/* =====================================================
    RESPONSIVE BASE BREAKPOINTS
 ===================================================== */
 @media (max-width: 960px) {
@@ -492,6 +709,13 @@ footer {
     }
     .footer-grid {
         grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-split {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 }
 
@@ -510,6 +734,11 @@ footer {
 
     .container {
         padding: 44px 20px;
+    }
+
+    .product-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
     }
 
     #whatsapp-button {
