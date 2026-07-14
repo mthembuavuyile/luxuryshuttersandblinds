@@ -36,39 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // ==========================================
-    // 3. LAZY LOADING IMAGES
-    // ==========================================
-    const lazyImages = document.querySelectorAll('img.lazy');
 
-    if (lazyImages.length > 0) {
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            img.classList.add('loaded');
-                            observer.unobserve(img);
-                        }
-                    }
-                });
-            });
-
-            lazyImages.forEach(img => imageObserver.observe(img));
-        } else {
-            // Fallback for older browsers
-            lazyImages.forEach(img => {
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    img.classList.add('loaded');
-                }
-            });
-        }
-    }
 });
 
 // ==========================================
@@ -92,6 +60,13 @@ function initNavigation() {
             burgerBtn.innerHTML = '<i data-lucide="menu" width="28" height="28"></i>';
         }
         lucide.createIcons();
+    });
+
+    // Close mobile nav when clicking the backdrop (empty space below links)
+    mobileNav.addEventListener('click', (e) => {
+        if (e.target === mobileNav) {
+            closeMobileNav();
+        }
     });
 }
 

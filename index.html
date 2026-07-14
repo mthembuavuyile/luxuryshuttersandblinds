@@ -82,13 +82,20 @@
     }
     </script>
 
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- Preload Hero Background Image for LCP performance -->
+    <link rel="preload" href="assets/images/shutters/exterior (5).jpg" as="image" fetchpriority="high">
+
     <!-- Lucide Icons (CDN) -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -122,7 +129,7 @@
     <section class="nav-cards-section">
         <div class="nav-cards-container">
             <a href="gallery.html" class="nav-card"
-                style="background-image: url('assets/images/shutters/exterior (5).jpg');">
+                style="background-image: url('assets/images/blinds/latest-blinds\ \(2\).jpg');">
                 <div class="nav-card-overlay"></div>
                 <div class="nav-card-content">
                     <h3>Explore Gallery</h3>
@@ -185,7 +192,7 @@
                 <div class="product-card">
                     <div class="product-card-img">
                         <img src="https://media.istockphoto.com/id/170614680/photo/blinds.jpg?s=612x612&w=0&k=20&c=-WMkfsrXIwk-1Q-VqWZbtB42PYmpdsQSH3xlIJ3R6gM="
-                            alt="Custom Shutters">
+                            alt="Custom Shutters" loading="lazy">
                     </div>
                     <div class="product-card-body">
                         <h3><a href="products.html">Custom Shutters</a></h3>
@@ -196,7 +203,7 @@
                 <div class="product-card">
                     <div class="product-card-img">
                         <img src="https://media.istockphoto.com/id/1729031007/photo/modern-japanese-style-living-room-interior-at-night-with-sofa-television-set-and-potted-plant.jpg?s=612x612&w=0&k=20&c=p94J9gyjgBxxm1hQRV2EZaxszYhcJAFh_ij9BgHb_DU="
-                            alt="Designer Blinds">
+                            alt="Designer Blinds" loading="lazy">
                     </div>
                     <div class="product-card-body">
                         <h3><a href="products.html">Designer Blinds</a></h3>
@@ -208,7 +215,7 @@
                 <div class="product-card">
                     <div class="product-card-img">
                         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-                            alt="Premium Flyscreens">
+                            alt="Premium Flyscreens" loading="lazy">
                     </div>
                     <div class="product-card-body">
                         <h3><a href="products.html">Premium Flyscreens</a></h3>
@@ -237,7 +244,7 @@
         <div class="slideshow-wrapper">
             <!-- Slide 1 -->
             <div class="slide fade active">
-                <img src="assets/images/blinds/latest-blinds (5).jpg" alt="Modern Blinds Installation"
+                <img src="assets/images/blinds/latest-blinds (5).jpg" alt="Modern Blinds Installation" loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Elegant Blinds</div>
             </div>
@@ -245,13 +252,14 @@
             <!-- Slide 2 -->
             <div class="slide fade">
                 <img src="assets/images/shutters/latest-window-shutter (7).jpg" alt="Premium Window Shutters"
+                    loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Premium Shutters</div>
             </div>
 
             <!-- Slide 3 -->
             <div class="slide fade">
-                <img src="assets/images/blinds/latest-blinds (2).jpg" alt="Stylish Window Blinds"
+                <img src="assets/images/blinds/latest-blinds (2).jpg" alt="Stylish Window Blinds" loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Stylish Blinds</div>
             </div>
@@ -259,20 +267,21 @@
             <!-- Slide 4 -->
             <div class="slide fade">
                 <img src="assets/images/shutters/latest-window-shutter (21).jpg" alt="Luxury Window Shutters"
+                    loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Luxury Shutters</div>
             </div>
 
             <!-- Slide 5 -->
             <div class="slide fade">
-                <img src="assets/images/curtains/curtain (37).jpg" alt="Curtains & Shutters Combination"
+                <img src="assets/images/curtains/curtain (37).jpg" alt="Curtains & Shutters Combination" loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Curtains & Shutters</div>
             </div>
 
             <!-- Slide 6 -->
             <div class="slide fade">
-                <img src="assets/images/blinds/latest-blinds (7).jpg" alt="Custom Blinds Design"
+                <img src="assets/images/blinds/latest-blinds (7).jpg" alt="Custom Blinds Design" loading="lazy"
                     onerror="this.src='https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80'">
                 <div class="slide-caption">Custom Blinds</div>
             </div>
@@ -387,28 +396,28 @@
                     a free quote. We are ready to help you choose the perfect window treatments.</p>
                 <ul>
                     <li>
-                        <i data-lucide="map-pin"></i> 
+                        <i data-lucide="map-pin"></i>
                         <div>
                             <strong>Showroom Address</strong>
                             <span>42 Bank Terrace, Durban, 4001, South Africa</span>
                         </div>
                     </li>
                     <li>
-                        <i data-lucide="phone"></i> 
+                        <i data-lucide="phone"></i>
                         <div>
                             <strong>Phone Number</strong>
                             <span>+27 73 289 9370</span>
                         </div>
                     </li>
                     <li>
-                        <i data-lucide="mail"></i> 
+                        <i data-lucide="mail"></i>
                         <div>
                             <strong>Email Support</strong>
                             <span>info@luxuryshuttersandblinds.co.za</span>
                         </div>
                     </li>
                     <li>
-                        <i data-lucide="clock"></i> 
+                        <i data-lucide="clock"></i>
                         <div>
                             <strong>Working Hours</strong>
                             <span>Mon - Fri: 08:00 - 17:00</span>
@@ -441,7 +450,7 @@
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank" aria-label="Contact us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" loading="lazy">
         WhatsApp Us
     </a>
 

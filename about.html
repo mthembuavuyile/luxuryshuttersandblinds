@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Luxury Shutters & Blinds | Durban Window Treatments</title>
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.luxuryshuttersandblinds.co.za/about.html" />
 
@@ -77,13 +77,20 @@
     }
     </script>
 
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- Preload Hero Background Image for LCP performance -->
+    <link rel="preload" href="assets/images/shutters/latest-window-shutter (21).jpg" as="image" fetchpriority="high">
+
     <!-- Lucide Icons (CDN) -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
@@ -113,17 +120,24 @@
             <div class="about-content-inner">
                 <h2>Our Story</h2>
                 <p>Founded in 2015 in the vibrant city of Durban, KZN, Shutters & Blinds began with a simple mission: to
-                    offer high-quality window treatments that blend functionality, style, and innovation. What started as a
-                    small family business has blossomed into a leading provider of shutters, blinds, and shades across South
+                    offer high-quality window treatments that blend functionality, style, and innovation. What started
+                    as a
+                    small family business has blossomed into a leading provider of shutters, blinds, and shades across
+                    South
                     Africa.</p>
-                <p>Our journey is marked by a commitment to excellence, a passion for design, and an unwavering dedication
-                    to customer satisfaction. Over the years, we've expanded our product range, embraced new technologies,
+                <p>Our journey is marked by a commitment to excellence, a passion for design, and an unwavering
+                    dedication
+                    to customer satisfaction. Over the years, we've expanded our product range, embraced new
+                    technologies,
                     and honed our craft to meet the evolving needs of our clients.</p>
-                
+
                 <h2>Our Values</h2>
-                <p>At Shutters & Blinds, we are guided by values of integrity, craftsmanship, and customer-centric service.
-                    Our team is devoted to delivering products that not only elevate the aesthetics of your space but also
-                    ensure long-lasting durability and performance. Proudly rooted in Durban, we bring local expertise and a
+                <p>At Shutters & Blinds, we are guided by values of integrity, craftsmanship, and customer-centric
+                    service.
+                    Our team is devoted to delivering products that not only elevate the aesthetics of your space but
+                    also
+                    ensure long-lasting durability and performance. Proudly rooted in Durban, we bring local expertise
+                    and a
                     personal touch to every project we undertake.</p>
             </div>
         </div>
@@ -147,7 +161,7 @@
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/27732899370" id="whatsapp-button" target="_blank" aria-label="Contact us on WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" loading="lazy">
         WhatsApp Us
     </a>
 
