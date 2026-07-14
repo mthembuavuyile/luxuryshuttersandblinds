@@ -36,7 +36,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // ==========================================
+    // 3. WHATSAPP BUTTON AUTO-COLLAPSE
+    // ==========================================
+    const whatsappBtn = document.getElementById('whatsapp-button');
+    if (whatsappBtn) {
+        // Wrap the text node in a span.whatsapp-text for clean styling & transitions
+        const childNodes = Array.from(whatsappBtn.childNodes);
+        const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0);
+        if (textNode) {
+            const span = document.createElement('span');
+            span.className = 'whatsapp-text';
+            span.textContent = textNode.textContent.trim();
+            whatsappBtn.replaceChild(span, textNode);
+        }
 
+        // Automatically collapse the WhatsApp button after 4 seconds
+        setTimeout(() => {
+            whatsappBtn.classList.add('collapsed');
+        }, 4000);
+    }
 });
 
 // ==========================================

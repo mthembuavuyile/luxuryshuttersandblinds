@@ -310,7 +310,10 @@ nav a.active::after {
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     text-decoration: none;
-    transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #whatsapp-button:hover {
@@ -324,6 +327,44 @@ nav a.active::after {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+    transition: margin-right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whatsapp-text {
+    display: inline-block;
+    max-width: 120px;
+    opacity: 1;
+    transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+/* Collapsed State */
+#whatsapp-button.collapsed {
+    padding: 12px;
+    max-width: 48px;
+}
+
+#whatsapp-button.collapsed img {
+    margin-right: 0;
+}
+
+#whatsapp-button.collapsed .whatsapp-text {
+    max-width: 0;
+    opacity: 0;
+}
+
+/* Expand on Hover when Collapsed */
+#whatsapp-button.collapsed:hover {
+    padding: 12px 24px;
+    max-width: 220px;
+}
+
+#whatsapp-button.collapsed:hover img {
+    margin-right: 10px;
+}
+
+#whatsapp-button.collapsed:hover .whatsapp-text {
+    max-width: 120px;
+    opacity: 1;
 }
 
 /* =====================================================
@@ -476,11 +517,40 @@ footer {
         right: 20px;
         padding: 10px 20px;
         font-size: 12px;
+        max-width: 200px;
     }
 
     #whatsapp-button img {
         width: 20px;
         height: 20px;
+    }
+
+    #whatsapp-button.collapsed {
+        padding: 10px;
+        max-width: 40px;
+    }
+
+    #whatsapp-button.collapsed img {
+        margin-right: 0;
+    }
+
+    #whatsapp-button.collapsed .whatsapp-text {
+        max-width: 0;
+        opacity: 0;
+    }
+
+    #whatsapp-button.collapsed:hover {
+        padding: 10px 20px;
+        max-width: 200px;
+    }
+
+    #whatsapp-button.collapsed:hover img {
+        margin-right: 10px;
+    }
+
+    #whatsapp-button.collapsed:hover .whatsapp-text {
+        max-width: 120px;
+        opacity: 1;
     }
 
     footer {
