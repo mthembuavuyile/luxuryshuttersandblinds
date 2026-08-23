@@ -373,10 +373,47 @@
             display: none;
             background: none;
             border: 1px solid var(--border-light);
-            padding: 8px;
+            width: 42px;
+            height: 42px;
             border-radius: var(--radius-xs);
             cursor: pointer;
             color: var(--primary);
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .btn-mobile-toggle:hover {
+            background: var(--primary-subtle);
+            border-color: var(--primary);
+        }
+
+        .btn-mobile-toggle .burger-bar {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 2px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, background-color 0.25s ease;
+            transform-origin: center;
+        }
+
+        /* Morph into 'X' when open */
+        .btn-mobile-toggle.open .burger-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .btn-mobile-toggle.open .burger-bar:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .btn-mobile-toggle.open .burger-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
         /* Mobile Drawer */
@@ -1510,7 +1547,7 @@
             }
 
             .btn-mobile-toggle {
-                display: block;
+                display: inline-flex;
             }
 
             .container,
@@ -1634,7 +1671,9 @@
                 <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
             </a>
             <button class="btn-mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
-                <i data-lucide="menu" style="width:24px; height:24px;"></i>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
             </button>
         </div>
     </header>
@@ -2525,12 +2564,14 @@
 
             if (menuToggle && mobileDrawer) {
                 menuToggle.addEventListener('click', () => {
-                    mobileDrawer.classList.toggle('open');
+                    const isOpen = mobileDrawer.classList.toggle('open');
+                    menuToggle.classList.toggle('open', isOpen);
                 });
 
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         mobileDrawer.classList.remove('open');
+                        menuToggle.classList.remove('open');
                     });
                 });
             }

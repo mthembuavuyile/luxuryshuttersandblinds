@@ -22,51 +22,41 @@
 
     <style>
         /* ==========================================================================
-           AWEN CORPORATE DESIGN SYSTEM (EDITORIAL LIGHT THEME)
-           Anti-AI High-Craft Standard: Light-First, Architectural Solids, Human Editorial
+           AWEN CORPORATE DESIGN SYSTEM (MAROON & BLACK THEME - V2)
+           High-Craft Standard: Authoritative Corporate Maroon, Obsidian Black, Architectural Slate
            ========================================================================== */
         :root {
-            /* Brand Identity Colors (From AWEN Official Maroon & Gold Logo) */
-            --primary: #8B1A1A;
-            /* Corporate Maroon */
-            --primary-dark: #5A0A0A;
-            /* Deep Heavy Maroon */
-            --primary-deep: #3B0707;
-            /* Darkest Slate Maroon */
-            --primary-light: #A82424;
-            /* Rich Crimson */
-            --primary-subtle: #FAF2F2;
-            /* Soft Maroon Tint */
+            /* Brand Identity Colors (From AWEN Official Maroon & Black Logo) */
+            --primary: #8B1A1A;             /* Official Corporate Maroon */
+            --primary-dark: #630D0D;        /* Deep Heavy Oxblood */
+            --primary-deep: #2A0505;        /* Deepest Velvet Maroon */
+            --primary-light: #A82424;       /* Rich Cardinal Crimson Accent */
+            --primary-subtle: #FAF2F2;      /* Delicate Alabaster Maroon Tint */
+            --primary-border: #E8D3D3;      /* Hairline Maroon Tint Border */
 
-            /* Architectural Accents */
-            --accent-orange: #DE5920;
-            /* High-Visibility Safety Orange Accent */
-            --accent-orange-dark: #BF4410;
-            --gold: #C0911D;
-            /* Architectural Warm Gold */
-            --gold-light: #FCF8EE;
+            /* Obsidian Black & Architectural Dark Foundations */
+            --black-pitch: #0B0E12;         /* Deep Obsidian Black (Topbar / Footer) */
+            --black-surface: #13171C;       /* Onyx Surface */
+            --black-card: #1A1F26;          /* Deep Slate Card */
+            --black-accent: #111418;        /* Architectural Jet Black */
+            --black-hover: #1E232B;
 
             /* Light-Theme Canvas & Surfaces */
             --white: #FFFFFF;
-            --canvas: #F6F8FA;
-            /* Crisp Off-White */
-            --canvas-alt: #EDF1F5;
-            /* Neutral Cool Grey */
+            --canvas: #F6F8FA;              /* Architectural Crisp Off-White */
+            --canvas-alt: #EDF1F5;          /* Neutral Slate Grey */
             --card-bg: #FFFFFF;
             --surface-hover: #F8FAFC;
 
             /* Editorial Typography Colors */
-            --text-main: #1A202C;
-            /* High-Legibility Deep Charcoal */
-            --text-secondary: #4A5568;
-            /* Body Slate */
-            --text-muted: #718096;
-            /* Captions & Metadata */
-            --text-light: #A0AEC0;
+            --text-main: #0E1217;           /* High-Legibility Jet Black */
+            --text-secondary: #3B4554;      /* Executive Slate */
+            --text-muted: #64748B;          /* Captions & Metadata */
+            --text-light: #94A3B8;
 
             /* Hairline Structural Borders */
             --border-light: #E2E8F0;
-            --border-mid: #CBD5E0;
+            --border-mid: #CBD5E1;
             --border-dark: #94A3B8;
 
             /* Typography Stacks */
@@ -82,9 +72,9 @@
             --radius-md: 8px;
 
             /* Tactile Physical Shadows */
-            --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06);
-            --shadow-elevated: 0 12px 32px rgba(0, 0, 0, 0.09);
+            --shadow-subtle: 0 2px 8px rgba(14, 18, 23, 0.04);
+            --shadow-card: 0 4px 16px rgba(14, 18, 23, 0.06);
+            --shadow-elevated: 0 12px 32px rgba(14, 18, 23, 0.10);
             --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -167,7 +157,7 @@
             display: inline-block;
             width: 16px;
             height: 2.5px;
-            background: var(--accent-orange);
+            background: var(--primary);
         }
 
         .section-title {
@@ -193,13 +183,13 @@
            1. TOP STATUTORY ACCREDITATION BAR
            ========================================================================== */
         .topbar {
-            background: var(--primary-deep);
+            background: var(--black-pitch);
             color: var(--white);
             font-size: 11px;
             height: var(--topbar-h);
             display: flex;
             align-items: center;
-            border-bottom: 2px solid var(--accent-orange);
+            border-bottom: 2px solid var(--primary);
             position: relative;
             z-index: 1001;
         }
@@ -223,18 +213,24 @@
             letter-spacing: 0.6px;
         }
 
-        .topbar-accreditations .gold-txt {
-            color: var(--gold);
+        .topbar-accreditations .maroon-txt {
+            color: var(--primary-light);
             font-weight: 700;
         }
 
-        .topbar-accreditations .orange-badge {
-            background: var(--accent-orange);
+        .topbar-accreditations .white-txt {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .topbar-accreditations .maroon-badge {
+            background: var(--primary);
             color: var(--white);
             font-size: 9.5px;
-            padding: 2px 6px;
+            padding: 2px 7px;
             font-weight: 800;
             border-radius: var(--radius-xs);
+            letter-spacing: 0.5px;
         }
 
         .topbar-divider {
@@ -257,7 +253,7 @@
         }
 
         .topbar-actions a:hover {
-            color: var(--gold);
+            color: var(--primary-light);
         }
 
         /* ==========================================================================
@@ -333,7 +329,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-orange);
+            background: var(--primary);
             transition: width var(--transition);
         }
 
@@ -348,7 +344,7 @@
         }
 
         .btn-header-contact {
-            background: var(--accent-orange);
+            background: var(--primary);
             color: var(--white);
             padding: 12px 22px;
             font-family: var(--font-display);
@@ -360,11 +356,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 3px 10px rgba(222, 89, 32, 0.25);
+            box-shadow: 0 3px 12px rgba(139, 26, 26, 0.25);
         }
 
         .btn-header-contact:hover {
-            background: var(--accent-orange-dark);
+            background: var(--primary-dark);
             color: var(--white);
             transform: translateY(-1px);
         }
@@ -373,10 +369,47 @@
             display: none;
             background: none;
             border: 1px solid var(--border-light);
-            padding: 8px;
+            width: 42px;
+            height: 42px;
             border-radius: var(--radius-xs);
             cursor: pointer;
             color: var(--primary);
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .btn-mobile-toggle:hover {
+            background: var(--primary-subtle);
+            border-color: var(--primary);
+        }
+
+        .btn-mobile-toggle .burger-bar {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 2px;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, background-color 0.25s ease;
+            transform-origin: center;
+        }
+
+        /* Morph into 'X' when open */
+        .btn-mobile-toggle.open .burger-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .btn-mobile-toggle.open .burger-bar:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .btn-mobile-toggle.open .burger-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
         /* Mobile Drawer */
@@ -392,7 +425,7 @@
             flex-direction: column;
             padding: 32px 24px;
             gap: 18px;
-            border-top: 3px solid var(--accent-orange);
+            border-top: 3px solid var(--primary);
             overflow-y: auto;
             box-shadow: var(--shadow-elevated);
         }
@@ -471,14 +504,14 @@
             font-family: var(--font-display);
             font-size: clamp(30px, 3.6vw, 48px);
             font-weight: 900;
-            color: var(--primary);
+            color: var(--text-main);
             line-height: 1.2;
             letter-spacing: -0.5px;
             margin-bottom: 18px;
         }
 
         .hero-headline span {
-            color: var(--accent-orange);
+            color: var(--primary);
         }
 
         .hero-intro-text {
@@ -501,7 +534,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--accent-orange);
+            background: var(--primary);
             color: var(--white);
             padding: 14px 28px;
             font-family: var(--font-display);
@@ -510,12 +543,12 @@
             letter-spacing: 1.2px;
             text-transform: uppercase;
             border-radius: var(--radius-xs);
-            box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
+            box-shadow: 0 4px 14px rgba(139, 26, 26, 0.28);
             transition: var(--transition);
         }
 
         .btn-hero-primary:hover {
-            background: var(--accent-orange-dark);
+            background: var(--primary-dark);
             transform: translateX(3px);
             color: var(--white);
         }
@@ -525,7 +558,7 @@
             align-items: center;
             gap: 8px;
             background: var(--white);
-            color: var(--primary);
+            color: var(--text-main);
             border: 1px solid var(--border-mid);
             padding: 13px 24px;
             font-family: var(--font-display);
@@ -561,7 +594,7 @@
 
         .landmark-card:hover {
             box-shadow: var(--shadow-elevated);
-            border-left-color: var(--accent-orange);
+            border-left-color: var(--primary-light);
             transform: translateY(-2px);
         }
 
@@ -597,19 +630,19 @@
             font-family: var(--font-display);
             font-size: 11.5px;
             font-weight: 800;
-            color: var(--accent-orange);
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: var(--transition);
         }
 
         .btn-view-link:hover {
-            color: var(--accent-orange-dark);
+            color: var(--primary-dark);
             gap: 9px;
         }
 
         /* ==========================================================================
-           4. ABOUT AWEN SECTION (NEW & FACT-CHECKED FROM COMPANY PROFILE)
+           4. ABOUT AWEN SECTION (FACT-CHECKED FROM COMPANY PROFILE)
            ========================================================================== */
         .about-section {
             background: var(--white);
@@ -632,8 +665,9 @@
         }
 
         .about-vision-box {
-            background: var(--gold-light);
-            border-left: 4px solid var(--gold);
+            background: var(--canvas);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--primary);
             padding: 20px 24px;
             border-radius: var(--radius-xs);
             margin: 28px 0 32px;
@@ -643,7 +677,7 @@
             font-family: var(--font-display);
             font-size: 14px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 6px;
@@ -673,12 +707,22 @@
             border-radius: var(--radius-sm);
         }
 
+        .about-stat-card:nth-child(2),
+        .about-stat-card:nth-child(4) {
+            border-top-color: var(--black-accent);
+        }
+
         .about-stat-num {
             font-family: var(--font-mono);
             font-size: 20px;
             font-weight: 800;
             color: var(--primary);
             margin-bottom: 4px;
+        }
+
+        .about-stat-card:nth-child(2) .about-stat-num,
+        .about-stat-card:nth-child(4) .about-stat-num {
+            color: var(--text-main);
         }
 
         .about-stat-label {
@@ -731,7 +775,7 @@
         .service-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-card);
-            border-top-color: var(--accent-orange);
+            border-top-color: var(--black-accent);
         }
 
         .service-card-top {
@@ -742,7 +786,7 @@
             font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 700;
-            color: var(--gold);
+            color: var(--primary);
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 6px;
@@ -752,7 +796,7 @@
             font-family: var(--font-display);
             font-size: 15px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.6px;
             line-height: 1.35;
@@ -786,7 +830,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: var(--accent-orange);
+            color: var(--primary);
             font-weight: bold;
         }
 
@@ -820,7 +864,7 @@
             width: 36px;
             height: 36px;
             background: var(--primary-subtle);
-            border: 1px solid rgba(139, 26, 26, 0.15);
+            border: 1px solid var(--primary-border);
             border-radius: var(--radius-xs);
             display: flex;
             align-items: center;
@@ -833,7 +877,7 @@
             font-family: var(--font-display);
             font-size: 13.5px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 8px;
@@ -866,7 +910,7 @@
         .gov-card {
             background: var(--white);
             border: 1px solid var(--border-light);
-            border-top: 4px solid var(--accent-orange);
+            border-top: 4px solid var(--primary);
             border-radius: var(--radius-sm);
             padding: 28px 24px;
             box-shadow: var(--shadow-subtle);
@@ -877,11 +921,11 @@
         }
 
         .gov-card:nth-child(2) {
-            border-top-color: var(--primary);
+            border-top-color: var(--black-accent);
         }
 
         .gov-card:nth-child(3) {
-            border-top-color: var(--gold);
+            border-top-color: var(--primary-light);
         }
 
         .gov-card:nth-child(4) {
@@ -889,11 +933,11 @@
         }
 
         .gov-card:nth-child(5) {
-            border-top-color: var(--accent-orange);
+            border-top-color: var(--black-accent);
         }
 
         .gov-card:nth-child(6) {
-            border-top-color: var(--gold);
+            border-top-color: var(--primary-light);
         }
 
         .gov-card:hover {
@@ -938,7 +982,7 @@
         .btn-gov-view {
             background: var(--canvas);
             border: 1px solid var(--border-mid);
-            color: var(--primary-dark);
+            color: var(--text-main);
             padding: 8px 18px;
             font-family: var(--font-display);
             font-size: 11px;
@@ -1022,7 +1066,7 @@
             font-family: var(--font-mono);
             font-size: 11px;
             font-weight: 700;
-            color: var(--accent-orange);
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 6px;
@@ -1032,7 +1076,7 @@
             font-family: var(--font-display);
             font-size: 15px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.6px;
             margin-bottom: 10px;
@@ -1076,7 +1120,7 @@
         .btn-toggle-ledger {
             background: var(--white);
             border: 1px solid var(--border-mid);
-            color: var(--primary);
+            color: var(--text-main);
             padding: 12px 28px;
             font-family: var(--font-display);
             font-size: 12px;
@@ -1116,7 +1160,7 @@
         }
 
         .ledger-table thead {
-            background: var(--primary-deep);
+            background: var(--black-pitch);
             color: var(--white);
         }
 
@@ -1127,7 +1171,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1.2px;
-            border-bottom: 2px solid var(--accent-orange);
+            border-bottom: 2px solid var(--primary);
             text-align: left;
         }
 
@@ -1181,11 +1225,16 @@
             box-shadow: var(--shadow-subtle);
         }
 
+        .team-card:nth-child(2),
+        .team-card:nth-child(4) {
+            border-top-color: var(--black-accent);
+        }
+
         .team-role {
             font-family: var(--font-mono);
             font-size: 10.5px;
             font-weight: 700;
-            color: var(--accent-orange);
+            color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 4px;
@@ -1195,7 +1244,7 @@
             font-family: var(--font-display);
             font-size: 15px;
             font-weight: 800;
-            color: var(--primary-dark);
+            color: var(--text-main);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 8px;
@@ -1228,11 +1277,11 @@
         }
 
         .rfq-direct-card {
-            background: var(--primary-deep);
+            background: var(--black-pitch);
             color: var(--white);
             padding: 40px 36px;
             border-radius: var(--radius-sm);
-            border-top: 4px solid var(--accent-orange);
+            border-top: 4px solid var(--primary);
             box-shadow: var(--shadow-elevated);
         }
 
@@ -1262,7 +1311,7 @@
         }
 
         .rfq-contact-channel i {
-            color: var(--accent-orange);
+            color: var(--primary-light);
             width: 20px;
             height: 20px;
             flex-shrink: 0;
@@ -1273,7 +1322,7 @@
             display: block;
             font-family: var(--font-mono);
             font-size: 11px;
-            color: var(--gold);
+            color: var(--white);
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 2px;
@@ -1303,7 +1352,7 @@
             color: var(--text-secondary);
             margin-bottom: 22px;
             padding-bottom: 12px;
-            border-bottom: 2px solid var(--accent-orange);
+            border-bottom: 2px solid var(--primary);
         }
 
         .form-row {
@@ -1349,7 +1398,7 @@
         }
 
         .btn-submit-rfq {
-            background: var(--accent-orange);
+            background: var(--primary);
             color: var(--white);
             border: none;
             padding: 14px 28px;
@@ -1366,11 +1415,11 @@
             justify-content: center;
             gap: 10px;
             transition: var(--transition);
-            box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
+            box-shadow: 0 4px 14px rgba(139, 26, 26, 0.28);
         }
 
         .btn-submit-rfq:hover {
-            background: var(--accent-orange-dark);
+            background: var(--primary-dark);
             transform: translateY(-2px);
         }
 
@@ -1378,9 +1427,9 @@
            12. CORPORATE FOOTER
            ========================================================================== */
         footer {
-            background: var(--primary-deep);
+            background: var(--black-pitch);
             color: var(--white);
-            border-top: 4px solid var(--accent-orange);
+            border-top: 4px solid var(--primary);
             padding: 64px 0 28px;
         }
 
@@ -1416,7 +1465,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--accent-orange);
+            color: var(--primary-light);
             margin-bottom: 18px;
         }
 
@@ -1441,7 +1490,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--gold);
+            color: var(--white);
             transform: translateX(4px);
         }
 
@@ -1510,7 +1559,7 @@
             }
 
             .btn-mobile-toggle {
-                display: block;
+                display: inline-flex;
             }
 
             .container,
@@ -1593,20 +1642,19 @@
     <div class="topbar">
         <div class="topbar-inner">
             <div class="topbar-accreditations">
-                <span>CIDB: <span class="gold-txt">4GB • 1CE • 1SF • 1SO • 1SN</span></span>
+                <span>CIDB: <span class="white-txt">4GB • 1CE • 1SF • 1SO • 1SN</span></span>
                 <span class="topbar-divider">•</span>
-                <span>B-BBEE: <span class="gold-txt">LEVEL 1</span> <span class="orange-badge">135%
-                        Recognition</span></span>
+                <span>B-BBEE: <span class="white-txt">LEVEL 1</span> <span class="maroon-badge">135% Recognition</span></span>
                 <span class="topbar-divider">•</span>
-                <span>CSD: <span class="gold-txt">MAAA0023374</span></span>
+                <span>CSD: <span class="white-txt">MAAA0023374</span></span>
                 <span class="topbar-divider">•</span>
-                <span>CRS: <span class="gold-txt">10065323</span></span>
+                <span>CRS: <span class="white-txt">10065323</span></span>
             </div>
             <div class="topbar-actions">
                 <a href="mailto:awen.tenders@gmail.com"><i data-lucide="mail"
-                        style="width:13px; height:13px; color:var(--accent-orange);"></i> awen.tenders@gmail.com</a>
+                        style="width:13px; height:13px; color:var(--primary-light);"></i> awen.tenders@gmail.com</a>
                 <a href="tel:+27719268316"><i data-lucide="phone"
-                        style="width:13px; height:13px; color:var(--accent-orange);"></i> 071 926 8316</a>
+                        style="width:13px; height:13px; color:var(--primary-light);"></i> 071 926 8316</a>
             </div>
         </div>
     </div>
@@ -1635,7 +1683,9 @@
                 <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
             </a>
             <button class="btn-mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
-                <i data-lucide="menu" style="width:24px; height:24px;"></i>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
             </button>
         </div>
     </header>
@@ -1651,7 +1701,7 @@
                 style="width:16px;"></i></a>
         <a href="#leadership" class="mobile-link">Management Team <i data-lucide="arrow-right"
                 style="width:16px;"></i></a>
-        <a href="#contact" class="mobile-link" style="color:var(--accent-orange);">Contact Us / Tender Enquiries <i
+        <a href="#contact" class="mobile-link" style="color:var(--primary);">Contact Us / Tender Enquiries <i
                 data-lucide="arrow-up-right" style="width:16px;"></i></a>
     </div>
 
@@ -1725,7 +1775,7 @@
                     </p>
 
                     <div class="about-vision-box">
-                        <h4><i data-lucide="eye" style="width:16px; height:16px; color:var(--gold);"></i> Our Vision &
+                        <h4><i data-lucide="eye" style="width:16px; height:16px; color:var(--primary);"></i> Our Vision &
                             Mission</h4>
                         <p>
                             <strong>Vision:</strong> To become a trusted, household name for clients requiring
@@ -1999,7 +2049,7 @@
                 <div>
                     <div class="gov-header">
                         <span class="gov-category">Transformation</span>
-                        <i data-lucide="award" style="width:18px; height:18px; color:var(--gold);"></i>
+                        <i data-lucide="award" style="width:18px; height:18px; color:var(--primary-light);"></i>
                     </div>
                     <h4>Level 1 B-BBEE (135% Recognition)</h4>
                     <p>100% Black-owned South African enterprise contributing to local employment and supplier
@@ -2029,7 +2079,7 @@
                 <div>
                     <div class="gov-header">
                         <span class="gov-category">Government Database</span>
-                        <i data-lucide="database" style="width:18px; height:18px; color:var(--accent-orange);"></i>
+                        <i data-lucide="database" style="width:18px; height:18px; color:var(--black-accent);"></i>
                     </div>
                     <h4>CSD Number: MAAA0023374</h4>
                     <p>Fully compliant with South African National Treasury's Central Supplier Database with valid tax
@@ -2044,7 +2094,7 @@
                 <div>
                     <div class="gov-header">
                         <span class="gov-category">Documentation</span>
-                        <i data-lucide="file-text" style="width:18px; height:18px; color:var(--gold);"></i>
+                        <i data-lucide="file-text" style="width:18px; height:18px; color:var(--primary-light);"></i>
                     </div>
                     <h4>Official Company Profile</h4>
                     <p>Comprehensive profile document containing company registration, CIDB details, management CVs, and
@@ -2412,7 +2462,7 @@
                     <div>
                         <strong>Tender Email</strong>
                         <a href="mailto:awen.tenders@gmail.com"
-                            style="color:var(--accent-orange); font-weight:700;">awen.tenders@gmail.com</a>
+                            style="color:var(--primary-light); font-weight:700;">awen.tenders@gmail.com</a>
                     </div>
                 </div>
 
@@ -2550,7 +2600,7 @@
                     Contact: Sicelo Meyiwa<br>
                     Phone: <a href="tel:+27719268316" style="color:var(--white);">071 926 8316</a><br>
                     Tenders: <a href="mailto:awen.tenders@gmail.com"
-                        style="color:var(--accent-orange);">awen.tenders@gmail.com</a><br>
+                        style="color:var(--primary-light);">awen.tenders@gmail.com</a><br>
                     Direct: <a href="mailto:meyiwasicelo@gmail.com"
                         style="color:rgba(255,255,255,0.8);">meyiwasicelo@gmail.com</a>
                 </p>
@@ -2581,12 +2631,14 @@
 
             if (menuToggle && mobileDrawer) {
                 menuToggle.addEventListener('click', () => {
-                    mobileDrawer.classList.toggle('open');
+                    const isOpen = mobileDrawer.classList.toggle('open');
+                    menuToggle.classList.toggle('open', isOpen);
                 });
 
                 mobileLinks.forEach(link => {
                     link.addEventListener('click', () => {
                         mobileDrawer.classList.remove('open');
+                        menuToggle.classList.remove('open');
                     });
                 });
             }
