@@ -459,7 +459,7 @@
             position: relative;
             background: #FFFFFF url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=85') right center / cover no-repeat;
             border-bottom: 1px solid var(--border-light);
-            padding: 60px 0 72px;
+            padding: 48px 0 54px;
             overflow: hidden;
         }
 
@@ -480,8 +480,14 @@
             padding: 0 32px;
         }
 
-        .hero-content-wrapper {
-            max-width: 740px;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.12fr 0.88fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content-col {
             display: flex;
             flex-direction: column;
         }
@@ -492,7 +498,7 @@
             gap: 8px;
             background: var(--primary-subtle);
             color: var(--primary);
-            border-left: 3px solid var(--primary);
+            border: 1px solid var(--border-mid);
             padding: 6px 14px;
             font-family: var(--font-mono);
             font-size: 11px;
@@ -506,7 +512,7 @@
 
         .hero-headline {
             font-family: var(--font-display);
-            font-size: clamp(30px, 3.6vw, 48px);
+            font-size: clamp(30px, 3.4vw, 46px);
             font-weight: 900;
             color: var(--primary);
             line-height: 1.2;
@@ -519,18 +525,18 @@
         }
 
         .hero-intro-text {
-            font-size: 16px;
+            font-size: 15.5px;
             color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 28px;
-            max-width: 680px;
+            margin-bottom: 26px;
+            max-width: 640px;
         }
 
         .hero-cta-row {
             display: flex;
             align-items: center;
             gap: 16px;
-            margin-bottom: 36px;
+            margin-bottom: 28px;
             flex-wrap: wrap;
         }
 
@@ -580,69 +586,208 @@
             color: var(--primary);
         }
 
-        /* Landmark Project Highlight */
-        .landmark-card {
-            background: rgba(255, 255, 255, 0.96);
-            border: 1px solid var(--border-light);
-            border-left: 4px solid var(--primary);
-            border-radius: var(--radius-sm);
-            padding: 18px 20px;
+        /* Hero Quick Statutory Specs */
+        .hero-stat-badges {
             display: grid;
-            grid-template-columns: 130px 1fr;
-            gap: 18px;
-            align-items: center;
-            box-shadow: var(--shadow-card);
-            max-width: 660px;
-            transition: var(--transition);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            max-width: 580px;
         }
 
-        .landmark-card:hover {
-            box-shadow: var(--shadow-elevated);
-            border-left-color: var(--accent-orange);
-            transform: translateY(-2px);
+        .hero-mini-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
 
-        .landmark-img-thumb {
-            width: 130px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: var(--radius-xs);
-            border: 1px solid var(--border-light);
+        .hero-mini-stat .stat-label {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
         }
 
-        .landmark-info h4 {
+        .hero-mini-stat .stat-val {
             font-family: var(--font-display);
             font-size: 13px;
             font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* Executive Flagship Showcase Card (Anti-AI Bespoke Design) */
+        .hero-project-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-project-card:hover {
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--border-mid);
+            transform: translateY(-3px);
+        }
+
+        .hero-project-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--canvas-alt);
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border-light);
+            font-family: var(--font-mono);
+            font-size: 11px;
+        }
+
+        .project-tag-client {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 700;
             color: var(--primary);
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent-orange);
+            display: inline-block;
+        }
+
+        .project-tag-type {
+            font-size: 10px;
+            color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 4px;
+            font-weight: 600;
         }
 
-        .landmark-info p {
-            font-size: 12.5px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 8px;
+        .hero-project-media {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: var(--canvas);
+            overflow: hidden;
         }
 
-        .btn-view-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-family: var(--font-display);
-            font-size: 11.5px;
-            font-weight: 800;
-            color: var(--accent-orange);
+        .hero-project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .hero-project-card:hover .hero-project-img {
+            transform: scale(1.03);
+        }
+
+        .hero-project-val-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(11, 14, 18, 0.94);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 6px 12px;
+            border-radius: var(--radius-xs);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .hero-project-val-badge .val-label {
+            font-family: var(--font-mono);
+            font-size: 9px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.7);
         }
 
-        .btn-view-link:hover {
-            color: var(--accent-orange-dark);
-            gap: 9px;
+        .hero-project-val-badge .val-num {
+            font-family: var(--font-display);
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-project-body {
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .project-scope-header h3 {
+            font-family: var(--font-display);
+            font-size: 15.5px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .project-scope-desc {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .project-specs-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .spec-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--canvas);
+            border: 1px solid var(--border-light);
+            padding: 4px 9px;
+            border-radius: var(--radius-xs);
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .btn-hero-project-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--canvas-alt);
+            border: 1px solid var(--border-light);
+            padding: 10px 14px;
+            border-radius: var(--radius-xs);
+            font-family: var(--font-display);
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            transition: var(--transition);
+            margin-top: 4px;
+        }
+
+        .btn-hero-project-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-hero-project-link:hover i {
+            transform: translateX(3px);
         }
 
         /* ==========================================================================
@@ -670,8 +815,9 @@
 
         .about-vision-box {
             background: var(--gold-light);
-            border-left: 4px solid var(--gold);
-            padding: 20px 24px;
+            border: 1px solid rgba(192, 145, 29, 0.3);
+            border-top: 3px solid var(--gold);
+            padding: 22px 24px;
             border-radius: var(--radius-xs);
             margin: 28px 0 32px;
         }
@@ -1590,13 +1736,14 @@
                 font-size: 27px;
             }
 
-            .landmark-card {
+            .hero-grid {
                 grid-template-columns: 1fr;
+                gap: 36px;
             }
 
-            .landmark-img-thumb {
-                width: 100%;
-                height: 140px;
+            .hero-stat-badges {
+                grid-template-columns: 1fr;
+                gap: 10px;
             }
 
             .services-grid {
@@ -1783,45 +1930,82 @@
     <!-- 3. HERO SECTION -->
     <section class="hero-corporate">
         <div class="hero-container">
-            <div class="hero-content-wrapper">
-                <div class="hero-eyebrow-tag">
-                    <i data-lucide="shield-check" style="width:14px; height:14px; color:var(--primary);"></i>
-                    CIDB 4GB • 1CE • B-BBEE LEVEL 1 CONTRACTOR
-                </div>
+            <div class="hero-grid">
+                <!-- Left Column: Executive Value Proposition -->
+                <div class="hero-content-col">
+                    <h1 class="hero-headline">
+                        General Building, Civil Works & Structural Alterations Across <span>KwaZulu-Natal</span>.
+                    </h1>
 
-                <h1 class="hero-headline">
-                    General Building, Civil Works & Structural Alterations Across <span>KwaZulu-Natal</span>.
-                </h1>
+                    <p class="hero-intro-text">
+                        African Wealth Empowerment Network (AWEN) (Pty) Ltd is an established Durban-based contracting firm
+                        providing quality building construction, civil works, alterations, and maintenance services for
+                        public and commercial clients.
+                    </p>
 
-                <p class="hero-intro-text">
-                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is an established Durban-based contracting firm
-                    providing quality building construction, civil works, alterations, and maintenance services for
-                    public and commercial clients.
-                </p>
-
-                <div class="hero-cta-row">
-                    <a href="#contact" class="btn-hero-primary">
-                        Request a Quote
-                        <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
-                    </a>
-                    <a href="#projects" class="btn-hero-secondary">
-                        View Completed Projects
-                        <i data-lucide="arrow-down" style="width:14px; height:14px;"></i>
-                    </a>
-                </div>
-
-                <!-- Landmark Project Highlight -->
-                <div class="landmark-card">
-                    <img src="transnet-berthing.jpg" alt="Transnet Berthing Facilities Refurbishment"
-                        class="landmark-img-thumb">
-                    <div class="landmark-info">
-                        <h4>Transnet Berthing Facility Refurbishment</h4>
-                        <p>Refurbishment of the Berthing Services Building for Transnet SOC Ltd at the Port of Durban
-                            (Contract Value: R 1,666,860.85).</p>
-                        <a href="#projects" class="btn-view-link">
-                            View Details in Project Ledger
-                            <i data-lucide="arrow-up-right" style="width:14px; height:14px;"></i>
+                    <div class="hero-cta-row">
+                        <a href="#contact" class="btn-hero-primary">
+                            Request a Quote
+                            <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
                         </a>
+                        <a href="#projects" class="btn-hero-secondary">
+                            View Completed Projects
+                            <i data-lucide="arrow-down" style="width:14px; height:14px;"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-stat-badges">
+                        <div class="hero-mini-stat">
+                            <span class="stat-label">CIDB CRS</span>
+                            <span class="stat-val">10065323</span>
+                        </div>
+                        <div class="hero-mini-stat">
+                            <span class="stat-label">B-BBEE Recognition</span>
+                            <span class="stat-val">Level 1 (135%)</span>
+                        </div>
+                        <div class="hero-mini-stat">
+                            <span class="stat-label">Established Track Record</span>
+                            <span class="stat-val">Est. 2014 • Durban</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Flagship Project Executive Showcase Card -->
+                <div class="hero-showcase-col">
+                    <div class="hero-project-card">
+                        <div class="hero-project-topbar">
+                            <div class="project-tag-client">
+                                <span class="badge-dot"></span>
+                                Transnet SOC Ltd • Port of Durban
+                            </div>
+                            <span class="project-tag-type">Flagship SOE Project</span>
+                        </div>
+
+                        <div class="hero-project-media">
+                            <img src="transnet-berthing.jpg" alt="Transnet Berthing Facilities Refurbishment" class="hero-project-img">
+                            <div class="hero-project-val-badge">
+                                <span class="val-label">Contract Value</span>
+                                <span class="val-num">R 1,666,860.85</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-project-body">
+                            <div class="project-scope-header">
+                                <h3>Berthing Facility Refurbishment</h3>
+                                <p class="project-scope-desc">Refurbishment of the Berthing Services Building for Transnet SOC Ltd at the Port of Durban. Structural alterations, specialized coatings, and civil facility overhaul.</p>
+                            </div>
+
+                            <div class="project-specs-row">
+                                <div class="spec-pill"><i data-lucide="check-circle" style="width:12px; height:12px; color:var(--accent-orange);"></i> Civil & Structural</div>
+                                <div class="spec-pill"><i data-lucide="check-circle" style="width:12px; height:12px; color:var(--accent-orange);"></i> State-Owned Entity</div>
+                                <div class="spec-pill"><i data-lucide="check-circle" style="width:12px; height:12px; color:var(--accent-orange);"></i> 100% Completed</div>
+                            </div>
+
+                            <a href="#projects" class="btn-hero-project-link">
+                                <span>Inspect in Project Ledger</span>
+                                <i data-lucide="arrow-right" style="width:14px; height:14px;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
