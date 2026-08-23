@@ -266,6 +266,20 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
 
 \vspace{0.35cm}
 
+%% ── Service Card Header Helper ─────────────────────────────────
+\newcommand{\ServiceCardHeader}[3]{%
+  \begin{tabularx}{\linewidth}{@{} >{\centering\arraybackslash}m{0.85cm} @{\hspace{6.5pt}} >{\raggedright\arraybackslash}m{\dimexpr\linewidth-0.85cm-6.5pt\relax} @{}}
+    \begin{tikzpicture}[baseline=(iconnode.center)]
+      \node (iconnode) [fill=awenLightGrey, draw=awenMaroon, rounded corners=3.5pt, line width=0.7pt, inner sep=3.8pt] {
+        {\color{awenMaroon}\fontsize{10.5pt}{10.5pt}\selectfont #1}
+      };
+    \end{tikzpicture}
+    &
+    {\fontsize{9pt}{11pt}\selectfont\bfseries\color{awenDarkMaroon} #2}\par\vspace{1.5pt}%
+    {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} #3}
+  \end{tabularx}%
+}
+
 % Row 1: 01. Fencing & Security  |  02. Building Works
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
@@ -274,16 +288,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faShieldAlt}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 01. Fencing \& Security}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Perimeter Protection \& Enclosures}
-    \end{tabularx}
+    \ServiceCardHeader{\faShieldAlt}{01. Fencing \& Security}{Perimeter Protection \& Enclosures}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -300,16 +305,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faBuilding}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 02. Building Works}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Superstructures \& Alterations}
-    \end{tabularx}
+    \ServiceCardHeader{\faBuilding}{02. Building Works}{Superstructures \& Alterations}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -331,16 +327,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faCube}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 03. Concrete Works}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Reinforced Slabs \& Foundations}
-    \end{tabularx}
+    \ServiceCardHeader{\faCube}{03. Concrete Works}{Reinforced Slabs \& Foundations}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -357,16 +344,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faThLarge}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 04. Tiling \& Flooring}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Surface Finishes \& Screeding}
-    \end{tabularx}
+    \ServiceCardHeader{\faThLarge}{04. Tiling \& Flooring}{Surface Finishes \& Screeding}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -388,16 +366,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faHome}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 05. Roofing \& Timber}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Structural Roofs \& Sheeting}
-    \end{tabularx}
+    \ServiceCardHeader{\faHome}{05. Roofing \& Timber}{Structural Roofs \& Sheeting}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -414,16 +383,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faPaintBrush}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 06. Painting \& Coatings}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Protective \& Decorative Coatings}
-    \end{tabularx}
+    \ServiceCardHeader{\faPaintBrush}{06. Painting \& Coatings}{Protective \& Decorative Coatings}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -445,16 +405,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faHammer}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 07. Carpentry \& Joinery}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Ceilings, Partitions \& Fittings}
-    \end{tabularx}
+    \ServiceCardHeader{\faHammer}{07. Carpentry \& Joinery}{Ceilings, Partitions \& Fittings}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -471,16 +422,7 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
     width=\linewidth, height=3.95cm, valign=top,
     top=6pt, bottom=5pt, left=8pt, right=8pt, drop shadow=black!3
   ]
-    \begin{tabularx}{\linewidth}{@{} c @{\hspace{7pt}} X @{}}
-      \begin{tikzpicture}
-        \node[fill=awenLightGrey, draw=awenMaroon, rounded corners=4pt, line width=0.7pt, inner sep=4.5pt] {
-          {\color{awenMaroon}\fontsize{11pt}{11pt}\selectfont\faFaucet}
-        };
-      \end{tikzpicture}
-      &
-      {\fontsize{9pt}{10.8pt}\selectfont\bfseries\color{awenDarkMaroon} 08. Plumbing \& Wet Services}\par\vspace{1.5pt}%
-      {\fontsize{7.2pt}{8.5pt}\selectfont\color{awenTextMuted} Water Reticulation \& Sanitation}
-    \end{tabularx}
+    \ServiceCardHeader{\faFaucet}{08. Plumbing \& Wet Services}{Water Reticulation \& Sanitation}
     \vspace{2.5pt}
     {\color{awenMidGrey}\rule{\linewidth}{0.5pt}}
     \vspace{1.5pt}
@@ -590,12 +532,12 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
   \rowcolor{awenLightGrey}
   EDC – Experience Delivery Company & Painting Works in Block E 2nd Floor at DTI campus & R197 920.50 & 2015 & Complete & Farai Mandebvu 012 341 6007/8 \\
   \midrule
-  Public Works & Devon Prison – Renovations to Devon Prison & R349 586 & 2016 & & SM Venter 076 589 5530 \\
+  Public Works & Devon Prison – Renovations to Devon Prison & R349 586 & 2016 & Complete & SM Venter 076 589 5530 \\
   \midrule
   \rowcolor{awenLightGrey}
   Mangosuthu University of Technology & Paving at Mangosuthu University of Technology & R 456 265 & 2019 & Complete & Mr Lindo Mzolo 031 819 9310 \\
   \midrule
-  Zikhulise Group & Mangidini Housing Project Nkandla – Construction of Wallplate to & & 2019 & Project on hold & Mr Nzimande 082 363 4358 \\
+  Zikhulise Group & Mangidini Housing Project Nkandla – Construction of Wallplate & -- & 2019 & Project on hold & Mr Nzimande 082 363 4358 \\
   \midrule
   \rowcolor{awenLightGrey}
   Ndwedwe Local Municipality & Installation Of Galvanised Steel Carports At The Ndwedwe Civic Centre Parking Area & R757 873 & 2019 & Complete & David Ayisi 031 303 2470 \\
@@ -603,17 +545,17 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
   Department of Health KZN & Refurbishment of Nseleni CHC & R465 888 & 2021 & Complete & Ms K Kuboni 035 457 1236 \\
   \midrule
   \rowcolor{awenLightGrey}
-  Umhlathuze Municipality & Supply and Deliver Electrical items & R196 824.00 & 2021 & & Thabani Ndlovu 035 907 5974 / 5908 \\
+  Umhlathuze Municipality & Supply and Deliver Electrical items & R196 824.00 & 2021 & Complete & Thabani Ndlovu 035 907 5974 / 5908 \\
   \midrule
   Department Of Public Works KZN & Maintenance Works At Umlazi U Clinic & R855 460.00 & 2021 & Complete & Z Malunga 031 203 2163 \\
   \midrule
   \rowcolor{awenLightGrey}
   Department of Health KZN & Design, Fabricate And Install Steel Shelters To Walkways & R681 909.83 & 2023 & Complete & S.B Dlamini 035 831 7048 \\
   \midrule
-  Atom Gate & Alterations and renovations of new officers & R179 400 & 2022 & Complete & Makgabo Morema 071 168 0946 \\
+  Atom Gate & Alterations and renovations of new offices & R179 400 & 2022 & Complete & Makgabo Morema 071 168 0946 \\
   \midrule
   \rowcolor{awenLightGrey}
-  Logico & Reconfiguration of Logico office space & R589 950.43 & 2023 & & Lephoi Maduna 074 966 7824 \\
+  Logico & Reconfiguration of Logico office space & R589 950.43 & 2023 & Complete & Lephoi Maduna 074 966 7824 \\
   \midrule
   Department Of Public Works KZN & Supply Of New Prefabricated Ablutions Including Three Water Tanks And Electrical Pumps & R865,549 & 2023 & Complete & Nhlonipho Msomi 035 – 874 3419 \\
   \midrule
@@ -635,14 +577,19 @@ AWEN delivers comprehensive general construction, structural infrastructure, alt
   \rowcolor{awenLightGrey}
   Kzn Health Prince Mshiyeni Hospital & painting of ward C1,C2 and upgrading of nurses DUY rooms & R199 750 & 2025 & Complete & Hloniphani Ngcobo 031 907 8214 \\
   \midrule
-  UKZN Howard College & Renovation Of Student Discipline -Installing New Carpets, New Office, Repainting, New Windows, New Cabinets & R555 214 & 2025 & Complete & Shiven Maharaj \\
-  \midrule
-  \rowcolor{awenLightGrey}
-  CSIR & General Facilities \& Maintenance Services & -- & 2024 & Active & Regional Facility Manager \\
-  \midrule
-  NEF – National Empowerment Fund & Commercial Office Alterations \& Facilities Fit-Out & -- & 2024 & Active & Procurement Operations \\
+  UKZN Howard College & Renovation Of Student Discipline -- Installing New Carpets, New Office, Repainting, New Windows, New Cabinets & R555 214 & 2025 & Complete & Shiven Maharaj \\
   \bottomrule
 \end{longtable}
+
+\vspace{0.2cm}
+\begin{tcolorbox}[
+  enhanced, colback=awenLightGrey, colframe=awenMidGrey,
+  boxrule=0.8pt, arc=3pt, top=6pt, bottom=6pt, left=10pt, right=10pt
+]
+  \fontsize{8.5pt}{11pt}\selectfont\color{awenDarkGrey}
+  \textbf{\color{awenMaroon}\faBuilding\ Additional Institutional Client Registrations:} 
+  Council for Scientific and Industrial Research (CSIR) $\bullet$ National Empowerment Fund (NEF)
+\end{tcolorbox}
 }
 
 \newpage
