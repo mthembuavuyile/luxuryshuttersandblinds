@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="100%" height="100%">
+  <defs>
+    <style>
+      .brand-maroon { fill: #8B1A1A; }
+      .brand-text-awen-h { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 32px; letter-spacing: 3.5px; fill: #8B1A1A; }
+      .brand-text-sub-h { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 8.5px; letter-spacing: 1.8px; fill: #333333; }
+    </style>
+  </defs>
+
+  <!-- Emblem on Left -->
+  <g transform="translate(6, 6) scale(0.65)">
+    <!-- Right leg -->
+    <path d="M55 0 L110 102 L74 102 L58 68 L36 68 L55 0 Z" fill="#8B1A1A" />
+    <!-- Top left curve -->
+    <path d="M55 0 L25 56 C42 46 60 52 70 66 L55 0 Z" fill="#8B1A1A" />
+    <!-- Bottom left arch -->
+    <path d="M0 102 L24 64 C38 52 56 54 66 66 L52 102 L26 102 C18 102 8 102 0 102 Z" fill="#8B1A1A" />
+  </g>
+
+  <!-- Text Group on Right -->
+  <g transform="translate(90, 42)">
+    <text x="0" y="0" class="brand-text-awen-h">AWEN</text>
+    <text x="0" y="20" class="brand-text-sub-h">AFRICAN WEALTH EMPOWERMENT NETWORK</text>
+  </g>
+</svg>

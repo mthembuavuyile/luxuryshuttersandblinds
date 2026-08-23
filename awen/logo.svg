@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%" height="100%">
+  <defs>
+    <style>
+      .brand-maroon { fill: #8B1A1A; }
+      .brand-dark { fill: #1A1A1A; }
+      .brand-text-awen { font-family: 'Montserrat', 'Arial Black', sans-serif; font-weight: 900; font-size: 54px; letter-spacing: 6px; fill: #8B1A1A; }
+      .brand-text-sub { font-family: 'Montserrat', -apple-system, sans-serif; font-weight: 700; font-size: 13.5px; letter-spacing: 3.2px; fill: #222222; }
+    </style>
+  </defs>
+
+  <!-- Stylized Geometric "A" Emblem -->
+  <g transform="translate(195, 12)">
+    <!-- Right heavy diagonal leg -->
+    <path d="M55 0 L110 102 L74 102 L58 68 L36 68 L55 0 Z" fill="#8B1A1A" />
+    
+    <!-- Left diagonal leg with stylized curved cut -->
+    <path d="M55 0 L25 56 C42 46 60 52 70 66 L55 0 Z" fill="#8B1A1A" />
+    
+    <!-- Bottom left arch leg -->
+    <path d="M0 102 L24 64 C38 52 56 54 66 66 L52 102 L26 102 C18 102 8 102 0 102 Z" fill="#8B1A1A" />
+  </g>
+
+  <!-- Typography: AWEN -->
+  <text x="250" y="174" text-anchor="middle" class="brand-text-awen">AWEN</text>
+
+  <!-- Subtitle: AFRICAN WEALTH EMPOWERMENT NETWORK -->
+  <text x="250" y="206" text-anchor="middle" class="brand-text-sub">AFRICAN WEALTH EMPOWERMENT NETWORK</text>
+</svg>
