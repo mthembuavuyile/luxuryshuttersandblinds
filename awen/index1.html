@@ -1251,26 +1251,29 @@
            ========================================================================== */
         .rfq-section {
             background: var(--canvas);
-            padding: 84px 0;
+            padding: 96px 0;
         }
 
         .rfq-layout-grid {
-            max-width: 1260px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 32px;
             display: grid;
-            grid-template-columns: 1fr 1.15fr;
-            gap: 48px;
-            align-items: start;
+            grid-template-columns: 390px 1fr;
+            gap: 44px;
+            align-items: stretch;
         }
 
         .rfq-direct-card {
             background: var(--primary-deep);
             color: var(--white);
-            padding: 40px 36px;
+            padding: 48px 36px;
             border-radius: var(--radius-sm);
             border-top: 4px solid var(--accent-orange);
             box-shadow: var(--shadow-elevated);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .rfq-direct-card h3 {
@@ -1287,14 +1290,14 @@
             font-size: 14.5px;
             line-height: 1.75;
             color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 28px;
+            margin-bottom: 32px;
         }
 
         .rfq-contact-channel {
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
             font-size: 14px;
         }
 
@@ -1313,7 +1316,7 @@
             color: var(--gold);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .rfq-form-card {
@@ -1321,54 +1324,54 @@
             border: 1px solid var(--border-light);
             border-top: 4px solid var(--primary);
             border-radius: var(--radius-sm);
-            padding: 38px 34px;
-            box-shadow: var(--shadow-card);
+            padding: 48px 44px;
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
         }
 
         .rfq-form-card h3 {
             font-family: var(--font-display);
             color: var(--primary);
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .rfq-form-card p.form-subtitle {
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-secondary);
-            margin-bottom: 22px;
-            padding-bottom: 12px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
             border-bottom: 2px solid var(--accent-orange);
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: 20px;
         }
 
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 22px;
         }
 
         .form-group label {
             display: block;
-            font-size: 11.5px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             color: var(--text-main);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .form-control {
             width: 100%;
-            padding: 11px 13px;
-            border: 1px solid var(--border-mid);
+            padding: 13px 16px;
+            border: 1.5px solid var(--border-mid);
             background: var(--white);
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-main);
             border-radius: var(--radius-xs);
             outline: none;
@@ -1381,19 +1384,20 @@
         }
 
         textarea.form-control {
-            min-height: 105px;
+            min-height: 140px;
             resize: vertical;
+            line-height: 1.6;
         }
 
         .btn-submit-rfq {
             background: var(--accent-orange);
             color: var(--white);
             border: none;
-            padding: 14px 28px;
+            padding: 16px 32px;
             font-family: var(--font-display);
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 800;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             border-radius: var(--radius-xs);
             cursor: pointer;
@@ -1401,14 +1405,16 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             transition: var(--transition);
-            box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
+            box-shadow: 0 4px 16px rgba(222, 89, 32, 0.28);
+            margin-top: 4px;
         }
 
         .btn-submit-rfq:hover {
             background: var(--accent-orange-dark);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(222, 89, 32, 0.35);
         }
 
         /* ==========================================================================
@@ -1519,7 +1525,20 @@
             }
 
             .rfq-layout-grid {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                gap: 36px;
+                padding: 0 24px;
+            }
+
+            .rfq-form-card {
+                order: 1;
+                width: 100%;
+            }
+
+            .rfq-direct-card {
+                order: 2;
+                width: 100%;
             }
 
             .footer-grid {
@@ -1604,8 +1623,73 @@
                 grid-template-columns: 1fr;
             }
 
+            .rfq-section {
+                padding: 56px 0;
+            }
+
+            .rfq-layout-grid {
+                padding: 0 16px;
+                gap: 28px;
+            }
+
+            .rfq-form-card {
+                padding: 30px 18px;
+            }
+
+            .rfq-form-card h3 {
+                font-size: 20px;
+            }
+
+            .rfq-form-card p.form-subtitle {
+                font-size: 13.5px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
             .form-row {
                 grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-group {
+                margin-bottom: 16px;
+            }
+
+            .form-group label {
+                font-size: 11.5px;
+                margin-bottom: 6px;
+            }
+
+            .form-control {
+                padding: 13px 15px;
+                font-size: 15px;
+            }
+
+            textarea.form-control {
+                min-height: 120px;
+            }
+
+            .btn-submit-rfq {
+                padding: 15px 24px;
+                font-size: 12.5px;
+            }
+
+            .rfq-direct-card {
+                padding: 30px 18px;
+            }
+
+            .rfq-direct-card h3 {
+                font-size: 20px;
+            }
+
+            .rfq-direct-card p {
+                font-size: 13.5px;
+                margin-bottom: 22px;
+            }
+
+            .rfq-contact-channel {
+                margin-bottom: 18px;
+                font-size: 13.5px;
             }
 
             .footer-grid {
@@ -1632,7 +1716,8 @@
             <div class="topbar-accreditations">
                 <span>CIDB: <span class="gold-txt">4GB • 1CE • 1SF • 1SO • 1SN</span></span>
                 <span class="topbar-divider">•</span>
-                <span>B-BBEE: <span class="gold-txt">LEVEL 1</span> <span class="orange-badge">135% Recognition</span></span>
+                <span>B-BBEE: <span class="gold-txt">LEVEL 1</span> <span class="orange-badge">135%
+                        Recognition</span></span>
                 <span class="topbar-divider">•</span>
                 <span>CSD: <span class="gold-txt">MAAA0023374</span></span>
                 <span class="topbar-divider">•</span>
@@ -1681,11 +1766,16 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobileDrawer">
         <a href="#about" class="mobile-link">About AWEN <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#services" class="mobile-link">Services & Capabilities <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#governance" class="mobile-link">Compliance & Tenders <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#projects" class="mobile-link">Completed Projects <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#leadership" class="mobile-link">Management Team <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#contact" class="mobile-link" style="color:var(--accent-orange);">Contact Us / Tender Enquiries <i data-lucide="arrow-up-right" style="width:16px;"></i></a>
+        <a href="#services" class="mobile-link">Services & Capabilities <i data-lucide="arrow-right"
+                style="width:16px;"></i></a>
+        <a href="#governance" class="mobile-link">Compliance & Tenders <i data-lucide="arrow-right"
+                style="width:16px;"></i></a>
+        <a href="#projects" class="mobile-link">Completed Projects <i data-lucide="arrow-right"
+                style="width:16px;"></i></a>
+        <a href="#leadership" class="mobile-link">Management Team <i data-lucide="arrow-right"
+                style="width:16px;"></i></a>
+        <a href="#contact" class="mobile-link" style="color:var(--accent-orange);">Contact Us / Tender Enquiries <i
+                data-lucide="arrow-up-right" style="width:16px;"></i></a>
     </div>
 
     <!-- 3. HERO SECTION -->
@@ -1702,7 +1792,9 @@
                 </h1>
 
                 <p class="hero-intro-text">
-                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is an established Durban-based contracting firm providing quality building construction, civil works, alterations, and maintenance services for public and commercial clients.
+                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is an established Durban-based contracting firm
+                    providing quality building construction, civil works, alterations, and maintenance services for
+                    public and commercial clients.
                 </p>
 
                 <div class="hero-cta-row">
@@ -1718,11 +1810,12 @@
 
                 <!-- Landmark Project Highlight -->
                 <div class="landmark-card">
-                    <img src="transnet-berthing.jpg"
-                        alt="Transnet Berthing Facilities Refurbishment" class="landmark-img-thumb">
+                    <img src="transnet-berthing.jpg" alt="Transnet Berthing Facilities Refurbishment"
+                        class="landmark-img-thumb">
                     <div class="landmark-info">
                         <h4>Transnet Berthing Facility Refurbishment</h4>
-                        <p>Refurbishment of the Berthing Services Building for Transnet SOC Ltd at the Port of Durban (Contract Value: R 1,666,860.85).</p>
+                        <p>Refurbishment of the Berthing Services Building for Transnet SOC Ltd at the Port of Durban
+                            (Contract Value: R 1,666,860.85).</p>
                         <a href="#projects" class="btn-view-link">
                             View Details in Project Ledger
                             <i data-lucide="arrow-up-right" style="width:14px; height:14px;"></i>
@@ -1740,20 +1833,28 @@
                 <div class="about-text-col">
                     <span class="section-eyebrow">About Our Business</span>
                     <h2 class="section-title">Established Contractor Delivering Practical Construction Solutions</h2>
-                    
+
                     <p>
-                        <strong>African Wealth Empowerment Network (AWEN) (Pty) Ltd</strong> is a progressive construction company registered in 2014 (Reg: 2014/146827/07) and based in Woodlands, Durban. We provide general building, civil contracting, structural alterations, and facility maintenance services across KwaZulu-Natal.
+                        <strong>African Wealth Empowerment Network (AWEN) (Pty) Ltd</strong> is a progressive
+                        construction company registered in 2014 (Reg: 2014/146827/07) and based in Woodlands, Durban. We
+                        provide general building, civil contracting, structural alterations, and facility maintenance
+                        services across KwaZulu-Natal.
                     </p>
 
                     <p>
-                        Our construction and consulting solutions are tailored to suit each client's specific scope and budget. We focus on three core principles: <strong>quality workmanship</strong>, <strong>hands-on project management</strong>, and <strong>sound technical advice</strong>.
+                        Our construction and consulting solutions are tailored to suit each client's specific scope and
+                        budget. We focus on three core principles: <strong>quality workmanship</strong>,
+                        <strong>hands-on project management</strong>, and <strong>sound technical advice</strong>.
                     </p>
 
                     <div class="about-vision-box">
-                        <h4><i data-lucide="eye" style="width:16px; height:16px; color:var(--gold);"></i> Our Vision & Mission</h4>
+                        <h4><i data-lucide="eye" style="width:16px; height:16px; color:var(--gold);"></i> Our Vision &
+                            Mission</h4>
                         <p>
-                            <strong>Vision:</strong> To become a trusted, household name for clients requiring dependable construction and civil works services.<br>
-                            <strong>Mission:</strong> To provide clients with professional, quality, and affordable construction services using experienced personnel and ongoing skills development.
+                            <strong>Vision:</strong> To become a trusted, household name for clients requiring
+                            dependable construction and civil works services.<br>
+                            <strong>Mission:</strong> To provide clients with professional, quality, and affordable
+                            construction services using experienced personnel and ongoing skills development.
                         </p>
                     </div>
                 </div>
@@ -1762,25 +1863,29 @@
                     <div class="about-stat-card">
                         <div class="about-stat-num">CIDB 4GB / 1CE</div>
                         <div class="about-stat-label">Grading & Accreditation</div>
-                        <div class="about-stat-desc">Accredited by CIDB (CRS 10065323) in 4GB, 1CE, 1SF, 1SO, and 1SN classes of construction work.</div>
+                        <div class="about-stat-desc">Accredited by CIDB (CRS 10065323) in 4GB, 1CE, 1SF, 1SO, and 1SN
+                            classes of construction work.</div>
                     </div>
 
                     <div class="about-stat-card">
                         <div class="about-stat-num">B-BBEE Level 1</div>
                         <div class="about-stat-label">100% Black-Owned</div>
-                        <div class="about-stat-desc">135% procurement recognition status, supporting local employment and skills transfer on every site.</div>
+                        <div class="about-stat-desc">135% procurement recognition status, supporting local employment
+                            and skills transfer on every site.</div>
                     </div>
 
                     <div class="about-stat-card">
                         <div class="about-stat-num">CSD Registered</div>
                         <div class="about-stat-label">Government Supplier</div>
-                        <div class="about-stat-desc">Compliant with Central Supplier Database (MAAA0023374) for municipal, provincial, and SOE contracts.</div>
+                        <div class="about-stat-desc">Compliant with Central Supplier Database (MAAA0023374) for
+                            municipal, provincial, and SOE contracts.</div>
                     </div>
 
                     <div class="about-stat-card">
                         <div class="about-stat-num">10+ Years</div>
                         <div class="about-stat-label">Track Record</div>
-                        <div class="about-stat-desc">Registered in 2014 with verified public and private sector project delivery across KwaZulu-Natal.</div>
+                        <div class="about-stat-desc">Registered in 2014 with verified public and private sector project
+                            delivery across KwaZulu-Natal.</div>
                     </div>
                 </div>
             </div>
@@ -1793,7 +1898,8 @@
             <span class="section-eyebrow">Field of Expertise</span>
             <h2 class="section-title">Our Construction & Building Services</h2>
             <p class="section-subtitle">
-                AWEN provides general construction, structural infrastructure, alterations, and civil contracting across eight specialist disciplines:
+                AWEN provides general construction, structural infrastructure, alterations, and civil contracting across
+                eight specialist disciplines:
             </p>
         </div>
 
@@ -1810,7 +1916,8 @@
                         <li>Security enclosures & access gates</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Fencing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Fencing <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 02. Building Works -->
@@ -1825,7 +1932,8 @@
                         <li>Institutional maintenance & white boxing</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Building <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Building <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 03. Concrete Works -->
@@ -1840,7 +1948,8 @@
                         <li>Industrial paving & hardstanding areas</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Concrete <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Concrete <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 04. Tiling & Flooring -->
@@ -1855,7 +1964,8 @@
                         <li>Specialized wall cladding & finishes</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Tiling <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Tiling <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 05. Roofing & Timber -->
@@ -1870,7 +1980,8 @@
                         <li>Waterproofing, flashings & gutters</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Roofing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Roofing <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 06. Painting & Coatings -->
@@ -1885,7 +1996,8 @@
                         <li>Hospital & clinic specialized paints</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Painting <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Painting <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 07. Carpentry & Joinery -->
@@ -1900,7 +2012,8 @@
                         <li>Custom joinery, doors, frames & cabinetry</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Carpentry <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Carpentry <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- 08. Plumbing & Wet Services -->
@@ -1915,7 +2028,8 @@
                         <li>Drainage reticulation & booster pumps</li>
                     </ul>
                 </div>
-                <a href="#contact" class="btn-view-link">Enquire About Plumbing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-view-link">Enquire About Plumbing <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
         </div>
     </section>
@@ -1926,7 +2040,8 @@
             <span class="section-eyebrow">Technical Capacity</span>
             <h2 class="section-title">Equipment, Surveying & Tools</h2>
             <p class="section-subtitle">
-                We maintain our own site equipment, transport, and precision surveying instruments for reliable project execution.
+                We maintain our own site equipment, transport, and precision surveying instruments for reliable project
+                execution.
             </p>
         </div>
 
@@ -1940,19 +2055,22 @@
             <div class="equip-card">
                 <div class="equip-icon"><i data-lucide="crosshair" style="width:18px; height:18px;"></i></div>
                 <h4>Surveying & Setting Out</h4>
-                <p>3x Trimble M3 Total Stations, Trimble Survey GPS, 2x Dumpy Levels, and field laptops for accurate setting out.</p>
+                <p>3x Trimble M3 Total Stations, Trimble Survey GPS, 2x Dumpy Levels, and field laptops for accurate
+                    setting out.</p>
             </div>
 
             <div class="equip-card">
                 <div class="equip-icon"><i data-lucide="wrench" style="width:18px; height:18px;"></i></div>
                 <h4>Plant & Tooling</h4>
-                <p>Full suite of handheld power tools, concrete equipment, and direct access to heavy plant hire partners.</p>
+                <p>Full suite of handheld power tools, concrete equipment, and direct access to heavy plant hire
+                    partners.</p>
             </div>
 
             <div class="equip-card">
                 <div class="equip-icon"><i data-lucide="laptop" style="width:18px; height:18px;"></i></div>
                 <h4>Engineering Software</h4>
-                <p>AutoCAD (2018), ArchiCAD, and Model Maker for drawing verification, site measurements, and project planning.</p>
+                <p>AutoCAD (2018), ArchiCAD, and Model Maker for drawing verification, site measurements, and project
+                    planning.</p>
             </div>
         </div>
     </section>
@@ -1963,7 +2081,8 @@
             <span class="section-eyebrow">Statutory Compliance</span>
             <h2 class="section-title">Procurement, Compliance & Tender Information</h2>
             <p class="section-subtitle">
-                Clear credentials and compliance information for procurement officers, municipal managers, and quantity surveyors.
+                Clear credentials and compliance information for procurement officers, municipal managers, and quantity
+                surveyors.
             </p>
         </div>
 
@@ -1976,9 +2095,11 @@
                         <i data-lucide="file-check-2" style="width:18px; height:18px; color:var(--accent-orange);"></i>
                     </div>
                     <h4>Tender Submissions & RFQs</h4>
-                    <p>Send tender invitations, Bills of Quantities (BoQs), and RFQ documents directly to our tender email at awen.tenders@gmail.com.</p>
+                    <p>Send tender invitations, Bills of Quantities (BoQs), and RFQ documents directly to our tender
+                        email at awen.tenders@gmail.com.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">Send Tender Request <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Send Tender Request <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 2: CIDB Grading -->
@@ -1989,9 +2110,11 @@
                         <i data-lucide="shield" style="width:18px; height:18px; color:var(--primary);"></i>
                     </div>
                     <h4>CIDB 4GB • 1CE • 1SF • 1SO • 1SN</h4>
-                    <p>Registered with the Construction Industry Development Board (CRS Number: 10065323) across multiple classes of work.</p>
+                    <p>Registered with the Construction Industry Development Board (CRS Number: 10065323) across
+                        multiple classes of work.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">Request CIDB Details <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Request CIDB Details <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 3: B-BBEE Level 1 -->
@@ -2002,9 +2125,11 @@
                         <i data-lucide="award" style="width:18px; height:18px; color:var(--gold);"></i>
                     </div>
                     <h4>Level 1 B-BBEE (135% Recognition)</h4>
-                    <p>100% Black-owned South African enterprise contributing to local employment and supplier development across KwaZulu-Natal.</p>
+                    <p>100% Black-owned South African enterprise contributing to local employment and supplier
+                        development across KwaZulu-Natal.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">View B-BBEE Info <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">View B-BBEE Info <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 4: Health & Safety -->
@@ -2015,9 +2140,11 @@
                         <i data-lucide="activity" style="width:18px; height:18px; color:var(--primary);"></i>
                     </div>
                     <h4>OHS Act & Site Safety</h4>
-                    <p>SACPCMP registered Construction Health & Safety Officer, daily safety briefings, risk assessments, and COIDA compliance.</p>
+                    <p>SACPCMP registered Construction Health & Safety Officer, daily safety briefings, risk
+                        assessments, and COIDA compliance.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">Safety Overview <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Safety Overview <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 5: Central Supplier Database -->
@@ -2028,9 +2155,11 @@
                         <i data-lucide="database" style="width:18px; height:18px; color:var(--accent-orange);"></i>
                     </div>
                     <h4>CSD Number: MAAA0023374</h4>
-                    <p>Fully compliant with South African National Treasury's Central Supplier Database with valid tax clearance status.</p>
+                    <p>Fully compliant with South African National Treasury's Central Supplier Database with valid tax
+                        clearance status.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">CSD Details <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">CSD Details <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 6: Company Profile Pack -->
@@ -2041,9 +2170,11 @@
                         <i data-lucide="file-text" style="width:18px; height:18px; color:var(--gold);"></i>
                     </div>
                     <h4>Official Company Profile</h4>
-                    <p>Comprehensive profile document containing company registration, CIDB details, management CVs, and verified project schedules.</p>
+                    <p>Comprehensive profile document containing company registration, CIDB details, management CVs, and
+                        verified project schedules.</p>
                 </div>
-                <a href="#contact" class="btn-gov-view">Request Profile <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Request Profile <i data-lucide="arrow-right"
+                        style="width:13px; height:13px;"></i></a>
             </div>
         </div>
     </section>
@@ -2060,8 +2191,7 @@
         <div class="projects-card-grid">
             <!-- Project 1 -->
             <div class="project-item-card">
-                <img src="transnet-berthing.jpg"
-                    alt="Transnet SOC Ltd" class="project-thumb-img">
+                <img src="transnet-berthing.jpg" alt="Transnet SOC Ltd" class="project-thumb-img">
                 <div class="project-body">
                     <div>
                         <div class="project-client-tag">Transnet SOC Ltd • 2024</div>
@@ -2323,7 +2453,8 @@
             <span class="section-eyebrow">Our Personnel</span>
             <h2 class="section-title">Key Management & Site Personnel</h2>
             <p class="section-subtitle">
-                Qualified, experienced personnel managing daily site operations, safety compliance, and quantity surveying.
+                Qualified, experienced personnel managing daily site operations, safety compliance, and quantity
+                surveying.
             </p>
         </div>
 
@@ -2379,7 +2510,8 @@
                 <span class="section-eyebrow" style="color:var(--accent-orange);">Get in Touch</span>
                 <h3>Contact Us & Tender Enquiries</h3>
                 <p>
-                    Whether you have an upcoming building project, require alterations, or want to invite AWEN to tender on civil and general building works, contact our office directly.
+                    Whether you have an upcoming building project, require alterations, or want to invite AWEN to tender
+                    on civil and general building works, contact our office directly.
                 </p>
 
                 <div class="rfq-contact-channel">
@@ -2402,7 +2534,8 @@
                     <i data-lucide="mail"></i>
                     <div>
                         <strong>Tender Email</strong>
-                        <a href="mailto:awen.tenders@gmail.com" style="color:var(--accent-orange); font-weight:700;">awen.tenders@gmail.com</a>
+                        <a href="mailto:awen.tenders@gmail.com"
+                            style="color:var(--accent-orange); font-weight:700;">awen.tenders@gmail.com</a>
                     </div>
                 </div>
 
@@ -2410,7 +2543,8 @@
                     <i data-lucide="mail"></i>
                     <div>
                         <strong>Direct Email</strong>
-                        <a href="mailto:meyiwasicelo@gmail.com" style="color:rgba(255,255,255,0.9);">meyiwasicelo@gmail.com</a>
+                        <a href="mailto:meyiwasicelo@gmail.com"
+                            style="color:rgba(255,255,255,0.9);">meyiwasicelo@gmail.com</a>
                     </div>
                 </div>
 
@@ -2442,14 +2576,16 @@
                         </div>
                         <div class="form-group">
                             <label for="org">Company / Department</label>
-                            <input type="text" id="org" class="form-control" placeholder="e.g. Municipality, School, Private">
+                            <input type="text" id="org" class="form-control"
+                                placeholder="e.g. Municipality, School, Private">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" placeholder="name@domain.co.za" required>
+                            <input type="email" id="email" class="form-control" placeholder="name@domain.co.za"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
@@ -2498,7 +2634,9 @@
                         style="height: 36px; width: auto; display: block;">
                 </div>
                 <p>
-                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited general building and civil works contractor based in Durban, delivering quality construction and maintenance across KwaZulu-Natal.
+                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited general building
+                    and civil works contractor based in Durban, delivering quality construction and maintenance across
+                    KwaZulu-Natal.
                 </p>
             </div>
 
@@ -2534,8 +2672,10 @@
                 <p>
                     Contact: Sicelo Meyiwa<br>
                     Phone: <a href="tel:+27719268316" style="color:var(--white);">071 926 8316</a><br>
-                    Tenders: <a href="mailto:awen.tenders@gmail.com" style="color:var(--accent-orange);">awen.tenders@gmail.com</a><br>
-                    Direct: <a href="mailto:meyiwasicelo@gmail.com" style="color:rgba(255,255,255,0.8);">meyiwasicelo@gmail.com</a>
+                    Tenders: <a href="mailto:awen.tenders@gmail.com"
+                        style="color:var(--accent-orange);">awen.tenders@gmail.com</a><br>
+                    Direct: <a href="mailto:meyiwasicelo@gmail.com"
+                        style="color:rgba(255,255,255,0.8);">meyiwasicelo@gmail.com</a>
                 </p>
                 <p style="margin-top:10px;">
                     Mon – Fri: 07:30 – 17:00
