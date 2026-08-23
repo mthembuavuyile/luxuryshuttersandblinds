@@ -1,0 +1,449 @@
+/* =====================================================
+   404 ERROR PAGE STYLING - LUXURY SHUTTERS & BLINDS
+   ===================================================== */
+
+.error-page {
+    background-color: var(--white);
+    min-height: calc(100vh - var(--header-h) - 300px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================================
+   HERO / MAIN NOTIFICATION SECTION
+   ===================================================== */
+.error-hero-section {
+    background: linear-gradient(180deg, #fdfdfd 0%, var(--off-white) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 70px 24px 80px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle architectural watermark background */
+.error-hero-section::before {
+    content: "404";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(140px, 28vw, 360px);
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.025);
+    letter-spacing: -6px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+    line-height: 1;
+}
+
+.error-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Custom Architectural Shutter Illustration */
+.error-shutter-graphic {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    color: var(--gold);
+    position: relative;
+}
+
+.error-shutter-graphic svg {
+    width: 48px;
+    height: 48px;
+}
+
+.error-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: var(--gold);
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.error-badge svg {
+    stroke: var(--gold);
+}
+
+.error-title {
+    font-size: clamp(26px, 4.5vw, 42px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.error-desc {
+    font-size: clamp(14px, 1.6vw, 16px);
+    color: var(--text-light);
+    line-height: 1.75;
+    max-width: 620px;
+    margin: 0 auto 36px auto;
+}
+
+/* Primary Action Buttons */
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.btn-error {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all var(--transition);
+    border: 2px solid transparent;
+    cursor: pointer;
+    min-width: 190px;
+}
+
+.btn-error svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-error-primary {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.btn-error-primary:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-error-secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-error-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-error-gold {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+.btn-error-gold:hover {
+    background: #b58d4e;
+    border-color: #b58d4e;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* =====================================================
+   DIRECTORY / POPULAR DESTINATIONS GRID
+   ===================================================== */
+.error-directory-section {
+    padding: 70px 24px;
+    background: var(--white);
+}
+
+.error-directory-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.error-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.error-section-header h2 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.error-section-header h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 8px auto 0 auto;
+}
+
+.error-section-header p {
+    font-size: 13.5px;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.error-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.error-directory-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    position: relative;
+}
+
+.error-directory-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+    transition: background var(--transition);
+}
+
+.error-directory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+}
+
+.error-directory-card:hover::before {
+    background: var(--gold);
+}
+
+.card-icon-wrap {
+    width: 44px;
+    height: 44px;
+    background: var(--off-white);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.error-directory-card:hover .card-icon-wrap {
+    background: var(--primary);
+    color: var(--gold);
+    border-color: var(--primary);
+}
+
+.card-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+}
+
+.error-directory-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.error-directory-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--gold);
+    margin-top: auto;
+    transition: gap var(--transition), color var(--transition);
+}
+
+.card-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform var(--transition);
+}
+
+.error-directory-card:hover .card-link {
+    color: var(--primary);
+}
+
+.error-directory-card:hover .card-link svg {
+    transform: translateX(4px);
+}
+
+/* =====================================================
+   SUPPORT & CONTACT BANNER
+   ===================================================== */
+.error-support-bar {
+    background: var(--primary);
+    color: var(--white);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 24px;
+}
+
+.error-support-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.error-support-text h3 {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 6px;
+}
+
+.error-support-text p {
+    font-size: 13.5px;
+    color: #cccccc;
+    margin: 0;
+}
+
+.error-support-channels {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.support-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--white);
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all var(--transition);
+}
+
+.support-pill svg {
+    width: 15px;
+    height: 15px;
+    color: var(--gold);
+}
+
+.support-pill:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.support-pill:hover svg {
+    color: var(--white);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ===================================================== */
+@media (max-width: 1024px) {
+    .error-directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .error-support-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .error-support-channels {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .error-hero-section {
+        padding: 50px 16px 60px 16px;
+    }
+
+    .error-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-error {
+        width: 100%;
+    }
+
+    .error-directory-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .error-directory-section {
+        padding: 50px 16px;
+    }
+
+    .error-support-channels {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .support-pill {
+        width: 100%;
+        justify-content: center;
+    }
+}
