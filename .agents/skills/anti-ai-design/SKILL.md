@@ -158,3 +158,57 @@ Before delivering or finalizing any web design, run this rapid verification:
 ## 5. Core Tenet
 
 > **Craftsmanship over convenience. Specificity over templates. Editorial authority over generic trends.**
+
+
+According to some sources, these are the **30 things he associates with an “AI/vibe-coded” website**:
+
+1. Harsh gradients
+2. Lucide icons
+3. Pure white background
+4. Rainbow coloring
+5. Drop shadows
+6. 3 feature cards in a row
+7. Emojis
+8. Liquid glass
+9. Em dashes
+10. Inter / Geist / Space Grotesk
+11. Colored left stripe
+12. Fake testimonials
+13. Bento grids
+14. Terminal window
+15. “It’s not X, it’s Y”
+16. Checkmark bullets
+17. 3 pricing tiers
+18. No real product demos
+19. Soft corner radius
+20. Purple and black
+21. No skeleton loaders
+22. Radial orbs
+23. Dot grids
+24. Sparkle icons
+25. Animated arrows
+26. No TOS
+27. No privacy policy
+28. Hover animations
+29. Neon colors
+30. Basic pastel colors
+
+### What he's really getting at
+
+He's basically arguing that **AI-generated/vibe-coded websites tend to converge on the same visual patterns** rather than looking deliberately designed.
+
+The criticism isn't that *each individual item is bad*. It's the **combination and repetition**:
+
+> gradient + rounded cards + purple/black + Lucide icons + bento grid + sparkle icon + radial gradient + animated arrow + three pricing cards + fake testimonials
+
+That combination has become a recognizable **“AI startup website” aesthetic**.
+
+By contrast, well-designed websites made before the current AI/vibe-coding boom often had more **individual visual identities**. Designers made deliberate choices around typography, spacing, photography, composition, navigation, brand colors, illustrations, and actual product presentation rather than reaching for the same popular UI patterns.
+
+And importantly, some of his list is **deliberately provocative**: things like *em dashes*, *Inter*, *soft corner radius*, or *white backgrounds* aren't inherently signs of AI. He's pointing to the **overuse of recognizable design clichés**.
+
+So the useful takeaway is:
+
+**AI-looking:** “What are the currently popular SaaS design patterns? → combine them.”
+
+**Human/intentional:** “What makes this particular company distinctive? → design around its brand, product, audience and story.”

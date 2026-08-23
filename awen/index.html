@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWEN (Pty) Ltd | African Wealth Empowerment Network | South Africa Civil Engineering & Building Group</title>
+    <title>AWEN (Pty) Ltd | African Wealth Empowerment Network | General Building & Civil Works Contractor</title>
     <meta name="description"
-        content="African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited, B-BBEE Level 1 civil engineering and commercial construction group based in Durban, South Africa.">
+        content="African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited, B-BBEE Level 1 general building and civil works contracting company based in Durban, South Africa.">
     <meta name="keywords"
-        content="AWEN, African Wealth Empowerment Network, CIDB 4GB, CIDB 1CE, Durban Construction, Raubex inspired, B-BBEE Level 1, Transnet Contractor, UKZN Contractor, Civil Works, Concrete Slabs, SANS 10400">
+        content="AWEN, African Wealth Empowerment Network, CIDB 4GB, CIDB 1CE, Durban Construction Contractor, Civil Works, Building Maintenance, B-BBEE Level 1, Transnet Contractor, UKZN Contractor, KwaZulu-Natal">
 
-    <!-- Fonts: Montserrat (Headings & Brand) & Inter (Crisp Editorial Body) -->
+    <!-- Fonts: Montserrat (Headings & Brand) & Inter (Clean Editorial Body) & Space Grotesk (Labels) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,7 +22,7 @@
 
     <style>
         /* ==========================================================================
-           AWEN CORPORATE DESIGN SYSTEM (RAUBEX-INSPIRED LIGHT THEME)
+           AWEN CORPORATE DESIGN SYSTEM (EDITORIAL LIGHT THEME)
            Anti-AI High-Craft Standard: Light-First, Architectural Solids, Human Editorial
            ========================================================================== */
         :root {
@@ -40,7 +40,7 @@
 
             /* Architectural Accents */
             --accent-orange: #DE5920;
-            /* Raubex-Style Industrial Orange */
+            /* High-Visibility Safety Orange Accent */
             --accent-orange-dark: #BF4410;
             --gold: #C0911D;
             /* Architectural Warm Gold */
@@ -190,7 +190,7 @@
         }
 
         /* ==========================================================================
-           1. TOP STATUTORY ACCREDITATION BAR (LIGHT THEMED WITH MAROON & GOLD)
+           1. TOP STATUTORY ACCREDITATION BAR
            ========================================================================== */
         .topbar {
             background: var(--primary-deep);
@@ -261,7 +261,7 @@
         }
 
         /* ==========================================================================
-           2. HEADER & BRAND NAVIGATION (RAUBEX INSPIRED, LIGHT CANVAS)
+           2. HEADER & BRAND NAVIGATION
            ========================================================================== */
         header {
             position: sticky;
@@ -305,7 +305,7 @@
         nav.nav-menu {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 26px;
         }
 
         nav.nav-menu a {
@@ -317,23 +317,13 @@
             letter-spacing: 0.8px;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             padding: 8px 0;
             position: relative;
         }
 
-        nav.nav-menu a i {
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
         nav.nav-menu a:hover {
             color: var(--primary);
-        }
-
-        nav.nav-menu a:hover i {
-            color: var(--primary);
-            transform: translateY(1px);
         }
 
         nav.nav-menu a::after {
@@ -360,7 +350,7 @@
         .btn-header-contact {
             background: var(--accent-orange);
             color: var(--white);
-            padding: 12px 24px;
+            padding: 12px 22px;
             font-family: var(--font-display);
             font-size: 11.5px;
             font-weight: 800;
@@ -426,22 +416,21 @@
         }
 
         /* ==========================================================================
-           3. HERO SECTION: BESPOKE EDITORIAL FULL-IMAGE CANVAS HERO
+           3. HERO SECTION
            ========================================================================== */
-        .hero-raubex {
+        .hero-corporate {
             position: relative;
             background: #FFFFFF url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=85') right center / cover no-repeat;
             border-bottom: 1px solid var(--border-light);
-            padding: 56px 0 68px;
+            padding: 60px 0 72px;
             overflow: hidden;
         }
 
-        /* Seamless directional gradient so editorial typography is crisp & legible on the left while the full photography shines on the right */
-        .hero-raubex::before {
+        .hero-corporate::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48%, rgba(255, 255, 255, 0.88) 65%, rgba(255, 255, 255, 0.35) 85%, rgba(255, 255, 255, 0.1) 100%);
+            background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 50%, rgba(255, 255, 255, 0.90) 68%, rgba(255, 255, 255, 0.45) 86%, rgba(255, 255, 255, 0.15) 100%);
             z-index: 1;
             pointer-events: none;
         }
@@ -455,7 +444,7 @@
         }
 
         .hero-content-wrapper {
-            max-width: 720px;
+            max-width: 740px;
             display: flex;
             flex-direction: column;
         }
@@ -473,26 +462,42 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             width: fit-content;
             border-radius: var(--radius-xs);
         }
 
         .hero-headline {
             font-family: var(--font-display);
-            font-size: clamp(32px, 3.8vw, 50px);
+            font-size: clamp(30px, 3.6vw, 48px);
             font-weight: 900;
             color: var(--primary);
-            line-height: 1.15;
+            line-height: 1.2;
             letter-spacing: -0.5px;
-            margin-bottom: 28px;
+            margin-bottom: 18px;
         }
 
         .hero-headline span {
             color: var(--accent-orange);
         }
 
-        .btn-hero-cta {
+        .hero-intro-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 28px;
+            max-width: 680px;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -505,29 +510,49 @@
             letter-spacing: 1.2px;
             text-transform: uppercase;
             border-radius: var(--radius-xs);
-            width: fit-content;
-            margin-bottom: 36px;
             box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
             transition: var(--transition);
         }
 
-        .btn-hero-cta:hover {
+        .btn-hero-primary:hover {
             background: var(--accent-orange-dark);
-            transform: translateX(4px);
-            box-shadow: 0 6px 20px rgba(222, 89, 32, 0.35);
+            transform: translateX(3px);
+            color: var(--white);
         }
 
-        /* Landmark Featured Project Box */
+        .btn-hero-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--primary);
+            border: 1px solid var(--border-mid);
+            padding: 13px 24px;
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            border-radius: var(--radius-xs);
+            transition: var(--transition);
+        }
+
+        .btn-hero-secondary:hover {
+            background: var(--primary-subtle);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Landmark Project Highlight */
         .landmark-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(4px);
+            background: rgba(255, 255, 255, 0.96);
             border: 1px solid var(--border-light);
             border-left: 4px solid var(--primary);
             border-radius: var(--radius-sm);
-            padding: 20px 22px;
+            padding: 18px 20px;
             display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 20px;
+            grid-template-columns: 130px 1fr;
+            gap: 18px;
             align-items: center;
             box-shadow: var(--shadow-card);
             max-width: 660px;
@@ -541,8 +566,8 @@
         }
 
         .landmark-img-thumb {
-            width: 140px;
-            height: 95px;
+            width: 130px;
+            height: 90px;
             object-fit: cover;
             border-radius: var(--radius-xs);
             border: 1px solid var(--border-light);
@@ -550,19 +575,19 @@
 
         .landmark-info h4 {
             font-family: var(--font-display);
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 800;
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .landmark-info p {
             font-size: 12.5px;
             color: var(--text-secondary);
             line-height: 1.5;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .btn-view-link {
@@ -584,7 +609,96 @@
         }
 
         /* ==========================================================================
-           4. REGIONAL OPERATIONAL FOOTPRINT & MAP (LIGHT THEME)
+           4. ABOUT AWEN SECTION (NEW & FACT-CHECKED FROM COMPANY PROFILE)
+           ========================================================================== */
+        .about-section {
+            background: var(--white);
+            padding: 84px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .about-text-col p {
+            font-size: 15.5px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-vision-box {
+            background: var(--gold-light);
+            border-left: 4px solid var(--gold);
+            padding: 20px 24px;
+            border-radius: var(--radius-xs);
+            margin: 28px 0 32px;
+        }
+
+        .about-vision-box h4 {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .about-vision-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .about-stat-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .about-stat-card {
+            background: var(--canvas);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--primary);
+            padding: 22px 20px;
+            border-radius: var(--radius-sm);
+        }
+
+        .about-stat-num {
+            font-family: var(--font-mono);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .about-stat-label {
+            font-family: var(--font-display);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .about-stat-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* ==========================================================================
+           5. REGIONAL FOOTPRINT
            ========================================================================== */
         .footprint-section {
             background: var(--canvas);
@@ -627,21 +741,21 @@
             text-transform: uppercase;
             letter-spacing: 1.2px;
             line-height: 1.35;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .footprint-copy p {
             font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.8;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         .footprint-chips {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
         .footprint-chip {
@@ -659,16 +773,16 @@
         .btn-location-map {
             background: var(--accent-orange);
             color: var(--white);
-            padding: 14px 28px;
+            padding: 13px 26px;
             font-family: var(--font-display);
             font-size: 12px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             border-radius: var(--radius-xs);
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
             transition: var(--transition);
         }
@@ -676,138 +790,167 @@
         .btn-location-map:hover {
             background: var(--accent-orange-dark);
             transform: translateY(-2px);
-        }
-
-        /* ==========================================================================
-           5. OUR DIVISIONS: RAUBEX-STYLE VERTICAL STAGGERED CARDS (LIGHT THEMED)
-           ========================================================================== */
-        .divisions-section {
-            background: var(--white);
-            padding: 84px 0 96px;
-        }
-
-        .divisions-header-row {
-            max-width: 1260px;
-            margin: 0 auto 36px;
-            padding: 0 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .divisions-grid-raubex {
-            max-width: 1260px;
-            margin: 0 auto;
-            padding: 0 32px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 18px;
-        }
-
-        .division-column-card {
-            position: relative;
-            height: 420px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            box-shadow: var(--shadow-card);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            text-decoration: none;
-        }
-
-        .division-column-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-elevated);
-            border-color: var(--accent-orange);
-        }
-
-        .division-card-bg {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-            z-index: 1;
-        }
-
-        .division-column-card:hover .division-card-bg {
-            transform: scale(1.08);
-        }
-
-        /* Light-to-Dark Gradient Overlay so text pops cleanly */
-        .division-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(20, 20, 20, 0.1) 30%, rgba(59, 7, 7, 0.92) 80%, rgba(30, 4, 4, 0.98) 100%);
-            z-index: 2;
-            transition: var(--transition);
-        }
-
-        .division-column-card:hover .division-card-overlay {
-            background: linear-gradient(180deg, rgba(20, 20, 20, 0.05) 20%, rgba(139, 26, 26, 0.92) 75%, rgba(90, 10, 10, 0.98) 100%);
-        }
-
-        .division-card-content {
-            position: relative;
-            z-index: 3;
-            padding: 24px 20px;
             color: var(--white);
         }
 
-        .division-tag-num {
+        /* ==========================================================================
+           6. 8 SPECIALIST DISCIPLINES / SERVICES (FROM COMPANY PROFILE)
+           ========================================================================== */
+        .services-section {
+            background: var(--white);
+            padding: 84px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .services-grid {
+            max-width: 1260px;
+            margin: 36px auto 0;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-top: 3px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 24px 20px;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card);
+            border-top-color: var(--accent-orange);
+        }
+
+        .service-card-top {
+            margin-bottom: 16px;
+        }
+
+        .service-num {
             font-family: var(--font-mono);
             font-size: 11px;
-            color: var(--gold);
             font-weight: 700;
-            letter-spacing: 1.5px;
+            color: var(--gold);
+            letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 6px;
         }
 
-        .division-title {
+        .service-title {
             font-family: var(--font-display);
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
+            color: var(--primary-dark);
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            line-height: 1.3;
-            margin-bottom: 12px;
-            color: var(--white);
+            letter-spacing: 0.6px;
+            line-height: 1.35;
+            margin-bottom: 10px;
         }
 
-        .division-action-link {
-            font-family: var(--font-display);
-            font-size: 11.5px;
-            font-weight: 800;
+        .service-subtitle {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 16px;
+        }
+
+        .service-list li {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .service-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
             color: var(--accent-orange);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-        }
-
-        .division-column-card:hover .division-action-link {
-            color: var(--gold);
-            gap: 9px;
+            font-weight: bold;
         }
 
         /* ==========================================================================
-           6. PROCUREMENT & GOVERNANCE: RAUBEX 6-CARD GRID IN LIGHT THEME
+           7. EQUIPMENT & TECHNICAL TOOLS (FROM COMPANY PROFILE)
            ========================================================================== */
-        .governance-section {
+        .equipment-section {
             background: var(--canvas);
-            border-top: 1px solid var(--border-light);
             border-bottom: 1px solid var(--border-light);
-            padding: 84px 0;
+            padding: 68px 0;
         }
 
-        .governance-grid-raubex {
+        .equipment-grid {
+            max-width: 1260px;
+            margin: 32px auto 0;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .equip-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 22px 20px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .equip-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-subtle);
+            border: 1px solid rgba(139, 26, 26, 0.15);
+            border-radius: var(--radius-xs);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .equip-card h4 {
+            font-family: var(--font-display);
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .equip-card p {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        /* ==========================================================================
+           8. COMPLIANCE & GOVERNANCE: 6 CARDS
+           ========================================================================== */
+        .governance-section {
+            background: var(--white);
+            padding: 84px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .governance-grid {
             max-width: 1260px;
             margin: 36px auto 0;
             padding: 0 32px;
@@ -858,7 +1001,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .gov-category {
@@ -885,7 +1028,7 @@
             font-size: 13px;
             color: var(--text-secondary);
             line-height: 1.65;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .btn-gov-view {
@@ -914,11 +1057,12 @@
         }
 
         /* ==========================================================================
-           7. LATEST PROJECTS: RAUBEX CAROUSEL & AUDITABLE PROJECT LEDGER
+           9. COMPLETED PROJECTS & TRACK RECORD
            ========================================================================== */
         .projects-section {
-            background: var(--white);
+            background: var(--canvas);
             padding: 84px 0;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .projects-header-bar {
@@ -928,31 +1072,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .carousel-arrows {
-            display: flex;
-            gap: 10px;
-        }
-
-        .carousel-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: var(--radius-xs);
-            background: var(--canvas);
-            border: 1px solid var(--border-mid);
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .carousel-btn:hover {
-            background: var(--accent-orange);
-            color: var(--white);
-            border-color: var(--accent-orange);
         }
 
         .projects-card-grid {
@@ -1012,7 +1131,7 @@
             color: var(--primary-dark);
             text-transform: uppercase;
             letter-spacing: 0.6px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             line-height: 1.35;
         }
 
@@ -1051,7 +1170,7 @@
         }
 
         .btn-toggle-ledger {
-            background: var(--canvas);
+            background: var(--white);
             border: 1px solid var(--border-mid);
             color: var(--primary);
             padding: 12px 28px;
@@ -1076,6 +1195,7 @@
             max-width: 1260px;
             margin: 28px auto 0;
             padding: 0 32px;
+            overflow-x: auto;
         }
 
         .full-ledger-table-wrap.open {
@@ -1131,13 +1251,12 @@
         }
 
         /* ==========================================================================
-           8. LEADERSHIP & TECHNICAL MANAGEMENT
+           10. MANAGEMENT TEAM (FROM COMPANY PROFILE)
            ========================================================================== */
         .management-section {
-            background: var(--canvas);
-            border-top: 1px solid var(--border-light);
-            border-bottom: 1px solid var(--border-light);
+            background: var(--white);
             padding: 84px 0;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .team-grid {
@@ -1146,15 +1265,15 @@
             padding: 0 32px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
+            gap: 20px;
         }
 
         .team-card {
-            background: var(--white);
+            background: var(--canvas);
             border: 1px solid var(--border-light);
             border-top: 3px solid var(--primary);
             border-radius: var(--radius-sm);
-            padding: 24px;
+            padding: 22px 20px;
             box-shadow: var(--shadow-subtle);
         }
 
@@ -1175,22 +1294,22 @@
             color: var(--primary-dark);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .team-quals {
-            font-size: 12.5px;
+            font-size: 12px;
             color: var(--text-secondary);
             line-height: 1.55;
-            border-top: 1px solid var(--canvas);
+            border-top: 1px solid var(--border-light);
             padding-top: 10px;
         }
 
         /* ==========================================================================
-           9. TENDER DESK & RFQ DISPATCH
+           11. CONTACT & TENDER ENQUIRIES FORM (NORMAL, NON-AI LANGUAGE)
            ========================================================================== */
         .rfq-section {
-            background: var(--white);
+            background: var(--canvas);
             padding: 84px 0;
         }
 
@@ -1199,7 +1318,7 @@
             margin: 0 auto;
             padding: 0 32px;
             display: grid;
-            grid-template-columns: 1fr 1.1fr;
+            grid-template-columns: 1fr 1.15fr;
             gap: 48px;
             align-items: start;
         }
@@ -1207,7 +1326,7 @@
         .rfq-direct-card {
             background: var(--primary-deep);
             color: var(--white);
-            padding: 44px 36px;
+            padding: 40px 36px;
             border-radius: var(--radius-sm);
             border-top: 4px solid var(--accent-orange);
             box-shadow: var(--shadow-elevated);
@@ -1219,7 +1338,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             color: var(--white);
         }
 
@@ -1227,21 +1346,21 @@
             font-size: 14.5px;
             line-height: 1.75;
             color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .rfq-contact-channel {
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             font-size: 14px;
         }
 
         .rfq-contact-channel i {
             color: var(--accent-orange);
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             flex-shrink: 0;
             margin-top: 2px;
         }
@@ -1257,11 +1376,11 @@
         }
 
         .rfq-form-card {
-            background: var(--canvas);
+            background: var(--white);
             border: 1px solid var(--border-light);
             border-top: 4px solid var(--primary);
             border-radius: var(--radius-sm);
-            padding: 40px 36px;
+            padding: 38px 34px;
             box-shadow: var(--shadow-card);
         }
 
@@ -1272,6 +1391,12 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .rfq-form-card p.form-subtitle {
+            font-size: 13.5px;
+            color: var(--text-secondary);
             margin-bottom: 22px;
             padding-bottom: 12px;
             border-bottom: 2px solid var(--accent-orange);
@@ -1284,7 +1409,7 @@
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .form-group label {
@@ -1299,7 +1424,7 @@
 
         .form-control {
             width: 100%;
-            padding: 12px 14px;
+            padding: 11px 13px;
             border: 1px solid var(--border-mid);
             background: var(--white);
             font-size: 13.5px;
@@ -1315,7 +1440,7 @@
         }
 
         textarea.form-control {
-            min-height: 110px;
+            min-height: 105px;
             resize: vertical;
         }
 
@@ -1323,11 +1448,11 @@
             background: var(--accent-orange);
             color: var(--white);
             border: none;
-            padding: 15px 30px;
+            padding: 14px 28px;
             font-family: var(--font-display);
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 800;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
             border-radius: var(--radius-xs);
             cursor: pointer;
@@ -1346,7 +1471,7 @@
         }
 
         /* ==========================================================================
-           10. CORPORATE FOOTER (RAUBEX SOLID STYLE)
+           12. CORPORATE FOOTER
            ========================================================================== */
         footer {
             background: var(--primary-deep);
@@ -1355,7 +1480,7 @@
             padding: 64px 0 28px;
         }
 
-        .footer-grid-raubex {
+        .footer-grid {
             display: grid;
             grid-template-columns: 1.4fr 1fr 1fr 1fr;
             gap: 40px;
@@ -1375,16 +1500,6 @@
             margin-bottom: 6px;
         }
 
-        .footer-brand .sub {
-            font-size: 9.5px;
-            color: var(--gold);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            display: block;
-            margin-bottom: 16px;
-        }
-
         .footer-brand p {
             font-size: 13px;
             color: rgba(255, 255, 255, 0.8);
@@ -1398,7 +1513,7 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--accent-orange);
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .footer-col p {
@@ -1412,7 +1527,7 @@
         }
 
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 9px;
         }
 
         .footer-links a {
@@ -1426,26 +1541,6 @@
             transform: translateX(4px);
         }
 
-        .btn-fraud-policy {
-            background: var(--accent-orange);
-            color: var(--white);
-            padding: 8px 16px;
-            font-family: var(--font-display);
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: var(--radius-xs);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 14px;
-        }
-
-        .btn-fraud-policy:hover {
-            background: var(--accent-orange-dark);
-        }
-
         .footer-bottom-bar {
             max-width: 1260px;
             margin: 0 auto;
@@ -1454,7 +1549,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 11.5px;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.6);
             font-family: var(--font-mono);
         }
 
@@ -1462,15 +1557,23 @@
            RESPONSIVE BREAKPOINTS
            ========================================================================== */
         @media (max-width: 1100px) {
-            .divisions-grid-raubex {
-                grid-template-columns: repeat(3, 1fr);
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
             }
 
             .footprint-grid {
                 grid-template-columns: 1fr;
             }
 
-            .governance-grid-raubex {
+            .governance-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -1482,7 +1585,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid-raubex {
+            .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -1515,11 +1618,11 @@
                 padding: 48px 20px;
             }
 
-            .hero-raubex {
+            .hero-corporate {
                 padding: 36px 0 44px;
             }
 
-            .hero-raubex::before {
+            .hero-corporate::before {
                 background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
             }
 
@@ -1528,7 +1631,7 @@
             }
 
             .hero-headline {
-                font-size: 28px;
+                font-size: 27px;
             }
 
             .landmark-card {
@@ -1540,15 +1643,19 @@
                 height: 140px;
             }
 
-            .divisions-grid-raubex {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .division-column-card {
-                height: 340px;
+            .equipment-grid {
+                grid-template-columns: 1fr;
             }
 
-            .governance-grid-raubex {
+            .about-stat-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .governance-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1564,7 +1671,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-grid-raubex {
+            .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
                 padding: 0 20px 32px;
@@ -1586,10 +1693,9 @@
     <div class="topbar">
         <div class="topbar-inner">
             <div class="topbar-accreditations">
-                <span>CIDB GRADING: <span class="gold-txt">4GB • 1CE • 1SF • 1SO • 1SN</span></span>
+                <span>CIDB: <span class="gold-txt">4GB • 1CE • 1SF • 1SO • 1SN</span></span>
                 <span class="topbar-divider">•</span>
-                <span>B-BBEE: <span class="gold-txt">LEVEL 1</span> <span class="orange-badge">135%
-                        Recognition</span></span>
+                <span>B-BBEE: <span class="gold-txt">LEVEL 1</span> <span class="orange-badge">135% Recognition</span></span>
                 <span class="topbar-divider">•</span>
                 <span>CSD: <span class="gold-txt">MAAA0023374</span></span>
                 <span class="topbar-divider">•</span>
@@ -1598,8 +1704,8 @@
             <div class="topbar-actions">
                 <a href="mailto:awen.tenders@gmail.com"><i data-lucide="mail"
                         style="width:13px; height:13px; color:var(--accent-orange);"></i> awen.tenders@gmail.com</a>
-                <a href="tel:+27767451766"><i data-lucide="phone"
-                        style="width:13px; height:13px; color:var(--accent-orange);"></i> +27 76 745 1766</a>
+                <a href="tel:+27719268316"><i data-lucide="phone"
+                        style="width:13px; height:13px; color:var(--accent-orange);"></i> 071 926 8316</a>
             </div>
         </div>
     </div>
@@ -1614,18 +1720,18 @@
         </div>
 
         <nav class="nav-menu">
-            <a href="#about">About AWEN <i data-lucide="chevron-down" style="width:14px; height:14px;"></i></a>
-            <a href="#divisions">Divisions <i data-lucide="chevron-down" style="width:14px; height:14px;"></i></a>
-            <a href="#footprint">Footprint <i data-lucide="chevron-down" style="width:14px; height:14px;"></i></a>
-            <a href="#governance">Governance & Tenders <i data-lucide="chevron-down"
-                    style="width:14px; height:14px;"></i></a>
-            <a href="#projects">Projects <i data-lucide="chevron-down" style="width:14px; height:14px;"></i></a>
-            <a href="#leadership">Leadership</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#footprint">Footprint</a>
+            <a href="#governance">Compliance</a>
+            <a href="#projects">Projects</a>
+            <a href="#leadership">Management</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <div class="header-cta-block">
-            <a href="#rfq" class="btn-header-contact">
-                Contact Us
+            <a href="#contact" class="btn-header-contact">
+                Request a Quote
                 <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
             </a>
             <button class="btn-mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
@@ -1637,22 +1743,16 @@
     <!-- Mobile Drawer Menu -->
     <div class="mobile-drawer" id="mobileDrawer">
         <a href="#about" class="mobile-link">About AWEN <i data-lucide="arrow-right" style="width:16px;"></i></a>
-        <a href="#divisions" class="mobile-link">Specialist Divisions <i data-lucide="arrow-right"
-                style="width:16px;"></i></a>
-        <a href="#footprint" class="mobile-link">Operational Footprint <i data-lucide="arrow-right"
-                style="width:16px;"></i></a>
-        <a href="#governance" class="mobile-link">Governance & Tenders <i data-lucide="arrow-right"
-                style="width:16px;"></i></a>
-        <a href="#projects" class="mobile-link">Latest Projects <i data-lucide="arrow-right"
-                style="width:16px;"></i></a>
-        <a href="#leadership" class="mobile-link">Leadership Team <i data-lucide="arrow-right"
-                style="width:16px;"></i></a>
-        <a href="#rfq" class="mobile-link" style="color:var(--accent-orange);">Tender Desk / Contact <i
-                data-lucide="arrow-up-right" style="width:16px;"></i></a>
+        <a href="#services" class="mobile-link">Services & Capabilities <i data-lucide="arrow-right" style="width:16px;"></i></a>
+        <a href="#footprint" class="mobile-link">Operating Footprint <i data-lucide="arrow-right" style="width:16px;"></i></a>
+        <a href="#governance" class="mobile-link">Compliance & Tenders <i data-lucide="arrow-right" style="width:16px;"></i></a>
+        <a href="#projects" class="mobile-link">Completed Projects <i data-lucide="arrow-right" style="width:16px;"></i></a>
+        <a href="#leadership" class="mobile-link">Management Team <i data-lucide="arrow-right" style="width:16px;"></i></a>
+        <a href="#contact" class="mobile-link" style="color:var(--accent-orange);">Contact Us / Tender Enquiries <i data-lucide="arrow-up-right" style="width:16px;"></i></a>
     </div>
 
-    <!-- 3. HERO SECTION: BESPOKE EDITORIAL FULL-IMAGE CANVAS HERO -->
-    <section class="hero-raubex">
+    <!-- 3. HERO SECTION -->
+    <section class="hero-corporate">
         <div class="hero-container">
             <div class="hero-content-wrapper">
                 <div class="hero-eyebrow-tag">
@@ -1661,23 +1761,33 @@
                 </div>
 
                 <h1 class="hero-headline">
-                    AWEN is one of South Africa's dedicated <span>infrastructure development</span> and civil engineering groups.
+                    General Building, Civil Works & Structural Alterations Across <span>KwaZulu-Natal</span>.
                 </h1>
 
-                <a href="#about" class="btn-hero-cta">
-                    Read Corporate Profile
-                    <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
-                </a>
+                <p class="hero-intro-text">
+                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is an established Durban-based contracting firm providing quality building construction, civil works, alterations, and maintenance services for public and commercial clients.
+                </p>
 
-                <!-- Landmark Project Box -->
+                <div class="hero-cta-row">
+                    <a href="#contact" class="btn-hero-primary">
+                        Request a Quote / Send Enquiry
+                        <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
+                    </a>
+                    <a href="#projects" class="btn-hero-secondary">
+                        View Completed Projects
+                        <i data-lucide="arrow-down" style="width:14px; height:14px;"></i>
+                    </a>
+                </div>
+
+                <!-- Landmark Project Highlight -->
                 <div class="landmark-card">
                     <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=400&q=80"
-                        alt="Transnet Berthing Facilities" class="landmark-img-thumb">
+                        alt="Transnet Berthing Facilities Refurbishment" class="landmark-img-thumb">
                     <div class="landmark-info">
-                        <h4>Transnet Berthing Facility</h4>
-                        <p>A landmark R1.66M maritime infrastructure refurbishment delivering precision civil alterations and structural fit-outs across the Port of Durban.</p>
+                        <h4>Transnet Berthing Facility Refurbishment</h4>
+                        <p>Refurbishment of the Berthing Services Building for Transnet SOC Ltd at the Port of Durban (Contract Value: R 1,666,860.85).</p>
                         <a href="#projects" class="btn-view-link">
-                            View Project
+                            View Details in Project Ledger
                             <i data-lucide="arrow-up-right" style="width:14px; height:14px;"></i>
                         </a>
                     </div>
@@ -1686,18 +1796,70 @@
         </div>
     </section>
 
-    <!-- 4. REGIONAL OPERATIONAL FOOTPRINT & MAP (LIGHT THEMED) -->
+    <!-- 4. ABOUT AWEN SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text-col">
+                    <span class="section-eyebrow">About Our Business</span>
+                    <h2 class="section-title">Established Contractor Delivering Practical Construction Solutions</h2>
+                    
+                    <p>
+                        <strong>African Wealth Empowerment Network (AWEN) (Pty) Ltd</strong> is a progressive construction company registered in 2014 (Reg: 2014/146827/07) and based in Woodlands, Durban. We provide general building, civil contracting, structural alterations, and facility maintenance services across KwaZulu-Natal.
+                    </p>
+
+                    <p>
+                        Our construction and consulting solutions are tailored to suit each client's specific scope and budget. We focus on three core principles: <strong>quality workmanship</strong>, <strong>hands-on project management</strong>, and <strong>sound technical advice</strong>.
+                    </p>
+
+                    <div class="about-vision-box">
+                        <h4><i data-lucide="eye" style="width:16px; height:16px; color:var(--gold);"></i> Our Vision & Mission</h4>
+                        <p>
+                            <strong>Vision:</strong> To become a trusted, household name for clients requiring dependable construction and civil works services.<br>
+                            <strong>Mission:</strong> To provide clients with professional, quality, and affordable construction services using experienced personnel and ongoing skills development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-stat-cards">
+                    <div class="about-stat-card">
+                        <div class="about-stat-num">CIDB 4GB / 1CE</div>
+                        <div class="about-stat-label">Grading & Accreditation</div>
+                        <div class="about-stat-desc">Accredited by CIDB (CRS 10065323) in 4GB, 1CE, 1SF, 1SO, and 1SN classes of construction work.</div>
+                    </div>
+
+                    <div class="about-stat-card">
+                        <div class="about-stat-num">B-BBEE Level 1</div>
+                        <div class="about-stat-label">100% Black-Owned</div>
+                        <div class="about-stat-desc">135% procurement recognition status, supporting local employment and skills transfer on every site.</div>
+                    </div>
+
+                    <div class="about-stat-card">
+                        <div class="about-stat-num">CSD Registered</div>
+                        <div class="about-stat-label">Government Supplier</div>
+                        <div class="about-stat-desc">Compliant with Central Supplier Database (MAAA0023374) for municipal, provincial, and SOE contracts.</div>
+                    </div>
+
+                    <div class="about-stat-card">
+                        <div class="about-stat-num">10+ Years</div>
+                        <div class="about-stat-label">Track Record</div>
+                        <div class="about-stat-desc">Registered in 2014 with verified public and private sector project delivery across KwaZulu-Natal.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. REGIONAL FOOTPRINT -->
     <section id="footprint" class="footprint-section">
         <div class="footprint-grid">
             <div class="footprint-map-card">
-                <!-- Clean Vector Map Graphic Representing KwaZulu-Natal & SA Execution -->
                 <svg class="map-graphic" viewBox="0 0 450 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Stylized Southern Africa / KZN Regional Node Matrix -->
                     <g opacity="0.85">
                         <circle cx="280" cy="140" r="8" fill="#8B1A1A" />
                         <circle cx="280" cy="140" r="18" stroke="#8B1A1A" stroke-width="1.5" stroke-dasharray="3 3" />
                         <text x="296" y="145" font-family="'Montserrat', sans-serif" font-size="12" font-weight="800"
-                            fill="#8B1A1A">DURBAN (HQ)</text>
+                            fill="#8B1A1A">DURBAN (WOODLANDS HQ)</text>
 
                         <circle cx="250" cy="110" r="5" fill="#DE5920" />
                         <text x="175" y="114" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700"
@@ -1708,248 +1870,312 @@
                             fill="#2D3748">Ndwedwe</text>
 
                         <circle cx="270" cy="165" r="5" fill="#DE5920" />
-                        <text x="195" y="169" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700"
-                            fill="#2D3748">Umlazi Health</text>
+                        <text x="200" y="169" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700"
+                            fill="#2D3748">Umlazi</text>
 
-                        <circle cx="200" cy="80" r="4" fill="#A0AEC0" />
-                        <text x="125" y="84" font-family="'Inter', sans-serif" font-size="10" font-weight="600"
-                            fill="#718096">Gauteng</text>
+                        <circle cx="340" cy="60" r="5" fill="#DE5920" />
+                        <text x="350" y="64" font-family="'Inter', sans-serif" font-size="10.5" font-weight="700"
+                            fill="#2D3748">Empangeni / Nseleni</text>
 
-                        <!-- Connecting Route Lines -->
-                        <line x1="280" y1="140" x2="250" y2="110" stroke="#CBD5E0" stroke-width="1.5"
-                            stroke-dasharray="2 2" />
-                        <line x1="280" y1="140" x2="290" y2="90" stroke="#CBD5E0" stroke-width="1.5"
-                            stroke-dasharray="2 2" />
-                        <line x1="280" y1="140" x2="270" y2="165" stroke="#CBD5E0" stroke-width="1.5"
-                            stroke-dasharray="2 2" />
-                        <line x1="250" y1="110" x2="200" y2="80" stroke="#E2E8F0" stroke-width="1"
-                            stroke-dasharray="3 3" />
+                        <line x1="280" y1="140" x2="250" y2="110" stroke="#CBD5E0" stroke-width="1.5" stroke-dasharray="2 2" />
+                        <line x1="280" y1="140" x2="290" y2="90" stroke="#CBD5E0" stroke-width="1.5" stroke-dasharray="2 2" />
+                        <line x1="280" y1="140" x2="270" y2="165" stroke="#CBD5E0" stroke-width="1.5" stroke-dasharray="2 2" />
+                        <line x1="290" y1="90" x2="340" y2="60" stroke="#CBD5E0" stroke-width="1.5" stroke-dasharray="2 2" />
                     </g>
                 </svg>
             </div>
 
             <div class="footprint-copy">
-                <span class="section-eyebrow">Operating Footprint</span>
-                <h3>AWEN is headquartered in Durban, executing public works & commercial infrastructure across South
-                    Africa.</h3>
+                <span class="section-eyebrow">Operating Areas</span>
+                <h3>Headquartered in Durban, Delivering Projects Across KwaZulu-Natal</h3>
                 <p>
-                    From multi-million Rand reinforced concrete slabs for Human Settlements to specialized university
-                    campus upgrades (UKZN Howard College, Mangosuthu University of Technology) and Transnet SOC Ltd
-                    logistics facilities, AWEN provides dependable on-site engineering execution.
+                    AWEN operates from Woodlands, Durban, with site teams deployed across municipal, provincial, and commercial sites throughout KZN. From campus upgrades at UKZN Howard College and Mangosuthu University of Technology to clinic repairs, school maintenance, and Transnet port facilities, we manage site logistics reliably.
                 </p>
 
                 <div class="footprint-chips">
                     <span class="footprint-chip">Durban Metro</span>
                     <span class="footprint-chip">eThekwini</span>
-                    <span class="footprint-chip">Ndwedwe</span>
                     <span class="footprint-chip">Umlazi</span>
+                    <span class="footprint-chip">Ndwedwe</span>
+                    <span class="footprint-chip">Empangeni & Nseleni</span>
                     <span class="footprint-chip">KwaZulu-Natal Wide</span>
                 </div>
 
                 <a href="#projects" class="btn-location-map">
-                    View Project Locations Map
-                    <i data-lucide="arrow-up-right" style="width:16px; height:16px;"></i>
+                    View Completed Project Locations
+                    <i data-lucide="arrow-down" style="width:16px; height:16px;"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 5. OUR DIVISIONS: RAUBEX-STYLE VERTICAL STAGGERED CARDS (LIGHT THEME) -->
-    <section id="divisions" class="divisions-section">
-        <div class="divisions-header-row">
-            <div>
-                <span class="section-eyebrow">Operational Divisions</span>
-                <h2 class="section-title" style="margin-bottom: 0;">Our Specialist Divisions</h2>
-            </div>
-            <a href="#rfq" class="btn-view-link" style="font-size: 13px;">
-                Download Capability Statement <i data-lucide="arrow-up-right" style="width:16px; height:16px;"></i>
-            </a>
-        </div>
-
-        <div class="divisions-grid-raubex">
-            <!-- 01. Concrete & Civils -->
-            <a href="#rfq" class="division-column-card">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80"
-                    alt="Concrete Works" class="division-card-bg">
-                <div class="division-card-overlay"></div>
-                <div class="division-card-content">
-                    <div class="division-tag-num">01. Concrete & Civils</div>
-                    <div class="division-title">Structural Slabs & Heavy Earthworks</div>
-                    <div class="division-action-link">Click to view <i data-lucide="arrow-up-right"
-                            style="width:14px; height:14px;"></i></div>
-                </div>
-            </a>
-
-            <!-- 02. Building Works -->
-            <a href="#rfq" class="division-column-card">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
-                    alt="Building Works" class="division-card-bg">
-                <div class="division-card-overlay"></div>
-                <div class="division-card-content">
-                    <div class="division-tag-num">02. Superstructures</div>
-                    <div class="division-title">General Building & Alterations</div>
-                    <div class="division-action-link">Click to view <i data-lucide="arrow-up-right"
-                            style="width:14px; height:14px;"></i></div>
-                </div>
-            </a>
-
-            <!-- 03. Fencing & Security -->
-            <a href="#rfq" class="division-column-card">
-                <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80"
-                    alt="Fencing & Security" class="division-card-bg">
-                <div class="division-card-overlay"></div>
-                <div class="division-card-content">
-                    <div class="division-tag-num">03. Security Systems</div>
-                    <div class="division-title">High-Security ClearVu & Palisades</div>
-                    <div class="division-action-link">Click to view <i data-lucide="arrow-up-right"
-                            style="width:14px; height:14px;"></i></div>
-                </div>
-            </a>
-
-            <!-- 04. Roofing & Timber -->
-            <a href="#rfq" class="division-column-card">
-                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
-                    alt="Roofing & Timber" class="division-card-bg">
-                <div class="division-card-overlay"></div>
-                <div class="division-card-content">
-                    <div class="division-tag-num">04. Roofing & Timber</div>
-                    <div class="division-title">Engineered Trusses & Klip-Lok</div>
-                    <div class="division-action-link">Click to view <i data-lucide="arrow-up-right"
-                            style="width:14px; height:14px;"></i></div>
-                </div>
-            </a>
-
-            <!-- 05. Wet Services -->
-            <a href="#rfq" class="division-column-card">
-                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=600&q=80"
-                    alt="Wet Services" class="division-card-bg">
-                <div class="division-card-overlay"></div>
-                <div class="division-card-content">
-                    <div class="division-tag-num">05. Wet Services</div>
-                    <div class="division-title">Ablutions & Water Reticulation</div>
-                    <div class="division-action-link">Click to view <i data-lucide="arrow-up-right"
-                            style="width:14px; height:14px;"></i></div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- 6. PROCUREMENT, GOVERNANCE & ACCREDITATIONS: RAUBEX 6-CARD GRID (LIGHT THEME) -->
-    <section id="governance" class="governance-section">
+    <!-- 6. 8 CORE SERVICES & SPECIALIST DISCIPLINES -->
+    <section id="services" class="services-section">
         <div class="container" style="padding-top: 0; padding-bottom: 0;">
-            <span class="section-eyebrow">Corporate Governance</span>
-            <h2 class="section-title">Procurement, Compliance & Tender Information</h2>
+            <span class="section-eyebrow">Field of Expertise</span>
+            <h2 class="section-title">Our Construction & Building Services</h2>
             <p class="section-subtitle">
-                Statutory credentials, quality assurances, and tender participation packs for institutional procurement
-                officers and quantity surveyors.
+                AWEN provides general construction, structural infrastructure, alterations, and civil contracting across eight specialist disciplines:
             </p>
         </div>
 
-        <div class="governance-grid-raubex">
-            <!-- Card 1: Tender Portal -->
+        <div class="services-grid">
+            <!-- 01. Fencing & Security -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">01. Discipline</div>
+                    <h3 class="service-title">Fencing & Security</h3>
+                    <div class="service-subtitle">Perimeter Protection & Enclosures</div>
+                    <ul class="service-list">
+                        <li>Concrete palisade & precast boundary walls</li>
+                        <li>High-security ClearVu & anti-climb mesh</li>
+                        <li>Security enclosures & access gates</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Fencing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 02. Building Works -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">02. Discipline</div>
+                    <h3 class="service-title">Building Works</h3>
+                    <div class="service-subtitle">Superstructures & Alterations</div>
+                    <ul class="service-list">
+                        <li>Turnkey superstructures & brickwork</li>
+                        <li>Commercial alterations & refurbishments</li>
+                        <li>Institutional maintenance & white boxing</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Building <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 03. Concrete Works -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">03. Discipline</div>
+                    <h3 class="service-title">Concrete Works</h3>
+                    <div class="service-subtitle">Slabs & Foundations</div>
+                    <ul class="service-list">
+                        <li>Reinforced concrete slabs & surface beds</li>
+                        <li>Structural foundation footings & columns</li>
+                        <li>Industrial paving & hardstanding areas</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Concrete <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 04. Tiling & Flooring -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">04. Discipline</div>
+                    <h3 class="service-title">Tiling & Flooring</h3>
+                    <div class="service-subtitle">Finishes & Screeding</div>
+                    <ul class="service-list">
+                        <li>Ceramic & porcelain commercial tiling</li>
+                        <li>Self-leveling screeds & subfloor prep</li>
+                        <li>Specialized wall cladding & finishes</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Tiling <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 05. Roofing & Timber -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">05. Discipline</div>
+                    <h3 class="service-title">Roofing & Timber</h3>
+                    <div class="service-subtitle">Trusses & Sheeting</div>
+                    <ul class="service-list">
+                        <li>Engineered timber roof trusses & framing</li>
+                        <li>IBR & corrugated sheet replacements</li>
+                        <li>Waterproofing, flashings & gutters</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Roofing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 06. Painting & Coatings -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">06. Discipline</div>
+                    <h3 class="service-title">Painting & Coatings</h3>
+                    <div class="service-subtitle">Protective & Decorative</div>
+                    <ul class="service-list">
+                        <li>Interior & exterior commercial repainting</li>
+                        <li>Weather-resistant & anti-corrosion coats</li>
+                        <li>Hospital & clinic specialized paints</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Painting <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 07. Carpentry & Joinery -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">07. Discipline</div>
+                    <h3 class="service-title">Carpentry & Joinery</h3>
+                    <div class="service-subtitle">Ceilings & Partitions</div>
+                    <ul class="service-list">
+                        <li>Suspended ceilings & flush plastering</li>
+                        <li>Drywall partitioning & office fit-outs</li>
+                        <li>Custom joinery, doors, frames & cabinetry</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Carpentry <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+
+            <!-- 08. Plumbing & Wet Services -->
+            <div class="service-card">
+                <div class="service-card-top">
+                    <div class="service-num">08. Discipline</div>
+                    <h3 class="service-title">Plumbing & Wet Services</h3>
+                    <div class="service-subtitle">Reticulation & Ablutions</div>
+                    <ul class="service-list">
+                        <li>Commercial sanitaryware & ablution upgrades</li>
+                        <li>Rainwater harvesting & JoJo tank systems</li>
+                        <li>Drainage reticulation & booster pumps</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="btn-view-link">Enquire About Plumbing <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. EQUIPMENT & SITE CAPACITY -->
+    <section class="equipment-section">
+        <div class="container" style="padding-top: 0; padding-bottom: 0;">
+            <span class="section-eyebrow">Technical Capacity</span>
+            <h2 class="section-title">Equipment, Surveying & Tools</h2>
+            <p class="section-subtitle">
+                We maintain our own site equipment, transport, and precision surveying instruments for reliable project execution.
+            </p>
+        </div>
+
+        <div class="equipment-grid">
+            <div class="equip-card">
+                <div class="equip-icon"><i data-lucide="truck" style="width:18px; height:18px;"></i></div>
+                <h4>Transport & Logistics</h4>
+                <p>2x dedicated company bakkies for site supervision, tools mobilization, and materials transport.</p>
+            </div>
+
+            <div class="equip-card">
+                <div class="equip-icon"><i data-lucide="crosshair" style="width:18px; height:18px;"></i></div>
+                <h4>Surveying & Setting Out</h4>
+                <p>3x Trimble M3 Total Stations, Trimble Survey GPS, 2x Dumpy Levels, and field laptops for accurate setting out.</p>
+            </div>
+
+            <div class="equip-card">
+                <div class="equip-icon"><i data-lucide="wrench" style="width:18px; height:18px;"></i></div>
+                <h4>Plant & Tooling</h4>
+                <p>Full suite of handheld power tools, concrete equipment, and direct access to heavy plant hire partners.</p>
+            </div>
+
+            <div class="equip-card">
+                <div class="equip-icon"><i data-lucide="laptop" style="width:18px; height:18px;"></i></div>
+                <h4>Engineering Software</h4>
+                <p>AutoCAD (2018), ArchiCAD, and Model Maker for drawing verification, site measurements, and project planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. GOVERNANCE & COMPLIANCE -->
+    <section id="governance" class="governance-section">
+        <div class="container" style="padding-top: 0; padding-bottom: 0;">
+            <span class="section-eyebrow">Statutory Compliance</span>
+            <h2 class="section-title">Procurement, Compliance & Tender Information</h2>
+            <p class="section-subtitle">
+                Clear credentials and compliance information for procurement officers, municipal managers, and quantity surveyors.
+            </p>
+        </div>
+
+        <div class="governance-grid">
+            <!-- Card 1: Tender Inquiries -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
-                        <span class="gov-category">Procurement Desk</span>
+                        <span class="gov-category">Tenders & RFQs</span>
                         <i data-lucide="file-check-2" style="width:18px; height:18px; color:var(--accent-orange);"></i>
                     </div>
-                    <h4>Tender Portal & BoQ Submissions</h4>
-                    <p>Direct estimating desk for municipal, provincial, and parastatal tender notices, RFQs, and site
-                        briefing invitations.</p>
+                    <h4>Tender Submissions & RFQs</h4>
+                    <p>Send tender invitations, Bills of Quantities (BoQs), and RFQ documents directly to our tender email at awen.tenders@gmail.com.</p>
                 </div>
-                <a href="#rfq" class="btn-gov-view">View Portal <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Send Tender Request <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 2: CIDB Grading -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
-                        <span class="gov-category">Accreditation</span>
+                        <span class="gov-category">CIDB Registered</span>
                         <i data-lucide="shield" style="width:18px; height:18px; color:var(--primary);"></i>
                     </div>
                     <h4>CIDB 4GB • 1CE • 1SF • 1SO • 1SN</h4>
-                    <p>Fully accredited by the Construction Industry Development Board (CRS 10065323) for general
-                        building and civil engineering works.</p>
+                    <p>Registered with the Construction Industry Development Board (CRS Number: 10065323) across multiple classes of work.</p>
                 </div>
-                <a href="#about" class="btn-gov-view">View Grading <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Request CIDB Details <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
 
             <!-- Card 3: B-BBEE Level 1 -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
-                        <span class="gov-category">Empowerment</span>
+                        <span class="gov-category">Transformation</span>
                         <i data-lucide="award" style="width:18px; height:18px; color:var(--gold);"></i>
                     </div>
                     <h4>Level 1 B-BBEE (135% Recognition)</h4>
-                    <p>100% Black-owned enterprise driving local job creation, supplier development, and true
-                        socio-economic empowerment across KZN.</p>
+                    <p>100% Black-owned South African enterprise contributing to local employment and supplier development across KwaZulu-Natal.</p>
                 </div>
-                <a href="#about" class="btn-gov-view">View Credentials <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">View B-BBEE Info <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
 
-            <!-- Card 4: SHEQ Zero-Harm -->
+            <!-- Card 4: Health & Safety -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
                         <span class="gov-category">Health & Safety</span>
                         <i data-lucide="activity" style="width:18px; height:18px; color:var(--primary);"></i>
                     </div>
-                    <h4>SHEQ & Zero-Harm Framework</h4>
-                    <p>SACPCMP registered CHSO safety leadership, full COIDA good standing, daily DSTI talks, and strict
-                        OHS Act 85 compliance.</p>
+                    <h4>OHS Act & Site Safety</h4>
+                    <p>SACPCMP registered Construction Health & Safety Officer, daily safety briefings, risk assessments, and COIDA compliance.</p>
                 </div>
-                <a href="#rfq" class="btn-gov-view">View Safety Record <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Safety Overview <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
 
-            <!-- Card 5: Geomatics & Equipment -->
+            <!-- Card 5: Central Supplier Database -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
-                        <span class="gov-category">Instrumentation</span>
-                        <i data-lucide="crosshair" style="width:18px; height:18px; color:var(--accent-orange);"></i>
+                        <span class="gov-category">Government Database</span>
+                        <i data-lucide="database" style="width:18px; height:18px; color:var(--accent-orange);"></i>
                     </div>
-                    <h4>Trimble M3 Total Stations & Plant</h4>
-                    <p>Owned geomatics fleet, Trimble survey-grade GPS, AutoCAD suites, concrete plant, and dedicated
-                        site bakkies.</p>
+                    <h4>CSD Number: MAAA0023374</h4>
+                    <p>Fully compliant with South African National Treasury's Central Supplier Database with valid tax clearance status.</p>
                 </div>
-                <a href="#rfq" class="btn-gov-view">View Fleet <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">CSD Details <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
 
-            <!-- Card 6: Download Dossier -->
+            <!-- Card 6: Company Profile Pack -->
             <div class="gov-card">
                 <div>
                     <div class="gov-header">
                         <span class="gov-category">Documentation</span>
-                        <i data-lucide="download-cloud" style="width:18px; height:18px; color:var(--gold);"></i>
+                        <i data-lucide="file-text" style="width:18px; height:18px; color:var(--gold);"></i>
                     </div>
-                    <h4>Executive Company Profile (PDF)</h4>
-                    <p>Complete corporate dossier including verified project schedule, key personnel CVs, and CIPC tax
-                        clearance certificates.</p>
+                    <h4>Official Company Profile</h4>
+                    <p>Comprehensive profile document containing company registration, CIDB details, management CVs, and verified project schedules.</p>
                 </div>
-                <a href="#rfq" class="btn-gov-view">Request PDF <i data-lucide="arrow-up-right"
-                        style="width:13px; height:13px;"></i></a>
+                <a href="#contact" class="btn-gov-view">Request Profile <i data-lucide="arrow-right" style="width:13px; height:13px;"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- 7. LATEST PROJECTS & VERIFIED TRACK RECORD -->
+    <!-- 9. COMPLETED PROJECTS & TRACK RECORD -->
     <section id="projects" class="projects-section">
         <div class="projects-header-bar">
             <div>
-                <span class="section-eyebrow">Auditable Track Record</span>
-                <h2 class="section-title" style="margin-bottom: 0;">Latest Completed Projects</h2>
-            </div>
-            <div class="carousel-arrows">
-                <button class="carousel-btn" id="prevCard" aria-label="Previous Project"><i data-lucide="chevron-left"
-                        style="width:20px; height:20px;"></i></button>
-                <button class="carousel-btn" id="nextCard" aria-label="Next Project"><i data-lucide="chevron-right"
-                        style="width:20px; height:20px;"></i></button>
+                <span class="section-eyebrow">Completed Work</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Selected Completed Projects</h2>
             </div>
         </div>
 
@@ -1961,15 +2187,14 @@
                 <div class="project-body">
                     <div>
                         <div class="project-client-tag">Transnet SOC Ltd • 2024</div>
-                        <h4 class="project-title">Berthing Services Facility Refurbishment</h4>
+                        <h4 class="project-title">Refurbishment of Berthing Services Building</h4>
                         <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
-                            Structural civil alterations, interior fit-outs, and durable marine quayside
-                            weatherproofing.
+                            Building refurbishment and alterations to port berthing services facility in Durban.
                         </p>
                     </div>
                     <div class="project-meta-row">
                         <span class="project-value">R 1,666,860.85</span>
-                        <span class="project-discipline-tag">Civil & Marine Infra</span>
+                        <span class="project-discipline-tag">Building Refurbishment</span>
                     </div>
                 </div>
             </div>
@@ -1981,15 +2206,14 @@
                 <div class="project-body">
                     <div>
                         <div class="project-client-tag">The Playhouse Company • 2025</div>
-                        <h4 class="project-title">Front House Architectural Canopy</h4>
+                        <h4 class="project-title">Front House Canopy Installation</h4>
                         <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
-                            Supply and erection of structural steel architectural entrance canopy and pedestrian
-                            sheltering.
+                            Supply, fabrication, and installation of new front house architectural canopy.
                         </p>
                     </div>
                     <div class="project-meta-row">
                         <span class="project-value">R 912,240.00</span>
-                        <span class="project-discipline-tag">Structural Steel Canopy</span>
+                        <span class="project-discipline-tag">Steelwork & Canopy</span>
                     </div>
                 </div>
             </div>
@@ -2001,15 +2225,14 @@
                 <div class="project-body">
                     <div>
                         <div class="project-client-tag">UKZN Howard College • 2025</div>
-                        <h4 class="project-title">EECE North Multi-Storey Ablution Overhaul</h4>
+                        <h4 class="project-title">EECE North Multi-Storey Ablution Upgrade</h4>
                         <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.6;">
-                            Turnkey sanitaryware modernization, plumbing reticulation, and tiling from Ground to 5th
-                            Floor.
+                            Upgrade and tiling of toilets from ground floor to 5th floor in EECE North building.
                         </p>
                     </div>
                     <div class="project-meta-row">
                         <span class="project-value">R 775,950.00</span>
-                        <span class="project-discipline-tag">Multi-Storey Wet Services</span>
+                        <span class="project-discipline-tag">Ablution & Plumbing</span>
                     </div>
                 </div>
             </div>
@@ -2018,7 +2241,7 @@
         <div class="table-toggle-wrap">
             <button class="btn-toggle-ledger" id="toggleLedgerBtn">
                 <i data-lucide="table" style="width:15px; height:15px; vertical-align:middle; margin-right:6px;"></i>
-                View Full Auditable Project Ledger (10 Contracts)
+                View Full Project Schedule (20+ Verified Contracts)
             </button>
         </div>
 
@@ -2027,96 +2250,202 @@
                 <thead>
                     <tr>
                         <th>Client / Department</th>
-                        <th>Project Scope & Execution Details</th>
+                        <th>Project Scope</th>
                         <th>Contract Value</th>
                         <th>Year</th>
-                        <th>Institutional Verification / Reference</th>
+                        <th>Status</th>
+                        <th>Contact / Reference</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Transnet SOC Ltd</strong></td>
-                        <td>Refurbishment of the Berthing Services Building & Structural Fit-Out</td>
+                        <td>Refurbishment of the Berthing Services Building</td>
                         <td class="ledger-val">R 1,666,860.85</td>
                         <td>2024</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">N Mkhwanazi (031 361 3312)</td>
                     </tr>
                     <tr>
                         <td><strong>The Playhouse Company</strong></td>
-                        <td>Installation of New Front House Architectural Canopy & Steelwork</td>
+                        <td>Installation of new Front House Canopy</td>
                         <td class="ledger-val">R 912,240.00</td>
                         <td>2025</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">Clinton Hiralil (031 208 2272)</td>
                     </tr>
                     <tr>
-                        <td><strong>UKZN Howard College</strong></td>
-                        <td>Upgrade Toilets in EECE North (Ground Floor to 5th Floor)</td>
-                        <td class="ledger-val">R 775,950.00</td>
-                        <td>2025</td>
-                        <td class="ledger-ref">Tumelo Phethlo (031 260 1806)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>UKZN Howard College</strong></td>
-                        <td>Renovation of Student Discipline: Carpets, Windows, Painting & Joinery</td>
-                        <td class="ledger-val">R 555,214.00</td>
-                        <td>2025</td>
-                        <td class="ledger-ref">Shiven Maharaj (Campus PM)</td>
-                    </tr>
-                    <tr>
                         <td><strong>Dept. of Public Works KZN</strong></td>
-                        <td>Supply of Prefabricated Ablutions, 3x Water Tanks & Booster Pumps</td>
+                        <td>Supply of New Prefabricated Ablutions, 3x Water Tanks & Electrical Pumps</td>
                         <td class="ledger-val">R 865,549.00</td>
                         <td>2023</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">Nhlonipho Msomi (035 874 3419)</td>
                     </tr>
                     <tr>
                         <td><strong>Dept. of Public Works KZN</strong></td>
-                        <td>General Building & Maintenance Works at Umlazi U Clinic</td>
+                        <td>Maintenance Works At Umlazi U Clinic</td>
                         <td class="ledger-val">R 855,460.00</td>
                         <td>2021</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">Z Malunga (031 203 2163)</td>
                     </tr>
                     <tr>
-                        <td><strong>Ndwedwe Municipality</strong></td>
-                        <td>Galvanised Steel Carports at Ndwedwe Civic Centre Parking Area</td>
+                        <td><strong>UKZN Howard College</strong></td>
+                        <td>Upgrade toilets in EECE North (Ground Floor to 5th Floor)</td>
+                        <td class="ledger-val">R 775,950.00</td>
+                        <td>2025</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Tumelo Phethlo (031 260 1806)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ndwedwe Local Municipality</strong></td>
+                        <td>Installation Of Galvanised Steel Carports at Ndwedwe Civic Centre</td>
                         <td class="ledger-val">R 757,873.00</td>
                         <td>2019</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">David Ayisi (031 303 2470)</td>
                     </tr>
                     <tr>
-                        <td><strong>Human Settlements</strong></td>
-                        <td>Subcontractor for Construction of Reinforced Concrete Slabs</td>
-                        <td class="ledger-val">R 55,000,000.00</td>
-                        <td>2018</td>
-                        <td class="ledger-ref">Mr G Ntaka (076 745 1766)</td>
+                        <td><strong>Department of Health KZN</strong></td>
+                        <td>Design, Fabricate and Install Steel Shelters to Walkways</td>
+                        <td class="ledger-val">R 681,909.83</td>
+                        <td>2023</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">S.B Dlamini (035 831 7048)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IDT (Dept. of Education)</strong></td>
+                        <td>General Minor Repairs and Maintenance at Umfolozi High School</td>
+                        <td class="ledger-val">R 589,990.00</td>
+                        <td>2024</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Thobile Mnebele (076 873 3139)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logico</strong></td>
+                        <td>Reconfiguration of Logico office space</td>
+                        <td class="ledger-val">R 589,950.43</td>
+                        <td>2023</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Lephoi Maduna (074 966 7824)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UKZN Howard College</strong></td>
+                        <td>Renovation Of Student Discipline: Carpets, Windows, Painting & Cabinets</td>
+                        <td class="ledger-val">R 555,214.00</td>
+                        <td>2025</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Shiven Maharaj</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thobile M Construction</strong></td>
+                        <td>Setting out and Installation of concrete fence and ClearVu</td>
+                        <td class="ledger-val">R 486,420.00</td>
+                        <td>2015</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Mr R Ndlovu (073 453 0561)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Department of Health KZN</strong></td>
+                        <td>Refurbishment of Nseleni CHC</td>
+                        <td class="ledger-val">R 465,888.00</td>
+                        <td>2021</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Ms K Kuboni (035 457 1236)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mangosuthu University of Tech</strong></td>
+                        <td>Paving at Mangosuthu University of Technology</td>
+                        <td class="ledger-val">R 456,265.00</td>
+                        <td>2019</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Mr Lindo Mzolo (031 819 9310)</td>
                     </tr>
                     <tr>
                         <td><strong>KZN Growth Fund</strong></td>
-                        <td>White Boxing & Re-Instatement of Ceilings at Corporate Offices</td>
-                        <td class="ledger-val">R 797,130.00</td>
+                        <td>White Boxing KZN Growth Fund Offices</td>
+                        <td class="ledger-val">R 448,380.00</td>
                         <td>2024</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">Nqubeko Madondo (031 372 3720)</td>
                     </tr>
                     <tr>
-                        <td><strong>Mangosuthu Univ of Tech</strong></td>
-                        <td>Procurement Office Reconfiguration & Campus Paving Works</td>
-                        <td class="ledger-val">R 731,701.05</td>
+                        <td><strong>Department of Education</strong></td>
+                        <td>Maintenance programme for Nomvuywa Primary School</td>
+                        <td class="ledger-val">R 393,390.87</td>
+                        <td>2014</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Mr S Towani (033 345 5694)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Department of Water & Sanitation</strong></td>
+                        <td>Water harvesting program – Supply and installation of 15 water tanks</td>
+                        <td class="ledger-val">R 357,000.00</td>
+                        <td>2014</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">David Ayisi (083 567 3736)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Public Works</strong></td>
+                        <td>Devon Prison – Renovations to Devon Prison</td>
+                        <td class="ledger-val">R 349,586.00</td>
+                        <td>2016</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">SM Venter (076 589 5530)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>KZN Growth Fund</strong></td>
+                        <td>Re-Instatement of Ceilings</td>
+                        <td class="ledger-val">R 348,750.00</td>
+                        <td>2024</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Nqubeko Madondo (031 372 3720)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mangosuthu University of Tech</strong></td>
+                        <td>Renovation & Reconfiguration of Procurement Office</td>
+                        <td class="ledger-val">R 275,436.05</td>
                         <td>2019</td>
+                        <td>Complete</td>
                         <td class="ledger-ref">Mr Lindo Mzolo (031 819 9310)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Department of Transport</strong></td>
+                        <td>Replace 10x roofs and Paint – RTI Winklespruit</td>
+                        <td class="ledger-val">R 223,580.00</td>
+                        <td>2016</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Sally (031 916 4588)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prince Mshiyeni Hospital</strong></td>
+                        <td>Painting of ward C1, C2 and upgrading of nurses duty rooms</td>
+                        <td class="ledger-val">R 199,750.00</td>
+                        <td>2025</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Hloniphani Ngcobo (031 907 8214)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Human Settlement</strong></td>
+                        <td>Housing Project (Subcontractor for construction of concrete slabs)</td>
+                        <td class="ledger-val">R 55,000,000.00</td>
+                        <td>2018</td>
+                        <td>Complete</td>
+                        <td class="ledger-ref">Mr G Ntaka (076 745 1766)</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- 8. LEADERSHIP & TECHNICAL MANAGEMENT -->
+    <!-- 10. MANAGEMENT TEAM -->
     <section id="leadership" class="management-section">
         <div class="container" style="padding-top: 0; padding-bottom: 0;">
-            <span class="section-eyebrow">Professional Leadership</span>
-            <h2 class="section-title">Key Management & Engineering Personnel</h2>
+            <span class="section-eyebrow">Our Personnel</span>
+            <h2 class="section-title">Key Management & Site Personnel</h2>
             <p class="section-subtitle">
-                Qualified construction professionals with registered qualifications across quantity surveying, civil
-                engineering, and building science.
+                Qualified, experienced personnel managing daily site operations, safety compliance, and quantity surveying.
             </p>
         </div>
 
@@ -2128,119 +2457,152 @@
             </div>
 
             <div class="team-card">
-                <div class="team-role">Project Manager / PrQS</div>
+                <div class="team-role">Project / Contracts Manager</div>
                 <div class="team-name">Sibongiseni Magwaza</div>
-                <div class="team-quals">BSc Quantity Surveying Degree • Professional Quantity Surveyor (PrQS) • SACPCMP
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-role">Health & Safety Officer</div>
-                <div class="team-name">Ayanda Mhlongo</div>
-                <div class="team-quals">SACPCMP Professional Construction Health & Safety Officer (CHSO)</div>
+                <div class="team-quals">BSc Quantity Surveying • Professional Quantity Surveyor (PrQS) • SACPCMP</div>
             </div>
 
             <div class="team-card">
                 <div class="team-role">Civil Engineer</div>
                 <div class="team-name">Siyabonga Msomi</div>
-                <div class="team-quals">National Diploma in Civil Engineering • Geomatics Setting-Out Specialist</div>
+                <div class="team-quals">National Diploma in Civil Engineering • Site Engineering & Setting Out</div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-role">Health & Safety Officer</div>
+                <div class="team-name">Ayanda Mhlongo</div>
+                <div class="team-quals">SACPCMP Professional Construction Health and Safety Officer (CHSO)</div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-role">Site Agent</div>
+                <div class="team-name">Sihle Khumalo</div>
+                <div class="team-quals">National Diploma Civil • Site Operations & Coordination</div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-role">Site Foreman</div>
+                <div class="team-name">Sethu Vilakazi</div>
+                <div class="team-quals">National Diploma Building • Quality Control & Trade Supervision</div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-role">Safety (SHE) Representative</div>
+                <div class="team-name">Anele Tembe</div>
+                <div class="team-quals">National Diploma Human Resources • Site Safety & Personnel Representation</div>
             </div>
         </div>
     </section>
 
-    <!-- 9. TENDER DESK & RFQ DISPATCH -->
-    <section id="rfq" class="rfq-section">
+    <!-- 11. CONTACT & TENDER ENQUIRIES FORM -->
+    <section id="contact" class="rfq-section">
         <div class="rfq-layout-grid">
             <div class="rfq-direct-card">
-                <span class="section-eyebrow" style="color:var(--accent-orange);">Estimating Desk</span>
-                <h3>Tender Inquiries & RFQs</h3>
+                <span class="section-eyebrow" style="color:var(--accent-orange);">Get in Touch</span>
+                <h3>Contact Us & Tender Enquiries</h3>
                 <p>
-                    AWEN actively bids on civil, structural, and general building projects across South Africa. Dispatch
-                    tender documents, RFQs, and site briefing requests directly to our estimating desk.
+                    Whether you have an upcoming building project, require alterations, or want to invite AWEN to tender on civil and general building works, contact our office directly.
                 </p>
 
                 <div class="rfq-contact-channel">
-                    <i data-lucide="mail"></i>
+                    <i data-lucide="user"></i>
                     <div>
-                        <strong>Dedicated Tender Email</strong>
-                        <a href="mailto:awen.tenders@gmail.com"
-                            style="color:var(--accent-orange); font-weight:800; font-size:16px;">awen.tenders@gmail.com</a>
+                        <strong>Contact Person</strong>
+                        <span>Sicelo Meyiwa (Director)</span>
                     </div>
                 </div>
 
                 <div class="rfq-contact-channel">
-                    <i data-lucide="phone-call"></i>
+                    <i data-lucide="phone"></i>
                     <div>
-                        <strong>Direct Telephone</strong>
-                        <a href="tel:+27767451766" style="color:var(--white); font-weight:700;">+27 76 745 1766</a>
+                        <strong>Phone / WhatsApp</strong>
+                        <a href="tel:+27719268316" style="color:var(--white); font-weight:700;">071 926 8316</a>
+                    </div>
+                </div>
+
+                <div class="rfq-contact-channel">
+                    <i data-lucide="mail"></i>
+                    <div>
+                        <strong>Tender Email</strong>
+                        <a href="mailto:awen.tenders@gmail.com" style="color:var(--accent-orange); font-weight:700;">awen.tenders@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="rfq-contact-channel">
+                    <i data-lucide="mail"></i>
+                    <div>
+                        <strong>Direct Email</strong>
+                        <a href="mailto:meyiwasicelo@gmail.com" style="color:rgba(255,255,255,0.9);">meyiwasicelo@gmail.com</a>
                     </div>
                 </div>
 
                 <div class="rfq-contact-channel">
                     <i data-lucide="map-pin"></i>
                     <div>
-                        <strong>Operating Base</strong>
-                        <span>Durban, KwaZulu-Natal, South Africa</span>
+                        <strong>Physical Address</strong>
+                        <span>24 Carmichael Place, Woodlands, Durban, 4004</span>
                     </div>
                 </div>
 
                 <div class="rfq-contact-channel">
                     <i data-lucide="clock"></i>
                     <div>
-                        <strong>Business Hours</strong>
+                        <strong>Office Hours</strong>
                         <span>Monday – Friday: 07:30 – 17:00</span>
                     </div>
                 </div>
             </div>
 
             <div class="rfq-form-card">
-                <h3>Submit Project Inquiry / RFQ</h3>
+                <h3>Request a Quote / Send an Enquiry</h3>
+                <p class="form-subtitle">Fill in your details below and we will respond promptly.</p>
                 <form id="rfqForm" onsubmit="handleFormSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
+                            <label for="name">Your Name *</label>
                             <input type="text" id="name" class="form-control" placeholder="e.g. Sipho Mkhize" required>
                         </div>
                         <div class="form-group">
-                            <label for="org">Organization / Department *</label>
-                            <input type="text" id="org" class="form-control"
-                                placeholder="e.g. Transnet / Municipality / Private" required>
+                            <label for="org">Company / Department</label>
+                            <input type="text" id="org" class="form-control" placeholder="e.g. Municipality, School, Private">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email">Official Email Address *</label>
-                            <input type="email" id="email" class="form-control" placeholder="name@company.co.za"
-                                required>
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="name@domain.co.za" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="+27 ...">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="071 ... / 082 ..." required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="discipline">Primary Division of Interest</label>
+                        <label for="discipline">Service / Area of Interest</label>
                         <select id="discipline" class="form-control">
-                            <option value="Civils">01. Concrete Works & Civil Foundations</option>
-                            <option value="Building">02. General Building & Superstructures</option>
-                            <option value="Fencing">03. High-Security Fencing & Access Control</option>
-                            <option value="Roofing">04. Roofing & Timber Framing</option>
-                            <option value="Wet Services">05. Plumbing & Wet Services</option>
-                            <option value="Turnkey">Multi-Disciplinary Turnkey Infrastructure</option>
+                            <option value="General Building">01. General Building & Alterations</option>
+                            <option value="Fencing">02. Fencing & Security (ClearVu / Palisade)</option>
+                            <option value="Concrete Works">03. Concrete Works & Foundations</option>
+                            <option value="Roofing">04. Roofing, Trusses & Waterproofing</option>
+                            <option value="Tiling & Flooring">05. Tiling & Flooring</option>
+                            <option value="Painting">06. Painting & Protective Coatings</option>
+                            <option value="Carpentry & Ceilings">07. Carpentry, Drywall & Suspended Ceilings</option>
+                            <option value="Plumbing">08. Plumbing & Wet Services</option>
+                            <option value="General Tender">Tender Invitation / Multiple Disciplines</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="scope">Project Scope / Tender Reference *</label>
+                        <label for="scope">Project Details / Message *</label>
                         <textarea id="scope" class="form-control"
-                            placeholder="Provide overview of scope, location, required CIDB grade, or tender number..."
+                            placeholder="Please describe the scope of work, project location, or any specific requirements..."
                             required></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit-rfq">
-                        Dispatch RFQ to Estimators
+                        Send Enquiry / Request a Quote
                         <i data-lucide="send" style="width:16px; height:16px;"></i>
                     </button>
                 </form>
@@ -2248,66 +2610,64 @@
         </div>
     </section>
 
-    <!-- 10. CORPORATE FOOTER (RAUBEX-STYLE STRUCTURE) -->
+    <!-- 12. CORPORATE FOOTER -->
     <footer>
-        <div class="footer-grid-raubex">
+        <div class="footer-grid">
             <div class="footer-brand">
                 <div
-                    style="margin-bottom: 20px; display: inline-flex; align-items: center; background: #ffffff; padding: 10px 18px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.18);">
+                    style="margin-bottom: 18px; display: inline-flex; align-items: center; background: #ffffff; padding: 8px 16px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.18);">
                     <img src="awen-logo-horizontal.png" alt="AWEN (Pty) Ltd"
-                        style="height: 38px; width: auto; display: block;">
+                        style="height: 36px; width: auto; display: block;">
                 </div>
                 <p>
-                    A CIDB 4GB / 1CE accredited civil engineering and general building group committed to structural
-                    excellence, SANS 10400 quality compliance, and socio-economic transformation across South Africa.
+                    African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited general building and civil works contractor based in Durban, delivering quality construction and maintenance across KwaZulu-Natal.
                 </p>
-                <a href="#about" class="btn-fraud-policy">
-                    Corporate Policies <i data-lucide="arrow-up-right" style="width:14px; height:14px;"></i>
-                </a>
             </div>
 
             <div class="footer-col">
-                <h4>Registered Office</h4>
+                <h4>Company Details</h4>
                 <p>
-                    AWEN (Pty) Ltd<br>
-                    CIPC Reg: 2014/146827/07<br>
-                    Durban, KwaZulu-Natal<br>
-                    South Africa
+                    <strong>AWEN (Pty) Ltd</strong><br>
+                    Reg: 2014/146827/07<br>
+                    24 Carmichael Place, Woodlands<br>
+                    Durban, 4004
                 </p>
-                <p style="margin-top:12px;">
+                <p style="margin-top:10px;">
                     CIDB CRS: 10065323<br>
-                    CSD: MAAA0023374
+                    CSD: MAAA0023374<br>
+                    B-BBEE: Level 1 Contributor
                 </p>
             </div>
 
             <div class="footer-col">
-                <h4>Direct Divisions</h4>
+                <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#divisions">Concrete & Earthworks</a></li>
-                    <li><a href="#divisions">Building Superstructures</a></li>
-                    <li><a href="#divisions">Security & ClearVu Fencing</a></li>
-                    <li><a href="#divisions">Roofing & Engineered Timber</a></li>
-                    <li><a href="#divisions">Plumbing & Wet Services</a></li>
+                    <li><a href="#about">About AWEN</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#governance">Compliance & CIDB</a></li>
+                    <li><a href="#projects">Completed Projects</a></li>
+                    <li><a href="#leadership">Management Team</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Tender & Ethics Line</h4>
+                <h4>Contact Info</h4>
                 <p>
-                    24-Hour Estimating & Procurement:<br>
-                    <a href="mailto:awen.tenders@gmail.com"
-                        style="color:var(--accent-orange); font-weight:700;">awen.tenders@gmail.com</a>
+                    Contact: Sicelo Meyiwa<br>
+                    Phone: <a href="tel:+27719268316" style="color:var(--white);">071 926 8316</a><br>
+                    Tenders: <a href="mailto:awen.tenders@gmail.com" style="color:var(--accent-orange);">awen.tenders@gmail.com</a><br>
+                    Direct: <a href="mailto:meyiwasicelo@gmail.com" style="color:rgba(255,255,255,0.8);">meyiwasicelo@gmail.com</a>
                 </p>
-                <p style="margin-top:12px;">
-                    Direct Line: +27 76 745 1766<br>
-                    B-BBEE: Level 1 (135% Recognition)
+                <p style="margin-top:10px;">
+                    Mon – Fri: 07:30 – 17:00
                 </p>
             </div>
         </div>
 
         <div class="footer-bottom-bar">
-            <div>&copy; 2026 African Wealth Empowerment Network (AWEN) (Pty) Ltd. All Rights Reserved.</div>
-            <div>CIDB 4GB • 1CE ACCREDITED CIVIL & BUILDING CONTRACTORS</div>
+            <div>&copy; 2026 African Wealth Empowerment Network (AWEN) (Pty) Ltd. All rights reserved.</div>
+            <div>CIDB 4GB • 1CE • 1SF • 1SO • 1SN | B-BBEE LEVEL 1</div>
         </div>
     </footer>
 
@@ -2315,7 +2675,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Render Lucide Icons
-            lucide.createIcons();
+            if (window.lucide) {
+                lucide.createIcons();
+            }
 
             // 2. Mobile Drawer Navigation
             const menuToggle = document.getElementById('menuToggle');
@@ -2342,19 +2704,20 @@
                 toggleLedgerBtn.addEventListener('click', () => {
                     const isOpen = ledgerWrapper.classList.toggle('open');
                     toggleLedgerBtn.innerHTML = isOpen
-                        ? '<i data-lucide="chevron-up" style="width:15px; height:15px; vertical-align:middle; margin-right:6px;"></i> Hide Full Project Ledger'
-                        : '<i data-lucide="table" style="width:15px; height:15px; vertical-align:middle; margin-right:6px;"></i> View Full Auditable Project Ledger (10 Contracts)';
-                    lucide.createIcons();
+                        ? '<i data-lucide="chevron-up" style="width:15px; height:15px; vertical-align:middle; margin-right:6px;"></i> Hide Full Project Schedule'
+                        : '<i data-lucide="table" style="width:15px; height:15px; vertical-align:middle; margin-right:6px;"></i> View Full Project Schedule (20+ Verified Contracts)';
+                    if (window.lucide) {
+                        lucide.createIcons();
+                    }
                 });
             }
         });
 
-        // 4. Form Submit Notification
+        // 4. Form Submit Notification (Natural, friendly, professional)
         function handleFormSubmit(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            const org = document.getElementById('org').value;
-            alert(`Thank you ${name} (${org}). Your project inquiry has been dispatched directly to the AWEN Estimating Desk (awen.tenders@gmail.com). We will review the requirements and contact you shortly.`);
+            alert(`Thank you, ${name}. Your enquiry has been sent to AWEN (awen.tenders@gmail.com). We will review your project details and get back to you shortly.`);
             document.getElementById('rfqForm').reset();
         }
     </script>
