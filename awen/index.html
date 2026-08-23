@@ -80,8 +80,8 @@
             --font-mono: 'Space Grotesk', monospace;
 
             /* Dimensions & Spacing */
-            --topbar-h: 38px;
-            --header-h: 84px;
+            --topbar-h: 34px;
+            --header-h: 70px;
             --radius-xs: 2px;
             --radius-sm: 4px;
             --radius-md: 8px;
@@ -306,7 +306,7 @@
         }
 
         .header-logo-img {
-            height: 50px;
+            height: 42px;
             width: auto;
             max-width: 290px;
             object-fit: contain;
@@ -470,7 +470,7 @@
             position: relative;
             background: #FFFFFF url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=85') right center / cover no-repeat;
             border-bottom: 1px solid var(--border-light);
-            padding: 48px 0 54px;
+            padding: clamp(20px, 2.8vh, 32px) 0;
             overflow: hidden;
         }
 
@@ -493,8 +493,8 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.12fr 0.88fr;
-            gap: 48px;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 36px;
             align-items: center;
         }
 
@@ -505,12 +505,12 @@
 
         .hero-headline {
             font-family: var(--font-display);
-            font-size: clamp(30px, 3.4vw, 46px);
+            font-size: clamp(26px, 2.6vw, 38px);
             font-weight: 900;
             color: var(--text-main);
-            line-height: 1.2;
+            line-height: 1.16;
             letter-spacing: -0.5px;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
 
         .hero-headline span {
@@ -518,18 +518,18 @@
         }
 
         .hero-intro-text {
-            font-size: 15.5px;
+            font-size: 14.5px;
             color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 26px;
-            max-width: 640px;
+            line-height: 1.55;
+            margin-bottom: 18px;
+            max-width: 580px;
         }
 
         .hero-cta-row {
             display: flex;
             align-items: center;
-            gap: 16px;
-            margin-bottom: 28px;
+            gap: 12px;
+            margin-bottom: 18px;
             flex-wrap: wrap;
         }
 
@@ -539,9 +539,9 @@
             gap: 8px;
             background: var(--primary);
             color: var(--white);
-            padding: 14px 28px;
+            padding: 11px 22px;
             font-family: var(--font-display);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
             letter-spacing: 1.2px;
             text-transform: uppercase;
@@ -563,9 +563,9 @@
             background: var(--white);
             color: var(--text-main);
             border: 1px solid var(--border-mid);
-            padding: 13px 24px;
+            padding: 10px 18px;
             font-family: var(--font-display);
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 800;
             letter-spacing: 1.2px;
             text-transform: uppercase;
@@ -583,10 +583,10 @@
         .hero-stat-badges {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            padding-top: 20px;
+            gap: 12px;
+            padding-top: 14px;
             border-top: 1px solid var(--border-light);
-            max-width: 580px;
+            max-width: 540px;
         }
 
         .hero-mini-stat {
@@ -597,16 +597,16 @@
 
         .hero-mini-stat .stat-label {
             font-family: var(--font-mono);
-            font-size: 10px;
+            font-size: 9.5px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             color: var(--text-muted);
         }
 
         .hero-mini-stat .stat-val {
             font-family: var(--font-display);
-            font-size: 13px;
+            font-size: 12.5px;
             font-weight: 800;
             color: var(--text-main);
         }
@@ -626,7 +626,7 @@
         .hero-project-card:hover {
             box-shadow: var(--shadow-elevated);
             border-color: var(--border-mid);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         .hero-project-topbar {
@@ -634,30 +634,19 @@
             align-items: center;
             justify-content: space-between;
             background: var(--canvas-alt);
-            padding: 10px 16px;
+            padding: 8px 14px;
             border-bottom: 1px solid var(--border-light);
             font-family: var(--font-mono);
-            font-size: 11px;
+            font-size: 10.5px;
         }
 
         .project-tag-client {
-            display: flex;
-            align-items: center;
-            gap: 7px;
             font-weight: 700;
             color: var(--primary);
         }
 
-        .badge-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: inline-block;
-        }
-
         .project-tag-type {
-            font-size: 10px;
+            font-size: 9.5px;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.8px;
@@ -667,7 +656,7 @@
         .hero-project-media {
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 145px;
             background: var(--canvas);
             overflow: hidden;
         }
@@ -685,12 +674,12 @@
 
         .hero-project-val-badge {
             position: absolute;
-            bottom: 12px;
-            right: 12px;
+            bottom: 8px;
+            right: 8px;
             background: rgba(11, 14, 18, 0.94);
             backdrop-filter: blur(6px);
             border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 6px 12px;
+            padding: 4px 9px;
             border-radius: var(--radius-xs);
             display: flex;
             flex-direction: column;
@@ -699,7 +688,7 @@
 
         .hero-project-val-badge .val-label {
             font-family: var(--font-mono);
-            font-size: 9px;
+            font-size: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: rgba(255, 255, 255, 0.7);
@@ -707,50 +696,50 @@
 
         .hero-project-val-badge .val-num {
             font-family: var(--font-display);
-            font-size: 13.5px;
+            font-size: 12px;
             font-weight: 800;
             color: #FFFFFF;
             letter-spacing: 0.5px;
         }
 
         .hero-project-body {
-            padding: 18px 20px;
+            padding: 12px 16px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 9px;
         }
 
         .project-scope-header h3 {
             font-family: var(--font-display);
-            font-size: 15.5px;
+            font-size: 14.5px;
             font-weight: 800;
             color: var(--primary);
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             line-height: 1.3;
         }
 
         .project-scope-desc {
-            font-size: 12.5px;
+            font-size: 11.5px;
             color: var(--text-secondary);
-            line-height: 1.55;
+            line-height: 1.45;
         }
 
         .project-specs-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 7px;
+            gap: 6px;
         }
 
         .spec-pill {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             background: var(--canvas);
             border: 1px solid var(--border-light);
-            padding: 4px 9px;
+            padding: 3px 7px;
             border-radius: var(--radius-xs);
             font-family: var(--font-mono);
-            font-size: 10.5px;
+            font-size: 9.5px;
             font-weight: 600;
             color: var(--text-secondary);
         }
@@ -761,16 +750,16 @@
             justify-content: space-between;
             background: var(--canvas-alt);
             border: 1px solid var(--border-light);
-            padding: 10px 14px;
+            padding: 8px 12px;
             border-radius: var(--radius-xs);
             font-family: var(--font-display);
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--primary);
             transition: var(--transition);
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .btn-hero-project-link:hover {
@@ -781,13 +770,6 @@
 
         .btn-hero-project-link:hover i {
             transform: translateX(3px);
-        }
-            transition: var(--transition);
-        }
-
-        .btn-view-link:hover {
-            color: var(--primary-dark);
-            gap: 9px;
         }
 
         /* ==========================================================================
