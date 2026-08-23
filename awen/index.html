@@ -426,26 +426,36 @@
         }
 
         /* ==========================================================================
-           3. HERO SECTION: RAUBEX-INSPIRED DUAL SPLIT IN LIGHT THEME
+           3. HERO SECTION: BESPOKE EDITORIAL FULL-IMAGE CANVAS HERO
            ========================================================================== */
         .hero-raubex {
-            background: var(--white);
+            position: relative;
+            background: #FFFFFF url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=85') right center / cover no-repeat;
             border-bottom: 1px solid var(--border-light);
-            padding: 40px 0 60px;
+            padding: 56px 0 68px;
+            overflow: hidden;
         }
 
-        .hero-grid-split {
+        /* Seamless directional gradient so editorial typography is crisp & legible on the left while the full photography shines on the right */
+        .hero-raubex::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 48%, rgba(255, 255, 255, 0.88) 65%, rgba(255, 255, 255, 0.35) 85%, rgba(255, 255, 255, 0.1) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
             max-width: 1260px;
             margin: 0 auto;
             padding: 0 32px;
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 52px;
-            align-items: center;
         }
 
-        /* Left Column: Bold Headline & Landmark Feature Card */
-        .hero-statement-col {
+        .hero-content-wrapper {
+            max-width: 720px;
             display: flex;
             flex-direction: column;
         }
@@ -470,10 +480,10 @@
 
         .hero-headline {
             font-family: var(--font-display);
-            font-size: clamp(32px, 3.6vw, 48px);
+            font-size: clamp(32px, 3.8vw, 50px);
             font-weight: 900;
             color: var(--primary);
-            line-height: 1.18;
+            line-height: 1.15;
             letter-spacing: -0.5px;
             margin-bottom: 28px;
         }
@@ -488,7 +498,7 @@
             gap: 8px;
             background: var(--accent-orange);
             color: var(--white);
-            padding: 13px 26px;
+            padding: 14px 28px;
             font-family: var(--font-display);
             font-size: 12px;
             font-weight: 800;
@@ -496,7 +506,7 @@
             text-transform: uppercase;
             border-radius: var(--radius-xs);
             width: fit-content;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
             box-shadow: 0 4px 14px rgba(222, 89, 32, 0.25);
             transition: var(--transition);
         }
@@ -504,25 +514,28 @@
         .btn-hero-cta:hover {
             background: var(--accent-orange-dark);
             transform: translateX(4px);
+            box-shadow: 0 6px 20px rgba(222, 89, 32, 0.35);
         }
 
-        /* Landmark Featured Project Box (Raubex Signature Element) */
+        /* Landmark Featured Project Box */
         .landmark-card {
-            background: var(--canvas);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
             border: 1px solid var(--border-light);
             border-left: 4px solid var(--primary);
             border-radius: var(--radius-sm);
-            padding: 20px;
+            padding: 20px 22px;
             display: grid;
             grid-template-columns: 140px 1fr;
             gap: 20px;
             align-items: center;
-            box-shadow: var(--shadow-subtle);
+            box-shadow: var(--shadow-card);
+            max-width: 660px;
             transition: var(--transition);
         }
 
         .landmark-card:hover {
-            box-shadow: var(--shadow-card);
+            box-shadow: var(--shadow-elevated);
             border-left-color: var(--accent-orange);
             transform: translateY(-2px);
         }
@@ -562,72 +575,12 @@
             color: var(--accent-orange);
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: var(--transition);
         }
 
         .btn-view-link:hover {
             color: var(--accent-orange-dark);
             gap: 9px;
-        }
-
-        /* Right Column: Hero High-Impact Real Photography */
-        .hero-photo-wrapper {
-            position: relative;
-        }
-
-        .hero-photo-container {
-            position: relative;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            box-shadow: var(--shadow-elevated);
-        }
-
-        .hero-main-img {
-            width: 100%;
-            height: 540px;
-            object-fit: cover;
-            object-position: center top;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .hero-photo-container:hover .hero-main-img {
-            transform: scale(1.03);
-        }
-
-        /* Architectural Accreditation Stamp on Photo */
-        .hero-floating-badge {
-            position: absolute;
-            bottom: 24px;
-            left: 24px;
-            right: 24px;
-            background: rgba(59, 7, 7, 0.98);
-            border: 1px solid var(--gold);
-            padding: 16px 20px;
-            border-radius: var(--radius-xs);
-            color: var(--white);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-        }
-
-        .floating-badge-title {
-            font-family: var(--font-mono);
-            font-size: 10px;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-        }
-
-        .floating-badge-val {
-            font-family: var(--font-display);
-            font-size: 13.5px;
-            font-weight: 800;
-            color: var(--white);
-            letter-spacing: 0.5px;
-            margin-top: 2px;
         }
 
         /* ==========================================================================
@@ -1509,11 +1462,6 @@
            RESPONSIVE BREAKPOINTS
            ========================================================================== */
         @media (max-width: 1100px) {
-            .hero-grid-split {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
             .divisions-grid-raubex {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -1568,10 +1516,14 @@
             }
 
             .hero-raubex {
-                padding: 24px 0 48px;
+                padding: 36px 0 44px;
             }
 
-            .hero-grid-split {
+            .hero-raubex::before {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.92) 100%);
+            }
+
+            .hero-container {
                 padding: 0 20px;
             }
 
@@ -1586,10 +1538,6 @@
             .landmark-img-thumb {
                 width: 100%;
                 height: 140px;
-            }
-
-            .hero-main-img {
-                height: 380px;
             }
 
             .divisions-grid-raubex {
@@ -1703,55 +1651,58 @@
                 data-lucide="arrow-up-right" style="width:16px;"></i></a>
     </div>
 
-    <!-- 3. HERO SECTION: RAUBEX-INSPIRED EDITORIAL DUAL SPLIT IN LIGHT THEME -->
-    <section class="hero-raubex">
-        <div class="hero-grid-split">
-            <!-- Left Statement & Feature Card -->
-            <div class="hero-statement-col">
-                <div class="hero-eyebrow-tag">
-                    <i data-lucide="shield-check" style="width:14px; height:14px; color:var(--primary);"></i>
-                    CIDB 4GB • 1CE • B-BBEE LEVEL 1 CONTRACTOR
-                </div>
+    <!-- 3. HERO SECTION: FULL-BLEED EDITORIAL ARCHITECTURAL HERO -->
+    <section class="hero-cinematic">
+        <div class="hero-cinematic-overlay"></div>
 
-                <h1 class="hero-headline">
-                    AWEN is one of South Africa's dedicated <span>infrastructure development</span> and civil
-                    engineering groups.
-                </h1>
-
-                <a href="#about" class="btn-hero-cta">
-                    Read Corporate Profile
-                    <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
-                </a>
-
-                <!-- Landmark Project Box (Signature Raubex Layout) -->
-                <div class="landmark-card">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156a?auto=format&fit=crop&w=400&q=80"
-                        alt="Transnet Berthing Facilities" class="landmark-img-thumb">
-                    <div class="landmark-info">
-                        <h4>Transnet Berthing Facility</h4>
-                        <p>A landmark R1.66M maritime infrastructure refurbishment delivering precision civil
-                            alterations and structural fit-outs across the Port of Durban.</p>
-                        <a href="#projects" class="btn-view-link">
-                            View Project
-                            <i data-lucide="arrow-up-right" style="width:14px; height:14px;"></i>
-                        </a>
-                    </div>
-                </div>
+        <div class="hero-cinematic-content">
+            <div class="hero-cinematic-eyebrow">
+                <i data-lucide="shield-check" style="width:15px; height:15px; color:var(--gold);"></i>
+                <span>CIDB 4GB • 1CE • B-BBEE LEVEL 1 ACCREDITED GROUP</span>
             </div>
 
-            <!-- Right Column: Hero High-Impact Real Photography -->
-            <div class="hero-photo-wrapper">
-                <div class="hero-photo-container">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
-                        alt="AWEN South African Civil Construction Team" class="hero-main-img">
+            <h1 class="hero-cinematic-title">
+                Engineering South Africa's Critical <span class="highlight-gold">Civil & Commercial</span> Infrastructure.
+            </h1>
 
-                    <div class="hero-floating-badge">
-                        <div>
-                            <div class="floating-badge-title">CIDB & Treasury Registered</div>
-                            <div class="floating-badge-val">4GB • 1CE • CSD MAAA0023374</div>
-                        </div>
-                        <i data-lucide="award" style="width:24px; height:24px; color:var(--gold);"></i>
-                    </div>
+            <p class="hero-cinematic-lead">
+                African Wealth Empowerment Network (AWEN) (Pty) Ltd is a CIDB 4GB / 1CE accredited contractor delivering high-spec concrete superstructures, maritime port refurbishments, municipal public works, and institutional campus developments across KwaZulu-Natal and South Africa.
+            </p>
+
+            <div class="hero-action-group">
+                <a href="#rfq" class="btn-hero-primary">
+                    Dispatch Tender BoQ / RFQ
+                    <i data-lucide="arrow-up-right" style="width:15px; height:15px;"></i>
+                </a>
+                <a href="#projects" class="btn-hero-secondary">
+                    View Auditable Project Ledger
+                    <i data-lucide="table" style="width:15px; height:15px;"></i>
+                </a>
+                <a href="#governance" class="btn-hero-ghost">
+                    Accreditation & CIDB Dossier
+                    <i data-lucide="download-cloud" style="width:15px; height:15px;"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Docked Statutory Metric Bar -->
+        <div class="hero-statutory-bar">
+            <div class="hero-statutory-grid">
+                <div class="hero-stat-item">
+                    <div class="hero-stat-num">4GB • 1CE • 1SF</div>
+                    <div class="hero-stat-lbl">CIDB Contractor Grading (CRS: 10065323)</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="hero-stat-num">LEVEL 1 (135%)</div>
+                    <div class="hero-stat-lbl">B-BBEE Procurement Recognition • 100% Black-Owned</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="hero-stat-num">R 55,000,000+</div>
+                    <div class="hero-stat-lbl">Peak Single Civil Housing Subcontract</div>
+                </div>
+                <div class="hero-stat-item">
+                    <div class="hero-stat-num">CSD MAAA0023374</div>
+                    <div class="hero-stat-lbl">National Treasury & SANS 10400 Compliant</div>
                 </div>
             </div>
         </div>
