@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // ==========================================
     try {
         const [headerResponse, footerResponse] = await Promise.all([
-            fetch('components/header.html'),
-            fetch('components/footer.html')
+            fetch('components/header.html?v=' + Date.now(), { cache: 'no-cache' }),
+            fetch('components/footer.html?v=' + Date.now(), { cache: 'no-cache' })
         ]);
 
         if (headerResponse.ok) {
